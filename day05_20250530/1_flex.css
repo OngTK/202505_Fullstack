@@ -1,0 +1,52 @@
+/**/
+.box{
+    border: 1px solid red;
+    width: 100px;
+}
+/* 
+flex-wrap:
+    nowrap(default): 하위요소(box) 크기 > 부모요소(flex) 크기  
+                => 하위요소의 크기를 자동 조절
+    wrap: 하위요소(box) 크기 > 부모요소(flex) 크기 
+                => 하위요소의 크기를 보존하면서 자동 줄바꿈 
+    wrap-reverse : 요소를 역순으로 배치
+flex-directio:
+    row(default): 가로배치
+    column : 세로배치, 일반적으로 많이 사용하지 않음 
+*/
+
+.flexbox1{
+    border: 1px solid blue;
+    width: 250px;               /* 하위 요소가 flexbox보다 크면 자동으로 flex width에 맞춤 */
+    display: flex;              /* 하위 요소들의 배치 방법 >> 배치의 편리성 */
+    flex-wrap: nowrap;          
+}
+
+.flexbox2{
+    border: 1px solid blue;
+    width: 250px;               /* 하위 요소가 flexbox보다 크면 자동으로 flex width에 맞춤 */
+    display: flex;              /* 하위 요소들의 배치 방법 >> 배치의 편리성 */
+    flex-wrap: wrap;          
+}
+
+.flexbox3{
+    border: 1px solid blue;
+    width: 250px;               
+    display: flex;
+    flex-wrap: wrap-reverse;          
+}
+
+
+.flexbox4{
+    border: 1px solid blue;
+    width: 250px;               
+    display: flex;
+    flex-direction: row; /*row(default): 가로배치*/
+}
+
+.flexbox5{
+    border: 1px solid blue;
+    width: 250px;               
+    display: flex;
+    flex-direction: column; /*세로배치: 일반적으로 많이 사용하지 않음*/
+}

@@ -1,0 +1,152 @@
+HTML : 마크업 언어
+JS : 객체지향 언어 > 동작/이벤트
+[ CSS ]
+    Cascading style sheets 스타일시트
+    1. 위에서 아래로 꾸미기 시트를 덮는다.
+    2. 주로 HTML언어를 꾸미는 목적으로 사용
+    3. HTML종속
+
+[ CSS 주석 ]
+     (내용) 
+
+[ CSS 적용 방법 ]
+    방법 1
+        <마크업명 sytle="속성명:값; 속성명:값; >
+    방법 2
+        <head> 
+            <style>
+                식별자{ 속성명:값; 속성명:값; }
+            </sytle>
+        </head>
+    방법 3
+        - CSS 확장자 파일내에서
+            식별자{ 속성명:값; 속성명:값; }
+        - HTML에서 CSS 확장자 파일 불러오기
+        <head> 
+            <link href="CSS파일경로" rel="stylesheet" />
+        </head>
+    브라우저 임시 테스트
+        브라우저 F12
+
+[ CSS 구조 ]
+    선택자{ 속성명:값; }
+
+[ CSS 선택자(식별자) ]
+    CSS 속성을 적용할 대상을 구분
+    1. *        : 와일드카드, 전체 선택
+    2. 마크업명  : 마크업 선택자
+    3. .class   : 클래스 선택자 >> 복수
+    4.#아이디    : 아이디 선택자 >> 단일
+        * 만일 속성이 중복일 때 우선순위
+            (style 속성)> #id > .class > 마크업 > *
+            그 외 중복일 때는 코드 작성순으로 마지막 코드의 속성이 적용
+            관례적, 최대한 클래스를 활용 > 특정 부분만 ID 선택자 사용
+    5. 다중선택자 : 여러 개 선택자를 한번에 적용 
+        A선택자, B선택자 { 속성명:값;}
+    6. 자식(하위) 선택자 : >
+        부모 선택자 > 자식선택자{}
+    7. 자손 선택자 : 띄어쓰기
+        부모 선택자" "자손선택자{}
+
+[ CSS 텍스트 속성 ]
+    font-family: ;               글꼴_현재 컴퓨터 내 글꼴만 사용가능 
+    font-size: px;               글자크기 px
+    font-style: normal;          italic(기울기)
+    font-weight: ;               진하기 : h 마크업에서는 기본값 
+    color: ;                     글꼴 색상 
+        색상 > 1. 색상명 2.RGB / 3.핵스코드
+            color:green;
+            color:rgb(100, 255, 100) ;
+            color: #000000 ;
+    word-spacing: px;            어간 : 단어간격 
+    letter-spacing: px;          자간 
+    line-height: 160%;           줄간격, 단위% 
+    text-align: center;          정렬 / left, right, center 
+    text-decoration:        ;    선 / overline, underline, line-through 
+    text-shadow: 10px -10px 5px black ; 
+                                 그림자 x축(좌>우) y축(상>하) 흐림정도 색상 
+    border :                     선형태 px color 
+    border-radius                모서리 둥글게
+    box-shadow                   그림자
+    width                        가로 크기
+    height                       세로 크기
+    padding                      안 여백
+    margin                       바깥 여백
+        margin: 0 auto ;         바깥 여백을 이용한 가로정렬
+    display:
+        inline                
+            한 줄에 해당 구역 포함 : span, a
+            inline으로는 구역 사이즈를 적용할 수 없음
+            height 적용 X (겹쳐짐)
+            margin, padding : 좌우만 적용 / 상하 적용 X
+        block
+            한 줄 차지 구역 : div h p ul il ol
+        inline-block
+            한 줄에 해당 구역을 차지 : input button img*
+        none
+            표시 안 함
+        flex
+            하위 요소들의 배치방법 제시
+    box-sizing:
+        content-box
+            구역 크기를 컨텍츠 기준으로 함
+            box width 500 + padding 10 >> 520으로 패딩까지 포함해서 크기가 증가
+        border-box  
+            더 많이 사용
+            구역 크기를 컨텐츠+안쪽여백 기준으로 함
+            box width 500 + padding 10
+                >> 내용물 width 480 + padding 10(좌우)로 인식 >> 전체 사이즈가 증가하지 않음!!
+
+[flex]
+    flex-wrap:
+        nowrap(default)
+            : 하위요소(box) 크기 > 부모요소(flex) 크기  
+                => 하위요소의 크기를 자동 조절
+        wrap
+            : 하위요소(box) 크기 > 부모요소(flex) 크기 
+                => 하위요소의 크기를 보존하면서 자동 줄바꿈 
+        wrap-reverse
+            : 요소를 역순으로 배치
+        
+    flex-directio
+        row(default)
+            : 가로배치
+        column
+            : 세로배치, 일반적으로 많이 사용하지 않음 
+
+    justify-content: 가로 정렬
+        flex-start(default)
+            : 왼쪽 정렬
+        flex-end
+            : 오른쪽 정렬
+        center
+            : 가운데 정렬
+        space-between
+            : 양 끝 빈틈 없이 균등 정렬
+        space-around
+            : 양 끝 50% 여백 후 균등 정렬
+        space-evenly
+            : 양 끝 100% 여백 후 균등 정렬  
+       
+    align-items : 세로 정렬
+        stretch(default)
+            : 하위 요소에 width/height 중 고정크기가 없다면, 자동으로 부모 요소의 width/height를 가져감
+        center 
+            : 세로 가운데 정렬
+        flex-start 
+            : 상단 정렬
+        flex-end
+            : 하단 정렬
+
+/*============공통 CSS 설정============*/
+*{    
+    margin: 0px;                    
+    padding: 0px;                   /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
+    box-sizing: border-box;         /*선, 여백 포함 계산될 수 있도록*/
+    /*border: 1px solid red;*/      /*필요에 따라 사용, 모든 요소에 테두리*/
+}
+a{                                  /*a(하이퍼링크)의 기본값 초기화*/
+    text-decoration: none;
+    color: black;
+}
+li{list-style: none;}               /*리스트의 글머리 삭제*/

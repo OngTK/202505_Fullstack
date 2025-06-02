@@ -1,0 +1,9 @@
+[ Git hub ]
+        https://github.com/
+
+    - 분산 버전 관리 툴 제공 웹 사이트
+    1. 웹 서비스에서 코드들을 저장하는 저장소
+    2. 다양한 기업들이 사용하는 협업 플랫폼
+
+[ vscode 와 github 연동]
+1. vscode > source controls

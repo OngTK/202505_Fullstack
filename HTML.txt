@@ -1,0 +1,85 @@
+[ 언어 ] : 정해진 규칙/기호 집합
+
+[ 컴파일 or 인터프린터 or 랜더링 ] : 언어와 언어 사이에 번역
+    [ 브라우저 ] : HTML 언어와 기계어 사이의 번역 (크롬, 엣지, 사파리 and so on)
+
+[ HTML 언어 ]
+    1. Hyper(이동) Text Markup Language
+        이동이 가능한 문자들을 제공하는 마크업 언어
+    2. Markup : 구조화된 표식 
+    3. 언어
+        - 마크업 언어 : 텍스트 앞·뒤에 마크하는 언어
+    4. 주석 : 메모(번역되지 않는 구역) 
+        <!-- 내용물 -->
+
+[ 마크업 ]
+   - HTML 언어를 만든 회사에서 미리 정의한 규칙
+    1. <마크> 대상 </마크>
+    2. <마크업명/>
+        ex. <img/>
+    3. 각 마크업들은 서로 다른 속성(본질의 특징)을 갖는다.
+        <마크업명 속성명="값"> </마크업>
+        HTML은 프로그래밍 언어 X >> 마크업 언어 >> REACT (JS기반 프로그래밍)
+
+[ 마크업의 종류 ]
+    * 마크업 작성시 주요 사항
+        상·하위 마크업 안에 포함하는 마크업을 작성시에는 들여쓰기(TAB) 한다. // Shift + Alt + F
+    1. <HTML> : HTML 모든 마크업들을 전체를 감싼 마크업
+    2. <head> : HTML 문서의 옵션정보 마크업을 감싼 마크업
+        3. <title> : 페이지 제목
+        4. <link href="css파일경로" real="stylesheet"> : HTML 문서의 CSS 포함
+        5. <script scr="JS파일경로"> : HTML 문서의 JS 포함 
+    6. <body> : HTML 문서의 본문
+    7. <h1> ~ <h6> : 제목(Head) 마크업, 글자 크기/굵게/구역 의미
+    8. <p> : 문단(Paragrath) 마크업
+    9. <br/> : 줄 바꿈(break rule)
+    10. <hr/> : 구분, 가로 선 (horiztontal rule)
+    11. <ol> : order list, 순서(번호)있는 목록
+    12. <ul> : unorder list, 순서(번호)없는 목록
+    13. <li> : list item, ol or li 마크업 안에 포함되는 항목
+    14. <a> : html/페이지 이동
+        <a href="이동 경로> 텍스트 </a>
+        <a href="경로" target="_blank"> 텍스트 </a> : 새 창/탭 열기
+    15. <img /> : 이미지 마크업
+    16. <audio> </audio> : 오디오 마크업
+    17. <video> </video> : 비디오 마크업
+        15~17 공통 속성 : src= "파일경로"
+        16~17 공통 속성
+            controls="controls" : 컨트롤러 제공
+            autoplay="autoplay" : 자동실행, 정책상 차단
+            muted = "muted" : 음소거, autoplay+muted : 비디오 자동실행 가능
+    18. <input> : 입력 상자
+        - [ 주요 속성명 ]
+        (1) type        : 입력 방법
+                "text"          : 문자입력
+                "password"      : 비밀번호, 가려진 문자
+                "file"          : 첨부파일, multiple : 다중선택
+                "radio"         : 단일 선택의 선택상자, name 속성값이 동일
+                "checkbox"      : 복수 선택의 선택상자
+                "number"        : 오로지 숫자만 입력
+                "date"          : 날짜 선택
+                "datetime-local": 날짜+시간 선택
+                "month"         : 월 선택 
+                "time"          : 시간 선택
+                "week"          : 주 선택
+                "range"         : 범위 스크롤
+                "submit"        : 폼 전송
+                "reset"         : 폼 초기화
+                "button"        : 일반 버튼 vs <button type="button"></button>
+        (2) name        : 동일한 마크업 간의 식별 이름
+        (3) value       : 입력상자 데이터
+        (4) disabled    : 비활성화
+        (5) readonly    : 수정불가능
+        (6) maxlength   : 최대 글자수 제한
+        (7) autofocus   : 지정한 입력 상자의 포커스
+        (8) placeholder : 입력상자의 가이드 텍스트
+    19. <button> : 버튼 마크업, 추후 자바스크립트의 함수 연동
+    20. <table> 전체 표를 깜산 마크업
+        <tr> : 가로, 행
+            <th> : 테이블 제목(열/세로) 셀
+            <td> : 테이블 데이터(열/세로) 칸
+        속성
+            border="1" : 테이블 테두리
+            style="border-collapse : collapse;" : 이중 테두리를 한 줄 테두리로 변경
+            rowspan : 행병합
+            colspan : 열병합

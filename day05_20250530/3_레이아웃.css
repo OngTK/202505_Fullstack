@@ -1,0 +1,28 @@
+/*확인용*/
+*{
+    border: 1px solid red;
+}
+#header{height: 150px;}
+#main{height: 500px;}
+#footer{height: 100px;}
+/*------*/
+
+
+/*wrap : 전체구역*/
+#wrap{
+    width: 1280px;
+    margin: 0 auto;
+}
+*{box-sizing: border-box;}
+
+/*본문*/
+#main{
+    display: flex;
+    flex-wrap: nowrap;              /*생략 O*/
+    flex-direction: row;            /*생략 O*/
+    justify-content: space-between; 
+    align-items: stretch;           /*생략 O*/
+}
+
+#main > #contents{ width: 850px}
+#main > #aside{ width: 400px}

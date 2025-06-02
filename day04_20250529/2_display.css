@@ -1,0 +1,59 @@
+*{
+    border: solid 1px red;
+}
+
+/* display:inline vs block [ span 기본 값 ]*/
+.s1{
+    display:inline; /*한 줄에 해당 구역 포함 : span, a*/
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+
+    /* inline으로는 구역 사이즈를 적용할 수 없음
+        height 적용 X (겹쳐짐)
+        margin, padding : 좌우만 적용 / 상하 적용 X
+    */
+}
+
+.s2{
+    display: block; /* 한 줄 차지 구역 : div h p ul il ol */
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.s3{
+    display: inline-block; /*한 줄에 해당 구역을 차지 : input button img*/
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.s4{
+    display: none; /*표시 안함*/
+}
+
+.flexbox1{
+    display: flex; /* 하위 요소들의 배치방법 제시 */
+}
+
+/*
+flex
+float 
+grid
+*/
+
+.box{
+    box-sizing:content-box; /*구역 크기를 컨텍츠 기준으로 함*/
+    width: 50%;
+    padding: 10px; /*안쪽 여백 추가후 전체 크기가 520px로 증가*/
+}
+
+.box2{
+    box-sizing: border-box; /*더 많이 사용: 구역 크기를 컨텐츠+안쪽여백 기준으로 함*/
+    width: 500px;
+    padding: 10px;
+}

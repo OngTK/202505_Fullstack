@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>실습06</title>
+    <link rel='stylesheet' href='실습06.css'>
+</head>
+
+<body>
+    <div id="wrap"> <!-- 전체 감싸기-->
+
+        <!--헤더 영역-->
+        <div id="header">
+            <div class="left">
+                <img src="./실습06_img/logo.png" />
+            </div> <!--왼쪽 헤더-->
+            <div class="rignt_head"> <!--오른쪽 헤더-->
+                <ul class="top_menu"> <!--오른쪽 상단-->
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+                <ul class="main_menu"> <!--오른쪽 하단-->
+                    <li><a href="#">사진이론</a></li>
+                    <li><a href="#">사진구도</a></li>
+                    <li><a href="#">사진작가</a></li>
+                    <li><a href="#">갤러리1</a></li>
+                    <li><a href="#">갤러리2</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--대표 이미지-->
+        <div><img src="실습06_img/main_img.png" id="main_img" /></div>
+
+        <!--본문 영역-->
+        <div id="main">
+            <div class="sidebar"> <!--좌측 메뉴-->
+                <h3> 사진이론 </h3>
+                <ul>
+                    <li><a href="#">카메라 동작 원리</a></li>
+                    <li><a href="#">모조건 찍어 보자</a></li>
+                    <li><a href="#">피사체의 배경</a></li>
+                    <li><a href="#">조리개와 심도</a></li>
+                    <li><a href="#">카메라 촬영 모드</a></li>
+                </ul>
+            </div>
+
+            <div class="content"> <!--우측 본문-->
+                <h3>카메라 동작 원리</h3>
+                <p>DSLR 카메라에서 DSLR은 "Digital Single Reflex"의 약어로 우리말로는 디지털 일안 반사식 카메라를 의미합니다. DSLR은 디지털 카메라로써 카메라 내부에
+                    들어온 빛이 상단위 펜타프리즘을 통하여 뷰파인더에 맺히게 되어 셔터를 누르기 전에 뷰 파인더를 통하여 피사체를 확인할 수 있게 됩니다. </p>
+
+                <img src="./실습06_img/dslr.png" />
+
+                <p>[그림 1]은 DSLR 카메라에서 셔터를 누르기 전의 상태를 보여주는데 렌즈를 통해 들어오는 빛은 카메라 내부에서 다음과 같은 과정을 거치게 됩니다. </p>
+                <ul>
+                    <li>① 빛이 카메라 렌즈를 통과합니다.</li>
+                    <li>② 빛이 반사 거울에 반사되어 위쪽으로 향합니다.</li>
+                    <li>③ 빛이 펜타프리즘 거울에 반사되어 뷰파인더로 향합니다.</li>
+                    <li>④ 들어온 빛에 의해 뷰파인더를 통하여 피사체를 볼 수 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--푸터 영역-->
+        <div id="footer"> <!--배경색 입일 전체 푸터-->
+            <div>   <!--flex 등을 적용 시킬 영역-->
+                <img src="./실습06_img/footer_logo.png" />
+                <ul>
+                    <li>인천광역시 부평구 부평역 1234 우 : 123-1234</li>
+                    <li>TEL : 031-123-1234 Email : qweqwe@qweqwe.com</li>
+                    <li>COPYRIGHT (c) 더조은 ALL RIGHTS RESERVED</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+
+        <ul> <!--unoredr list : 순서없는 목록-->
+            <li> 1일차 </li> <!-- list itme : 목록의 항목-->
+            <li> 2일차 </li> 
+            <li> 3일차 </li>
+        </ul>
+
+        <ol> <!--order list : 순서(번호)가 있는 목록-->
+            <li> 1일차 </li> 
+            <li> 2일차 </li> 
+            <li> 3일차 </li>        
+        </ol>
+
+        <a href="https://www.naver.com">네이버로 이동 </a> <br/>
+        <!-- 속성 : 각 마크업들의 추가적인 특징-->
+        <a href="2_제목및문단.html">이전 실습으로 이동 </a><br/>
+        <a href="https://www.naver.com" target="_blank"> 네이버 새창(tab) 열기</a><br/>
+        <a href="tel:010-0000-0000"> 전화걸기(모바일)</a> <!--모바일에서만 가능, PC 불가--><br/>
+        
+        <!-- 
+        상대경로 vs 절대경로 
+            상대경로 : 현재 파일 기준으로부터의 경로
+                - 현재 위치에서 호출할 파일의 경로 표현 방식
+                - 의미
+                    ./ : 현재경로, 생략 가능
+                    ../ : 상위 폴더로 이동
+            절대경로 : 절대(고정) 기준으로부터의 경로
+                - 파일 위치의 전체 경로 표현 방식
+        -->
+        <a href="./1_HTML시작.html">상대경로</a><br/>
+        <a href="http://192.168.40.14:5500/day02/1_HTML시작.html">(서버)절대경로</a><br/>
+        <a href="C:\Users\TJ-BU-702-P17\Documents\202505_Fullstack\day02\1_HTML시작.html">(로컬)절대경로</a><br/>
+        
+
+    </body>
+</html>

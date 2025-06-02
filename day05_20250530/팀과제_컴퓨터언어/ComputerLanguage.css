@@ -1,0 +1,104 @@
+/*=============== 공통 코드 ===============*/
+*{ margin: 0px; padding: 0px; } /* 기본 여백들을 제거*/
+*{ box-sizing: border-box;} /* 구역 사이즈기준을 테두리까지*/
+a{
+    text-decoration: none;
+    color: white;
+}
+/*=============== body 배경 이미지 ===============*/
+body{ background-image: url(./background_image_50.jpg);}
+
+/*=============== wrap ===============*/
+#wrap{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/*=============== 1. 메인영역 ===============*/
+
+#main{
+    display:flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+/*=============== 1. 메인_ 1)사이드 메뉴 ===============*/
+
+#sidebar{
+    width:300px;
+    height: 800px;
+    font-size: 28px;
+    padding-left: 10px;
+    color: white;
+}
+
+#sidesize{
+    padding : 50px 0px;
+}
+
+#font > ul > li{
+    padding : 10px;
+    border-bottom: 2px solid white;
+    list-style-type: none;
+}
+
+/*=============== 1. 메인_ 1) 본문 ===============*/
+    /*=========텍스트=========*/
+#content{
+    width:480px;
+    background-color: white;
+    padding: 30px 30px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   
+}
+
+#content > p{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 5px;
+
+    margin-bottom: 10px;
+}
+
+#content > ul {
+    font-size: 18px;
+    line-height: 180%;
+    margin-bottom: 30px;
+}
+
+#content > ul > li {
+    margin-bottom: 10px;
+}
+
+    /*=========이미지=========*/
+#pic{
+    width:480px;
+    background-color: white;
+    align-content: center;
+}
+
+#pic > img{
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+}
+
+/*=============== 푸터 ===============*/
+#footer{
+    width: 1280px;
+    padding : 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color:#2c2a29;
+    color: white;
+    align-items: center;
+
+}
+
+#footer > div > ul > li {
+    list-style-type: none;
+    line-height: 200%;
+}

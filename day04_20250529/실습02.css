@@ -1,0 +1,29 @@
+.book_img{
+    width: 350px;
+}
+
+.number{
+    color:#FFA200;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title{
+    color:black;
+    font-size: 20px ;
+    font-weight: bold;
+    margin: 20px 2px;
+}
+
+.txtarea{
+    background-color: #0F6878;
+    padding : 25px;     
+    color: white;
+    width: 600px;
+    line-height: 160%;
+}
+
+.highlight{
+    color:#FFA200;
+}
+

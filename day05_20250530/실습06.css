@@ -1,0 +1,99 @@
+/*============공통============*/
+*{
+    /*border: 1px solid red;*/
+    margin: 0px;                    
+    padding: 0px;                   /*margin, padding의 여백을 초기화*/
+    box-sizing: border-box;         /*선, 여백 포함 계산될 수 있도록*/
+}
+a{                                  /*a(하이퍼링크)의 기본값 초기화*/
+    text-decoration: none;
+    color: black;
+}
+li{list-style: none;}               /*리스트의 글머리 삭제*/
+
+/*============헤더============*/
+#header{
+    display: flex;                  /*하위 요소 배치 방법*/
+    justify-content: space-between; /*양끝 균등 정렬*/
+    align-items: center;            /*세로 가운데 정렬*/
+    width: 1280px;
+    margin: 10px auto;
+}
+.top_menu{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0px;
+    font-size: 12px;
+}
+.top_menu > li{margin-left: 20px;}
+.main_menu{
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main_menu > li{margin-left: 70px;}
+
+/*============대표 이미지============*/
+#main_img{
+    width: 100%; /*디바이스(화면크기) 기준*/
+}
+
+/*============본문============*/
+#main{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 30px auto;
+}
+    /*============본문-좌측 메뉴============*/
+.sidebar{
+    width: 250px;
+}
+
+
+.sidebar > h3 {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+.sidebar > ul > li{
+    padding: 15px 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+    /*============본문-우측 내용란============*/
+.content{
+    width: 1000px;
+}
+
+.content > h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.content > img{
+    display: block; /*default 값인 inline>>block으로 바꿈*/
+    margin: 0 auto;    
+}
+
+/*============푸터============*/
+#footer{
+    background-color: #2C2A29;
+}
+
+#footer > div {
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    padding: 30px;
+    margin: 0px auto;
+}
+
+#footer > div > ul > li {
+    color: #eeeeee;
+    font-weight: 500;
+}

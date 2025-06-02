@@ -1,0 +1,75 @@
+
+*{ margin: 0px; padding: 0px; } /* 기본 여백들을 제거*/
+*{ box-sizing: border-box;} /* 구역 사이즈기준을 테두리까지*/
+body{
+    background-image: url(./background_image_50.jpg);
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+/* 위에 공통인 코드 */
+
+#wrap{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#main{
+    display:flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+/* 사이드 CSS*/
+#sidebar{
+    width:300px;
+    height: 800px;
+    font-size: 28px;
+    padding-left: 10px;
+    color: white;
+}
+
+#sidesize{
+    padding : 50px 0px;
+}
+/* 목록 */
+#font > ul > li{
+    padding : 10px;
+    border-bottom: 2px solid white;
+    list-style-type: none;
+}
+
+
+/* 본문 CSS*/
+#content{
+    width:480px;
+    background-color: white;
+    padding: 30px 10px 0px 30px;
+}
+
+/*이미지 CSS*/
+#pic{
+    width:480px;
+    background-color: white;
+    align-content: center;
+}
+
+#pic > img{
+    display: block;
+    width: 470px;
+    margin: 0 auto;
+}
+
+/*푸터 CSS*/
+#footer{
+    width: 1280px;
+    padding : 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color:#2c2a29;
+    color: white;
+    align-items: center;
+}

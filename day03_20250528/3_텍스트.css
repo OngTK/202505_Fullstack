@@ -1,0 +1,36 @@
+
+/* 웹폰트 : 저작권 주의 
+웹 폰트 Ctrl + C / Ctrl + V
+한글:눈누 _ 영문:구글 폰트(https://fonts.google.com/)*/
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+.title{ 
+    font-family: "궁서";         /* 글꼴_현재 글꼴만 사용가능 */
+    font-size: 30px;            /* 글자크기, 단위 px(픽셀) */
+    font-style: normal;         /* italic(기울기) */
+    font-weight: bold ;         /* 진하기 : h 마크업에서는 기본값 */
+} 
+
+.content{
+    font-family: 'S-CoreDream-3Light';
+    color:darkblue ;          /* 글꼴 색상 */
+    word-spacing: 10px;         /* 어간 : 단어간격 */
+    letter-spacing: 1px;        /* 자간 */
+    line-height: 160%;          /* 줄간격, 단위% */
+}
+
+.writer{
+    text-align: center;         /* 정렬 / left, right, center */
+    text-decoration: underline; /* 선 / overline, underline, line-through */
+    text-shadow: 10px -10px 5px black ; 
+    /* 그림자 / x축 y축 흐림정도 색상*/
+    /*색상 > 1. 색상명 2.RGB / 3.핵스코드*/
+    color:green;
+    color:rgb(100, 255, 100) ;
+    color: #000000 ;
+}

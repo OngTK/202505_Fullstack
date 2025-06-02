@@ -1,0 +1,24 @@
+.header{
+    font-family: "궁서";
+    font-size: 40px;
+    font-style: italic;
+    color: black;
+}
+.detail{
+    font-family: "휴먼둥근헤드라인";
+    font-size: 15px;
+    color:blue ;
+    word-spacing: 4px;
+    letter-spacing: 8px;
+    line-height: 160%;
+    font-weight: bold;
+}
+.highlight{
+    color: red;
+    text-align: center;
+    text-decoration: overline underline line-through;
+    font-size: 15px;
+    text-shadow: 0px 1px 5px rgb(133, 133, 133);
+}
+
+.fontup{ font-size : 20px;}

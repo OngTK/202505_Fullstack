@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{ 
+    /*border: 1px solid red;*/
+    margin: 0 0;
+    padding: 0 0;
+
+    font-size: 18px;
+    font-family: "윤고딕";
+    line-height: 160%;
+}
+body{
+    width: 1280px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+.cnt_1{
+    display: inline-block;
+    width: 49.3%;
+    padding: 10px;
+}
+
+.cnt_2{
+    display: block;
+    width: 1000px;
+    height: 60px;
+    padding: 10px;
+}
+.cnt_3{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu0{
+    width: 210px;
+    padding: 30px 0px ;
+    background-color: #E8D4D1;
+}
+
+.menu1 ,.menu2{
+    list-style: none;
+    font-size: 25px;
+    padding: 3px 5px ;
+    background-color: #FFEDE6;
+    border-bottom: 1px dotted #D1D1D1;
+    color: black;
+}
+.menu2{
+    padding: 3px 15px ;
+}
+
+.header{
+    font-family: 'Danjo-bold-Regular';
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-bottom: solid 3px #D1D1D1;
+}

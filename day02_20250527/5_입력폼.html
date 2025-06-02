@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>5_입력폼</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <form> <!-- 여러 입력 마크업들을 묶어주는 역할, 백엔드(자바)와 통신-->
+        텍스트 : <input type="text" value="유재석" disabled="disabled"/> <br /> 
+        <!-- 입력 상자 생성 / disabled => 수정불가 + 비활성화-->
+        비밀번호 : <input type="password" placeholder="비밀번호를 입력해주세요." maxlength="5"/> <br />
+        텍스트2 : <input type="text" value="국민MC" readonly="readonly" autofocus="autofocus"/> <br /> 
+        <!-- 입력 상자 생성 / readonly => 수정불가 + 활성화 / autofocus => 페이지 접근 시 해당 위치에 포커스-->
+        단일 첨부파일 : <input type="file"/> <br />
+        복수 첨부파일 : <input type="file" multiple="multiple" /> <br />
+        숫자 : <input type="number" /> <br />
+        날짜 : <input type="date" /> <br />
+        날짜/시간 : <input type="datetime-local" /> <br />
+        시간 : <input type="time" /> <br />
+        월 : <input type="month" /> <br />
+        주 : <input type="week" /> <br />
+        스크롤 : <input type="range" /> <br />
+        원형 체크박스(단일 선택) : 
+            <input type="radio" name="동의여부"/> 예 
+            <input type="radio" name="동의여부"/> 아니오 <br />
+        사각 체크박스(복수 선택) : 
+            <input type="checkbox"name = "가입경로"/> 뉴스
+            <input type="checkbox"name = "가입경로"/> 검색 <br />
+        전송버튼 : <input type="submit"/> <br /> <!--폼전송, 추후 자바서버(백엔드)에 전송-->
+        리셋버튼 : <input type="reset"/> <br />
+        일반버튼1 : <input type="button"/> <br /> <!--자바스크립트의 함수(이벤트)를 연동하여 사용-->
+        일반버튼2 : <button type="button">일반버튼2</button>
+
+        <br/>
+        긴 텍스트 : <textarea cols="30" rows="5"></textarea>
+
+        <br/>
+        목록상자 : <select>
+            <option> 네이버 </option>
+            <option> 카카오 </option>
+            <option> 구글</option>
+        </select>
+</form>
+
+
+</body>
+</html>

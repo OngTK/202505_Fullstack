@@ -1,0 +1,15 @@
+*{
+    border: 1px solid red;
+}
+
+.main_title{
+    border: 1px solid red;
+}
+
+.a{
+    display: inline-block;
+}
+
+.b{
+    display: block
+}

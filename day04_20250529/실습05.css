@@ -1,0 +1,56 @@
+body{
+    background-color: #FFC0CB;
+}
+
+.area{
+    border: solid 3px white;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 30px 0;
+}
+
+.name{
+    margin: 0 auto;
+    width: 400px;
+    
+    border: solid 3px white;
+    border-radius: 40px ;
+    padding: 12px 0;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pic{ 
+    margin: 40px 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+}
+
+.txt{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    background-color: #87CEEB;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 0px;
+    border-radius: 15px;
+
+    width: 450px;
+    
+    padding: 25px 0;
+    margin: 10px 0;
+
+}
+
+a{ 
+    /*a 태그는 일반적으로 [CSS 기본값을 제거!] */
+    text-decoration: none;
+    color: white;
+}

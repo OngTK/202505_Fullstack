@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>KB 국민은행 고객 만족도 온라인 설문지</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <img src="./kb국민은행.png" /> <br/>
+    <h1>KB 국민은행 고객 만족도 온라인 설문지 </h1>
+    <hr/>
+
+    <!-- 인삿말 -->
+    <p> KB국민은행을 사용하는 고객분들의 소중한 의견을 듣고 서비스 개선과 고객 만족도 향상을 위해 설문조사를 실시합니다. 바쁘시더라도 성실히 답변해주시면 감사하겠습니다. </p>
+    <br/>    
+
+    <form>
+    <!-- Q1 -->
+        <p> Q1. 상담원의 응대는 친절하고 만족스러웠나요? </p>
+        <p> A1.
+        <input type="radio" name="Q1"/> 매우 그렇다
+        <input type="radio" name="Q1"/> 그렇다 
+        <input type="radio" name="Q1"/> 보통이다
+        <input type="radio" name="Q1"/> 그렇지 않다
+        <input type="radio" name="Q1"/> 매우 그렇지 않다
+        </p>
+        <br/>
+   <!-- Q2 -->
+        <p> Q2. KB국민은행 애플리케이션은 사용하기 편리했나요? </p>
+        <p> A2.
+        <input type="radio" name="Q2"/> 매우 그렇다
+        <input type="radio" name="Q2"/> 그렇다 
+        <input type="radio" name="Q2"/> 보통이다
+        <input type="radio" name="Q2"/> 그렇지 않다
+        <input type="radio" name="Q2"/> 매우 그렇지 않다
+        </p>
+        <br/>
+    <!-- Q3 -->
+        <p>Q3. 은행 업무를 보기 위해 주로 사용하는 수단을 선택해주세요 (중복 선택 가능)</p>
+        <p>A3. 
+        <input type="checkbox" name="Q3" /> ATM
+        <input type="checkbox" name="Q3" /> KB애플리케이션
+        <input type="checkbox" name="Q3" /> 전화 상담
+        <input type="checkbox" name="Q3" /> 영업점 방문
+        </p>
+        <br />
+    <!-- Q4 -->
+        <p>Q4. KB국민은행 애플리케이션 사용 시, 불편했던 기능이 있다면 적어주세요</p>
+        <p>A4. <input type="text" name="Q4" /></p>
+        <br />
+    <!-- Q5 -->
+        <p>Q5. KB국민은행 애플리케이션에 추가되었으면 하는 기능이 있다면 적어주세요</p>
+        <p>A5. <input type="text" name="Q5" /></p>
+        <br />
+    <!-- 건의사항 -->
+        <p>추가로 건의하고 싶은 사항이나, 칭찬할 부분이 있다면 자유롭게 적어주세요</p>
+        <p><textarea cols="80" rows="10" name="suggestion"></textarea></p>
+        <hr />
+    <!-- 작성자 정보 -->
+        <p>
+            이름 <input type="text" name="name" />&nbsp;&nbsp;
+            작성일자 <input type="datetime-local" name="localtime" /><br /><br />
+            <input type="submit" /> <input type="reset" />
+        </p>
+    </form>
+</body>
+</html>

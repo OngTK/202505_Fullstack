@@ -1,0 +1,44 @@
+.body{
+    border: solid 1px #eeeeee;
+
+    width: 400px;
+    margin: 0 auto;
+}
+
+.img{
+    margin : 0 auto;
+}
+.container{
+    border-top: solid 1px #eeeeee;
+    padding: 15px 15px;
+    line-height: 160%;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 20px;
+    padding : 10px 0px;
+}
+
+.price{
+    font-weight: 500;
+    font-size: 16px;
+    padding : 10px 0px;
+}
+
+.text{
+    font-size: 17px;
+    padding: 10px 0px;
+    line-height: 160%; 
+    margin-bottom: 10px;
+}
+
+.point{
+    color: #FFB400;
+    font-weight: bold;
+
+}
+
+/*Tip!! html의 계층관계가 있는 CSS의 경우
+.@@ > .@@ {} 으로 작성 가능!!
+*/
