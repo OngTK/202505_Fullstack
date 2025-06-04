@@ -1,0 +1,659 @@
+.popupSearch {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 45.4rem;
+}
+.popupSearch .searchForm {
+  overflow: hidden;
+  position: relative;
+  padding-right: 4.5rem;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+.popupSearch .searchForm label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.popupSearch .searchFormWrap {
+  display: block;
+  height: 4rem;
+}
+.popupSearch .searchForm .blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -0.1rem;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+.popupSearch .searchForm .inputSearch {
+  display: none;
+}
+.popupSearch .searchForm button {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+.popupSearch .searchForm button.searchReset {
+  background: url('/images/header/btn_searchDelete.svg') no-repeat center center;
+  display: none;
+  bottom: 1rem;
+  right: 4.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+.popupSearch .searchForm button.inputSearchBtn {
+  background: url('/images/header/btn_search.svg') no-repeat center center;
+  bottom: 0;
+  right: 0rem;
+  width: 5.2rem;
+  height: 100%;
+  text-indent: -9999rem;
+}
+.popupSearch .searchForm .searchAD {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: calc(100% - 6.5rem);
+  color: #666;
+  font-size: 1.5rem;
+  transform: translateY(-50%);
+  cursor: text;
+}
+.popupSearch .searchFormGap {
+  height: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popupSearch .searchInnerWrap {
+  display: none;
+  padding: 0 1.2rem 0;
+  background-color: white;
+  border-radius: 2.2rem;
+  border: 0.1rem solid #29292d1a;
+  box-shadow: 0 0.4rem 2rem 0 #00000012;
+  max-height: 52.2rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.popupSearch .searchInnerWrap.active {
+  display: block;
+}
+.popupSearch .searchInnerWrap::-webkit-scrollbar {
+  display: none;
+}
+.popupSearch .searchKeyword {
+  padding-top: 2.4rem;
+}
+.popupSearch .searchKeywordWrap {
+  display: none;
+}
+.popupSearch .searchKeywordWrap.active {
+  display: block;
+}
+.popupSearch .searchKeyword.hide {
+  display: none;
+}
+.popupSearch .searchKeyword.hide ~ .searchKeyword {
+  border-top: 0;
+}
+.popupSearch .searchKeyword .popularCityLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 0 0.8rem;
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity .popularCityName {
+  color: var(--gray-gray-9001-c-1-c-1-e, #1c1c1e);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 21px */
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 10rem;
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity1 img {
+  content: url('/images/header/commonHeader/popularCity/region_01.png');
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity2 img {
+  content: url('/images/header/commonHeader/popularCity/region_02.png');
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity3 img {
+  content: url('/images/header/commonHeader/popularCity/region_03.png');
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity4 img {
+  content: url('/images/header/commonHeader/popularCity/region_04.png');
+}
+.popupSearch .searchKeyword .popularCityLayout .popularCity5 img {
+  content: url('/images/header/commonHeader/popularCity/region_05.png');
+}
+.popupSearch .keywordHead {
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem 1.6rem;
+}
+.popupSearch .keywordHead h2 {
+  color: #000;
+  font-size: 1.7rem;
+}
+.popupSearch .keywordHead .btnRemoveAll {
+  color: #666;
+  font-size: 1.3rem;
+  margin-left: auto;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.popupSearch .keywordHead .baseDate {
+  color: #999;
+  font-size: 1.3rem;
+  margin-left: auto;
+}
+.popupSearch .recentList {
+}
+.popupSearch .recentList li {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: 3.5rem;
+  padding: 0 0 0 1.2rem;
+  margin: 0.6rem 0.4rem;
+  line-height: 3.5rem;
+  background-color: #e9f0fe;
+  border-radius: 3.2rem;
+}
+.popupSearch .recentList li a {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+  max-width: 12rem;
+  color: var(--int-blue500);
+  font-size: 1.5rem;
+}
+.popupSearch .recentList .keywordDelete {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 1.2rem 1.2rem 1.2rem 0.8rem;
+  background: url('/images/header/icon_keywordDelete.png') no-repeat center center;
+  background-size: 0.8rem;
+  box-sizing: content-box;
+  text-indent: -9999rem;
+  cursor: pointer;
+}
+.popupSearch .popularList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  height: 16.2rem;
+  padding: 0 0.8rem 2.8rem;
+  counter-reset: num;
+}
+.popupSearch .popularList li {
+  display: flex;
+  position: relative;
+  width: 18rem;
+  height: 2.6rem;
+  margin-bottom: 0.8rem;
+  line-height: 2.6rem;
+}
+.popupSearch .popularList li:nth-child(5n) {
+  margin-bottom: 0;
+}
+.popupSearch .popularList li::before {
+  content: counter(num);
+  counter-increment: num;
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.7rem;
+}
+.popupSearch .popularList li:nth-child(-n + 3)::before {
+  font-weight: bold;
+  color: #ef3e43;
+}
+.popupSearch .popularList .keyword {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 15rem;
+  padding-left: 2.8rem;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.popupSearch .popularList .state {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  margin-left: auto;
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.popupSearch .popularList .state span {
+  display: inline-block;
+  min-width: 1rem;
+  margin-left: 0.2rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.popupSearch .popularList .rank {
+  display: inline-block;
+  font-size: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.popupSearch .popularList .rank.up {
+  background-image: url('/images/header/icon_up.svg');
+}
+.popupSearch .popularList .rank.down {
+  background-image: url('/images/header/icon_down.svg');
+}
+.popupSearch .popularList .rank.new {
+  background-image: url('/images/header/icon_new.svg');
+}
+.popupSearch .popularList .rank.up ~ span {
+  color: #ff322e;
+}
+.popupSearch .popularList .rank.down ~ span {
+  color: #999;
+}
+.popupSearch .popularList .rank.new {
+  width: auto;
+  height: auto;
+  background: none;
+}
+.popupSearch .popularList .rank.new::before {
+  content: 'NEW';
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ff322e;
+}
+.popupSearch .popularList .rank.keep {
+  background: none;
+  margin-right: 0.4rem;
+}
+.popupSearch .popularList .rank.keep::before {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 0.2rem;
+  margin: 0.8rem 0 0.2rem auto;
+  background: #999;
+}
+.popupSearch .autocompleteWrap {
+  display: none;
+}
+.popupSearch .autocompleteWrap.active {
+  display: block;
+}
+.popupSearch .autocompleteWrap.active li:hover {
+  background-color: #f7f7f8;
+}
+.popupSearch .autocompleteWrap .keywordBox {
+  font-size: 0;
+  white-space: nowrap;
+  max-height: 52.2rem;
+  overflow-y: auto;
+  padding: 1.2rem 0;
+}
+.popupSearch .autocompleteWrap .keywordBox::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.popupSearch .autocompleteWrap .keywordBox ul li {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: flex;
+  height: 6rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #000;
+  box-sizing: border-box;
+  border-radius: 1.2rem;
+}
+.popupSearch .autocompleteWrap .keywordBox ul li a {
+  white-space: normal;
+  word-break: break-all;
+  color: #000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.popupSearch .autocompleteWrap .keywordBox ul li a strong {
+  font-weight: bold;
+  color: var(--int-blue500);
+}
+.popupSearch .autocompleteWrap .keywordBox ul li a .subText {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: #999;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList {
+  padding: 0 0 0;
+  vertical-align: top;
+  min-width: 50%;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent {
+  padding: 1rem;
+  vertical-align: top;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent a div.postDeco {
+  margin-left: auto;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .shortcutIcon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  background-size: 2rem 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .preDeco {
+  width: 1.2rem;
+  margin-right: 1.2rem;
+  background-size: 1.2rem 1.2rem;
+  background-image: url('/images/header/commonHeader/icon_shortcut_pre_deco.svg');
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .postDeco {
+  width: 1.6rem;
+  right: 0;
+  background-size: 1.6rem 1.6rem;
+  background-image: url('/images/header/commonHeader/icon_right_arrow.svg');
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .cityIcon {
+  background-image: url('/images/header/commonHeader/icon_pin.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .cityIcon img {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .tnaIcon {
+  background-image: url('/images/header/commonHeader/icon_tna.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .accommIcon {
+  background-image: url('/images/header/commonHeader/icon_accomm.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .pkgIcon {
+  background-image: url('/images/header/commonHeader/icon_pkg.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .airplaneIcon {
+  background-image: url('/images/header/commonHeader/icon_plane.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .rentcarIcon {
+  background-image: url('/images/header/commonHeader/icon_rentcar.svg');
+  background-color: #277cff1a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .ticketIcon {
+  background-image: url('/images/header/commonHeader/icon_ticket.svg');
+  background-color: #8e43e71a;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .shortcutInfo {
+  padding-left: 0px;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .shortcutInfo .cityName {
+  font-size: 1.5rem;
+  color: #29292d;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .shortcutInfo .cityName strong {
+  color: #29292d;
+}
+.popupSearch .autocompleteWrap .keywordBox .shortcutList .shortContent .shortcutInfo .countryName {
+  font-size: 1.2rem;
+  color: #999;
+}
+.popupSearch .autocompleteWrap .keywordBox .keywordList {
+  padding: 0;
+  vertical-align: top;
+  min-width: 50%;
+}
+.popupSearch .autocompleteWrap .keywordBox .keywordList .keywordIcon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  background-image: url('/images/header/commonHeader/icon_kw_search.svg');
+  background-size: 2rem 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f7f7f8;
+}
+.popupSearch .autocompleteWrap .keywordBox .keywordList .keywordContent {
+  padding-left: 0px;
+}
+.popupSearch .autocompleteWrap .searchItems {
+  min-width: 50%;
+  min-height: 100%;
+  padding-top: 2rem;
+  border-left: 0.1rem solid #e9edf3;
+}
+.popupSearch .autocompleteWrap .searchItems h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #000;
+}
+.popupSearch .autocompleteWrap .searchItems h4 strong {
+  vertical-align: middle;
+}
+.popupSearch .autocompleteWrap .searchItems h4 strong::after {
+  content: 'AD';
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  vertical-align: bottom;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.3);
+  background: #f3f3f3;
+}
+.popupSearch .autocompleteWrap .searchItems .tooltip {
+  position: relative;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  color: #999;
+}
+.popupSearch .autocompleteWrap .searchItems .tooltip .tipLaunch {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: top;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 0.1rem solid rgba(17, 17, 17, 0.2);
+  color: rgba(17, 17, 17, 0.4);
+  border-radius: 100%;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.popupSearch .autocompleteWrap .searchItems .tooltip .tipLaunch:hover ~ .tipMessage {
+  display: block;
+}
+.popupSearch .autocompleteWrap .searchItems .tooltip .tipMessage {
+  display: none;
+  position: absolute;
+  top: 2.3rem;
+  left: -21rem;
+  width: 22.7rem;
+  padding: 1.2rem 1rem;
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.3rem;
+  white-space: normal;
+  text-align: left;
+  color: #999;
+  box-sizing: border-box;
+}
+.popupSearch .autocompleteWrap .searchItems .items {
+  padding: 2rem 0 0 2.6rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items ul li + li {
+  margin-top: 3rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items ul li a {
+  display: flex;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemImage {
+  width: 6.5rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemImage img {
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta {
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemName {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 3rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #111;
+  white-space: normal;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemPrice {
+  margin-top: 0.7rem;
+  font-size: 0;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemPrice * {
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: #000;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemPrice em {
+  font-size: 1.8rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemPrice .currency {
+  font-size: 1.5rem;
+}
+.popupSearch .autocompleteWrap .searchItems .items .itemMeta .itemPrice .priceMore {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+.popupSearch.active {
+  display: block;
+  background: #fff;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popupSearch.active .searchForm {
+  height: auto;
+  border-radius: 5rem;
+  background-color: #f7f7f8;
+  top: -0.1rem;
+}
+.popupSearch.active .searchFormWrap {
+  height: 5.4rem;
+}
+.popupSearch.active .searchForm .inputSearch {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-left: 2rem;
+  color: #000;
+  font-size: 1.7rem;
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+}
+.popupSearch.active .searchForm .inputSearch::-ms-clear {
+  display: none;
+}
+.popupSearch.active .searchForm .inputSearch:-ms-input-placeholder {
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.popupSearch.active .searchForm .inputSearch::placeholder {
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.popupSearch.active .searchForm .inputSearch:valid {
+  padding-right: 3rem;
+}
+.popupSearch.active .searchForm .inputSearch:valid + .searchReset {
+  display: block;
+}
+.popupSearch.active .searchForm .inputSearchBtn {
+  bottom: 0rem;
+}
+.popupSearch.active .searchForm .searchAD {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .popupSearch.active {
+    display: none;
+  }
+}
