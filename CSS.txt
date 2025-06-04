@@ -150,3 +150,18 @@ a{                                  /*a(하이퍼링크)의 기본값 초기화*
     color: black;
 }
 li{list-style: none;}               /*리스트의 글머리 삭제*/
+
+[ position ]
+    relative : 상대 위치, 본래 지정된 구역에서 시작
+        <위치속성>
+            top : 기존 위치에서 상(-), 하(+)로 px 단위로 이동
+            bottom
+            left : 기존위치에서 좌(-), 우(+)로 px 단위로 이동
+            right
+    absolute : 절대위치
+               부모(상위) 요소의 위치를 시작점으로 하여 이동
+               ※ 상위 요소 중 가장 가까운 relative 상위 요소 기준으로 배치
+    static : 정적(default) 코드 작성 순으로 배치
+             위치속성(top/left/bottom/right) 사용 불가
+    fixed : 고정위치
+            디바이스(화면)에 위치 고정*/

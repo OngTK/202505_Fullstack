@@ -34,3 +34,11 @@
     - repository : 코드들을 저장하는 저장소, 주로 프로젝트 단위
     - commit : 코드 수정을 로컬에서 완료, 온라인(웹 git hub)에 저장X
     - push : 로컬에 저장된 코드를 git hub에 업로드
+
+[ 기존 저장소 가저오기 ]
+    1. File > New windows
+    2. 가운데 메뉴(시작) 아래 [ Git 리포지토리 복제 / ]
+    or Source Control > Clone repository
+        * PC에 Git 설치 필수
+        * VSCODE와 Git 연동 로그인
+    3. 복제할 저장소 이름 선택/검색하여 [복제]
