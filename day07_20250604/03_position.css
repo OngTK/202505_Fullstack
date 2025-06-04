@@ -1,0 +1,47 @@
+#parent {
+    background-color: red;
+    width: 700px;
+    height: 450px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.class {
+    background-color: yellow;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; /*가장 가까운 상위 요소의 relative 속성 값을 가진 요소를 기준*/
+}
+
+.class1 {
+    left: 300px;
+    top: 50px;
+}
+.class2 {
+    left: 150px;
+    top: 120px;
+}
+.class3 {
+    left: 450px;
+    top: 120px;
+}
+.class4 {
+    left: 150px;
+    bottom : 120px;
+}
+.class5 {
+    left: 450px;
+    bottom: 120px;
+}
+.class6 {
+    left: 300px;
+    bottom: 50px;
+}

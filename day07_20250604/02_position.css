@@ -1,0 +1,33 @@
+/*1. 팝업 CSS*/
+
+#popup{
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+    position: fixed; /*화면 위치 고정*/
+    
+    bottom: 50px;
+    right: 10px;
+    z-index : 2;
+}
+
+/*Position 사용시 다른 요소와 겹치는 경우 발생 
+    >> [ z-index ]로 순서 적용
+    >> z-index의 값이 클 수록 위에 표시
+    >> 최대 9999
+
+/* 2. 헤더메뉴 CSS */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    position: sticky;
+    top : 10px;
+    z-index: 2;
+}
+
+#header > ul {
+    display: flex;
+    
+}

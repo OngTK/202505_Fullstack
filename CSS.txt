@@ -165,3 +165,9 @@ li{list-style: none;}               /*리스트의 글머리 삭제*/
              위치속성(top/left/bottom/right) 사용 불가
     fixed : 고정위치
             디바이스(화면)에 위치 고정*/
+            ex. 팝업 광고창
+    sticky : 해당 요소가 화면에서 벗어났을 때(스크롤)부터 위치 고정
+             ex. 상단 메뉴 고정
+    z-index : position 사용에 따라 화면에 겹치는 경우 발생 시
+              z-index의 값이 클수록 위에 표시 
+              최대 9999
