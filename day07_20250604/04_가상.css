@@ -1,0 +1,67 @@
+/*
+가상 클래스
+    - 선택자 : 가상클래스명 { 속성명: 속성값 ;}
+    - 가상 클래스 종류
+        1. :hover : 해당 선택자의 마우스를 올렸을 때, CSS를 적용 (이용多)
+        2. :visited : 해당 링크에 방문한 적이 있을 때, ...
+        3. :active : 해당 선택자에 마우스를 클릭했을 때, ...
+*/
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* hover 선택자 */
+a:hover{ 
+    color: red;
+    text-decoration: underline;
+}
+
+/* visited 선택자 */
+a:visited{
+    color: orange;
+}
+
+/* active 선택자 */
+a:active{
+    color : blue;    
+}
+
+/*
+가상요소
+    - 선택자::가상요소명 {content : '가상요소';}
+    - 가상 요소 종류
+        1. ::before 
+        2. ::after
+    - '장식용 이미지' or '기호' 등을 삽입할 때 사용
+*/
+
+/**/
+.box1::before {
+    content: "[가상요소 시작점]";
+    font-weight: bold;
+}
+
+.box1::after{
+    content: "[가상요소 끝 점]";
+}
+
+.box2 {
+    list-style-type: none;
+}
+
+/*글머리 바꾸기*/
+.box2 > li::before {
+    content : "※";
+    color: green;
+} 
+
+/* 가상 이미지 */
+.box3::before{
+    content: url('../day06_20250602/실습07/img/bread1.png');
+}
+/* 이모지 */
+.box3::after{
+    content: "🔄"; /* win + ;*/ 
+}
