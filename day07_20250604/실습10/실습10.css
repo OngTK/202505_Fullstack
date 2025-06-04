@@ -1,0 +1,57 @@
+* { margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #737373;
+}
+
+#wrap{
+    display: contents;
+}
+
+/*=========== 메인 ===========*/
+#main{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#mainImg > img{
+    width: 550px;
+}
+
+#main_right {
+    width: 350px;
+}
+
+
+/*=========== 푸터 ===========*/
+
+#footer { 
+    width: 900px;
+        position: sticky;
+    bottom: 0px;
+    margin: 0 auto;
+    margin-bottom: 52px;
+}
+
+#footer > ul{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer > ul > li{
+    color: #737373;
+    font-size: 11px;
+    margin: 0px 7px 11px 7px;
+}
