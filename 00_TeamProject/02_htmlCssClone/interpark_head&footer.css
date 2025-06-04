@@ -1,0 +1,106 @@
+/* =============== 공통 =============== */
+* {
+    margin: 0px;
+    padding: 0px;
+    /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
+    box-sizing: border-box;
+    /*선, 여백 포함 계산될 수 있도록*/
+    /*border: 1px solid red;*/
+    /*필요에 따라 사용, 모든 요소에 테두리*/
+    font-size: 12px;
+}
+
+a {
+    /*a(하이퍼링크)의 기본값 초기화*/
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/*리스트의 글머리 삭제*/
+
+/* =============== Wrap =============== */
+#wrap {
+}
+
+/* =============== header =============== */
+#header{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#top_header {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.head_logo {
+    margin-right: 20px;
+    width: 130px;
+}
+
+#top_header>.head_search {
+    width: 355px;
+    height: 44px;
+    border: 1px solid #dfdfe0;
+    border-radius: 25px;
+    margin: 13px 0px;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_search>form>input {
+    font-size: 16px;
+    margin-left: 25px;
+    color: #a1a3a1;
+    border: none;
+}
+
+.head_search>img {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+.header_ad {
+    width: 180px;
+}
+
+#top_header>ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 320px;
+}
+
+#top_header>ul>li {
+    display: flex;
+    align-items: center;
+}
+
+#top_header span {
+    padding: 0px 10px;
+    color: #949496;
+    font-size: 10px;
+}
+
+/* =============== mian =============== */
+
+
+
+/* =============== footer =============== */
+
+#footer {
+}
+
+#footer_menu{
+    width: 1280px;
+    margin: 0 auto;
+}

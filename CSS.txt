@@ -1,3 +1,16 @@
+/*============공통 CSS 설정============*/
+*{    
+    margin: 0px;                    
+    padding: 0px;                   /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
+    box-sizing: border-box;         /*선, 여백 포함 계산될 수 있도록*/
+    /*border: 1px solid red;*/      /*필요에 따라 사용, 모든 요소에 테두리*/
+}
+a{                                  /*a(하이퍼링크)의 기본값 초기화*/
+    text-decoration: none;
+    color: black;
+}
+li{list-style: none;}               /*리스트의 글머리 삭제*/
+/*=========================================*/
 HTML : 마크업 언어
 JS : 객체지향 언어 > 동작/이벤트
 [ CSS ]
@@ -137,19 +150,6 @@ JS : 객체지향 언어 > 동작/이벤트
             : 상단 정렬
         flex-end
             : 하단 정렬
-
-/*============공통 CSS 설정============*/
-*{    
-    margin: 0px;                    
-    padding: 0px;                   /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
-    box-sizing: border-box;         /*선, 여백 포함 계산될 수 있도록*/
-    /*border: 1px solid red;*/      /*필요에 따라 사용, 모든 요소에 테두리*/
-}
-a{                                  /*a(하이퍼링크)의 기본값 초기화*/
-    text-decoration: none;
-    color: black;
-}
-li{list-style: none;}               /*리스트의 글머리 삭제*/
 
 [ position ]
     relative : 상대 위치, 본래 지정된 구역에서 시작
