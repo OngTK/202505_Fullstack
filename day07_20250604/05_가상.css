@@ -1,0 +1,93 @@
+li {
+    list-style-type: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*============= 1. 경계선 CSS =============*/
+
+.divider {
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: gray;
+    margin: 0px 10px;
+}
+
+/*============= 2. 드롭다운 메뉴1 CSS =============*/
+#header {
+    background-color: beige;
+}
+
+#header>ul {
+    display: flex;
+    justify-content: center;
+}
+
+#header>ul>li {
+    padding: 20px;
+    position: relative;
+    /*중요*/
+}
+
+#header .subMenu {
+    position: absolute;
+    /*중요*/
+    top: 50px;
+    left: 0px;
+    display: none;
+
+    background-color: beige;
+    padding: 10px;
+    border: 2px solid white;
+    line-height: 160%;
+
+}
+
+/* hover : 메뉴 hover시 subMenu 열기
+*/
+
+#header>ul>.menu:hover .subMenu {
+    /* hover 했을 때 submenu가 display되도록 동시 적용*/
+    display: block;
+}
+
+/*============= 3. 드롭다운 메뉴2 CSS =============*/
+#header2 {
+    background-color: skyblue;
+    position: relative;
+    /*전체 메뉴펼치기를 만들것이므로 ul이 아닌 header에 relative*/
+}
+
+#header2>ul {
+    display: flex;
+    justify-content: center;
+}
+
+#header2>ul>li {
+    padding: 10px;
+}
+
+#header2 .subMenu2 {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background-color: skyblue;
+    border: 1px solid white;
+
+    display: none;
+}
+
+#header2 > ul:hover .subMenu2{
+    display: block;
+}
