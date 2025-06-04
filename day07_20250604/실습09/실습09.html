@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>조군샵_실습09_레이아웃</title>
+    <link rel='stylesheet' href='실습09.css'>
+</head>
+
+<body>
+    <!-- 전체 레이아웃-->
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <div id="header">
+            <!-- 상단 메뉴 -->
+            <ul id="topMenu">
+                <li><a href="#">LOGIN</a> <span> | </span></li>
+                <li><a href="#">JOIN</a> <span> | </span></li>
+                <li><a href="#">MYPAGE</a> <span> | </span></li>
+                <li><a href="#">ORDER</a> <span> | </span></li>
+                <li><a href="#">CART(0)</a> <span> | </span></li>
+                <li><a href="#">COMMUNITY</a> <span> | </span></li>
+                <li><a href="#"> <img src="img/top_menu_icon.png" /></a></li>
+            </ul>
+
+            <!--본메뉴-->
+            <ul id="mainMenu">
+                <!-- 로고 구역-->
+                <div>
+                    <a href="#"><img src="img/logo.png" class="logo" /></a>
+                </div>
+
+                <!--메뉴 구역-->
+                <ul>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#"><span class="new">new~20%</span></a></li>
+                    <li>
+                        <a href="#">MADE</a>
+                        <ul class="subMenu">
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">바지</a></li>
+                            <li><a href="#">아우터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">BIG SIZE</a>
+                        <ul class="subMenu">
+                            <li><a href="#">티2</a></li>
+                            <li><a href="#">셔츠2</a></li>
+                            <li><a href="#">바지2</a></li>
+                            <li><a href="#">아우터2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">SHIRTS</a></li>
+                    <li><a href="#">PANTS</a></li>
+                    <li><a href="#">OUTER</a></li>
+                    <li><a href="#">SHOES&BAG</a></li>
+                    <li><a href="#">ACC</a></li>
+                    <li><a href="#">당일배송</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">1+1</a></li>
+                </ul>
+
+                <!-- 검색 구역-->
+                <div id="searchBox">
+                    <input />
+                    <img src="img/search_icon.png" />
+                </div>
+            </ul>
+        </div>
+
+        <!-- 메인 이미지-->
+        <img id="mainImg" src="img/main_img.jpg" />
+
+        <!-- 본문 -->
+        <div id="content">
+            <h3 class="title">HOT ITEM</h3>
+            <div class="comment">조군이 추천하는 핫 아이템입니다.</div>
+
+            <!-- 제품 목록 / 1번 제품-->
+            <div id="items">
+                <!-- 제품 1개 -->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods1.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 2번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods2.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 3번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods3.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 4번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods4.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 5번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods5.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 6번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods6.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 7번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods7.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+
+                <!-- 8번 제품-->
+                <div class="item">
+                    <!-- 1.제품 이미지 -->
+                    <img class="itemImg" src="img/goods/goods8.gif" />
+                    <!-- 2.제품 정보 -->
+                    <div class="itemInfo">
+                        <!-- 2-1. 제품 칼라/ 리뷰 -->
+                        <div class="colorReview">
+                            <span class="color">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: white;"></span>
+                            </span>
+                            <span class="review">
+                                (리뷰 : 379)
+                            </span>
+                        </div>
+                        <!-- 2.2. 제품 이름, 옵션 -->
+                        <div class="itemName">
+                            <div class="name">[1+1]핏좋은 프레쉬 탄탄 반팔티</div>
+                            <div class="size">M~2XL(95~115)</div>
+                            <div class="option">[SEMI-OVER FIT]</div>
+                        </div>
+                        <!-- 2.3. 제품 가격, 할인율 -->
+                        <div class="itemPrice">
+                            <div class="price">42,000원</div>
+                            <div class="discPrice">36,900원</div>
+                            <div class="disc">12%</div>
+                        </div>
+                        <!-- 2.4. 제품 이벤트 아이콘 -->
+                        <div class="itemIcon">
+                            <img src="img/best.jpg" />
+                            <img src="img/rush_of_order.jpg" />
+                        </div>
+                    </div>
+                </div> <!--제품 1개-->
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div id="footer">
+            <div id="footerTop">
+                <div id="footerContent">
+                    <div>
+                        <h3>CS CENTER</h3>
+                        <h4>카카오톡/네이버톡</h4> MON-FRI : 10:00 ~ 17:00 <br/>
+                        LUNCH : 13:00 ~ 14:00 <br/> SAT, SUN, HOLIDAY OFF <br/><br/>
+                        대표번호 1599-3120 (유선상담 불가)
+                    </div>
+                    <div>
+                        <h3>DELIVERY</h3>
+                        <div>반품주소</div>
+                        <br/>
+                        우체국 택배 이용 시 <br/>
+                        경기도 부천시 소향로 103(중1동 1169-2)<br/>
+                        부천우체국 (조군샵)<br/><br/>
+                        타 택배사 이용 시 <br/>
+                        경기도 부천시 길주로347(중동 1086-2)<br/>
+                        JG빌딩 5층 물류센터
+                    </div>
+                    <div>
+                        <h3>BANK ACCOUNT</h3>
+                        예금주 : (주)조군<br/><br/>
+                        우리 1005-601-776813<br/>
+                        농협 351-0286-8129-53<br/>
+                        기업 114-153764-04-011<br/>
+                        국민 594401-04-027446<br/>
+                        신한 140-009-662523
+                    </div>
+                    <div>
+                        <h3>MENU</h3>
+                        <ul>
+                            <li><a href="#">홈</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">쇼핑몰 이용안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footerBottom">
+                (주) 조군 | 대표 : 조안익 | 사업자 등록 번호 : 130-86-56658 |
+                통신판매업 신고 : 제2011-경기부천-126호 | 개인정보 보호 책임자 : 조안나 [사업자정보확인] <br/>
+                E-mail : jogunshop@naver.com | 주소 : 경기도 부천시 원미구 중동 1086-2 6층 조군샵 도로명 : 경기도 부천시 길주로 347(중동) 6층 조군샵
+                <br/> ⓒ 2006. jogun All rights reserved.
+            </div>
+        </div>
+
+        <!-- 팝업 -->
+        <div id="popup">
+            <ul>
+                <li>
+                    <img src="img/popup_icons/recent.png"/>
+                    <span class="popupSub">최근본상품</span>
+                </li>
+                <li>
+                    <img src="img/popup_icons/good.png"/>
+                    <span class="popupSub">관심상품</span>
+                </li>
+                                <li>
+                    <img src="img/popup_icons/check.png"/>
+                    <span class="popupSub">출석체크</span>
+                </li>
+                <li><img src="img/popup_icons/kakao.png"/></li>
+                <li><img src="img/popup_icons/internet.png"/></li>
+                <li><img src="img/popup_icons/up.png"/></li>
+                <li><img src="img/popup_icons/down.png"/></li>
+            </ul>
+        </div>
+
+        <!-- 전체 레이아웃 end-->
+    </div>
+</body>
+
+</html>
