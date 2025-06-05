@@ -153,9 +153,21 @@ li {
 
 /* =============== footer =============== */
 
-#footer {}
+#footer {
+    background-color: #ffffff;
+}
+
+#footer > div:nth-child(1) {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
 
 #footer_menu {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#footer_info {
     width: 1280px;
     margin: 0 auto;
 }
