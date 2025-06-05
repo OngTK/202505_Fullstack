@@ -33,6 +33,14 @@ a{
     width: 350px;
 }
 
+.img_container {
+    width: 175px;
+    height: 50px;
+    overflow: hidden;
+    background-image: url("./insta_logo.png");
+    background-position: 0px -50px;
+}
+
 
 /*=========== 푸터 ===========*/
 

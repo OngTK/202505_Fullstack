@@ -1,0 +1,33 @@
+.basicTable{
+    width: 500px;
+    border : 1px solid red;
+}
+
+.basicTable th, .basicTable td {
+    border: 1px solid red;
+    padding: 5px;    
+}
+
+/*형제 선택자 : 자식 선택자가 다수일 때,
+
+부모선택자 자식선택자명:nth-child(순번)*/
+
+.basicTable td:nth-child(1){background-color: aqua;}
+/*table의 td의 자식 중 1번 자식에게 속성입력!*/
+
+.basicTable td:nth-child(3),
+.basicTable td:nth-child(4),
+.basicTable td:nth-child(5),
+.basicTable td:nth-child(6) {
+    text-align: right;
+}
+
+/* 속성 선택자 : 선택자가 지정된 속성명을 가질 때 사용
+
+선택자[HTML속성명]    */
+
+.basicTable td[colspan]{text-align: center;}
+
+.basicTable  tr:nth-child(5) > td[colspan]{
+    background-color: beige;
+}
