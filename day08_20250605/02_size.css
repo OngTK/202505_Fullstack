@@ -1,0 +1,41 @@
+/* 1. size : width, height*/
+
+.box{
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.widthHeight{
+    width: 200px;
+    height: 200px;
+}
+
+/*최소 가로 사이즈 600px
+최대는 없으므로 화면 가로 사이즈 600px 이상에서는 100%*/
+
+.minWidth { 
+    min-width: 600px;
+}
+
+/*최대 가로 사이즈 600px
+최소는 없으므로 화면 가로 사이즈가 600px 이하에서는 100%*/
+
+.maxWidth {
+    max-width: 600px;
+}
+
+/*최소 세로 사이즈 100px
+내용이 적으면 세로 100px, 많으면 세로로 늘어남 */
+.minHeight{
+    width: 200px;
+    min-height: 100px;
+}
+
+/*최대 세로 사이즈 
+내용이 적으면 세로 100px 많으면 구역을 벗어남*/
+.maxHeight{
+    width: 200px;
+    max-height: 100px;
+    overflow: hidden;
+}

@@ -1,4 +1,5 @@
-* { margin: 0px;
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     border: 1px solid red;
@@ -8,24 +9,26 @@ li {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #737373;
 }
 
-#wrap{
+#wrap {
     display: contents;
+    width: 900px;
+    position: relative;
 }
 
 /*=========== 메인 ===========*/
-#main{
+#main {
     display: flex;
     justify-content: space-between;
-    width: 900px;
+
     margin: 0 auto;
 }
 
-#mainImg > img{
+#mainImg>img {
     width: 550px;
 }
 
@@ -44,21 +47,18 @@ a{
 
 /*=========== 푸터 ===========*/
 
-#footer { 
-    width: 900px;
-        position: sticky;
+#footer {
+    position: absolute;
     bottom: 0px;
-    margin: 0 auto;
-    margin-bottom: 52px;
+    padding-bottom: 50px;
 }
 
-#footer > ul{
-    
+#footer>ul {
     display: flex;
     justify-content: space-between;
 }
 
-#footer > ul > li{
+#footer>ul>li {
     color: #737373;
     font-size: 11px;
     margin: 0px 7px 11px 7px;
