@@ -1,0 +1,198 @@
+/*============공통 CSS 설정============*/
+*{    
+    margin: 0px;                    
+    padding: 0px;                   /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
+    box-sizing: border-box;         /*선, 여백 포함 계산될 수 있도록*/
+    /*border: 1px solid #eeeeee;*/        /*필요에 따라 사용, 모든 요소에 테두리*/
+}
+a{                                  /*a(하이퍼링크)의 기본값 초기화*/
+    text-decoration: none;
+    color: black;
+}
+li{list-style: none;}               /*리스트의 글머리 삭제*/
+
+/*============ 삭제 ============*/
+#example{
+    width: 1280px;
+}
+
+/*============ 헤더 ============*/
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1280px;
+    margin : 15px auto;
+}
+
+.top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-menu > li{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 30px 100px; 
+}
+
+
+/*============ 메인 이미지 ============*/
+#main_img > img{
+    width: 100%;
+}
+
+/*============ 메인 ============*/
+#main {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+    /*============ 사이드 바 ============*/
+  
+.side_bar{
+    width: 250px;
+}
+.title{
+    background-color: #0CA9A2;
+    color: white; 
+    padding: 10px;
+    font-size: 20px;
+}
+
+.coment{
+    padding: 5px;
+    line-height: 160%;
+}
+
+.search_input{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+.search_btn{
+    padding: 4px 8px;
+}
+
+.searchbox{
+    margin: 10px 0px;
+}
+
+.sub_title{
+    border-top: 2px solid #070707;
+    border-bottom: 2px solid #eeeeee;
+    padding: 10px 5px;
+    margin-top: 30px;
+    font-size: 18px;
+    padding : 10px
+}
+
+.sub_menu > li {
+    padding : 5px 10px;
+}
+
+    /*============ content 박스 ============*/
+.content{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.content > .left_box {
+    width: 490px;
+}
+
+.content > .right_box {
+    width: 490px;
+}
+
+.content_title{
+    border-bottom: 2px solid #070707;
+    font-size: 20px;
+    padding-bottom : 10px;
+    margin-bottom: 10px;
+}
+
+.board{
+    margin-bottom: 30px;
+}
+
+.board > li {
+    display: flex;
+    justify-content: space-between;
+    padding : 8px 0px;
+}
+
+.product_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product_list > ul {
+    width: 240px;
+    margin-bottom: 30px ;
+}
+
+/*table로 구현
+.table1 {
+    padding : 10px 0px ;
+    line-height: 200%;
+}
+
+.td1{
+    width: 400px;
+}
+.td2{
+    width: 80px;
+    text-align: right;
+}
+
+.td3{
+    width: 240px;
+    padding : 10px 0px;
+}
+.td4{
+    width: 240px;
+}
+    */
+
+/*============ 푸터 ============*/
+
+#footer{
+    background-color: #05344e;
+    color: white;
+}
+
+#footer_txt{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.footer_top{
+    display: flex;
+    padding-top: 10px;
+}
+
+.footer_top > li > a{
+    color: white;
+    margin-right: 50px;
+}
+
+.info{
+    padding: 30px 0px; 
+    display: flex;
+    justify-content: space-between;
+    line-height: 160%;
+}
+.info > div > h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
