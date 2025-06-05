@@ -205,14 +205,14 @@ JS : 객체지향 언어 > 동작/이벤트
 
 
 [ 이미지 ]
-    [object-fit ]
+    [ object-fit ]
         1. fill; 비율 무시하고 구역요소 채움(default)
         2. contain; 비율 유지하고 구역안에 모두 표시,
                     원본 이미지 사이즈에 따라 공백 발생
         3. cover; 비율 유지하고 요소 채움
                     비율에 따라 일부 잘림이 발생
         4. none; 원본 사이즈 그대로, 이미지 중앙의 박스 사이즈만큼만 보임
-    [object-positon] : 이미지의 위치 이동
+    [ object-positon] : 이미지의 위치 이동
         cover로 이미지의 잘린 영역이 있을 때 이동시키는 방법
         object-fit: cover;
         object-position: left/right/top/bottom; 
@@ -220,3 +220,12 @@ JS : 객체지향 언어 > 동작/이벤트
         contain으로 구역 내 공백이 있을 때 이동시키는 방법
         object-fit: contain;
         object-position: left/right/top/bottom ;
+    [rgba] 투명도가 포함된 색상
+        background-color: rgba(red, greed, blue, alpha(투명도 0~1));
+    [ background-repeat ]
+        if 빈공간이 발생하면 repeat해서 채움
+            1. repeat; (default)
+            2. no-repeat; 반복안함
+    [ background-attachment : fixed]
+        배경이 그대로 있는 상태로 스크롤해서 볼 수 있게
+        페러랙스 효과

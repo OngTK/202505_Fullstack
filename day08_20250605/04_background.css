@@ -1,0 +1,66 @@
+/* background */
+
+/*
+rgba(red, green, blue, 투명도"0~1")
+*/
+.box {
+    border: 1px solid red;
+    padding: 30px;
+}
+
+.box p {
+    background-color: white;
+    padding: 5px;
+    border: 1px solid white;
+    width: 200px;
+}
+
+.color1 {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.img1 {
+    background-image: url("포레스텔라\ 배경.jpg");
+    background-position: center;
+}
+
+/*
+background-repeat : if 빈공간이 발생하면 repeat해서 채움
+1. repeat; (default)
+2. no-repeat; 반복안함
+*/
+
+.img2 {
+    background-image: url(pattern.jpg);
+    background-repeat: no-repeat;
+}
+
+.img3 {
+    background-image: url(아이콘.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: black;
+}
+
+.img4 {
+    background-image: url("포레스텔라\ 배경.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /*배경이 그대로 있는 상태로 스크롤해서 볼 수 있게*/
+}
+
+/*fixed : 패러렉스 효과*/
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+
+    background-image: url("icon_naver.png");
+    background-repeat: no-repeat;
+    background-position: 32px -601px;
+
+}
