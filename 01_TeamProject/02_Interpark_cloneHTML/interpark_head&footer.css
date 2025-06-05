@@ -2,40 +2,41 @@
 * {
     margin: 0px;
     padding: 0px;
-    /*margin, padding의 여백을 초기화>>li 등의 기본 여백 삭제를 위해*/
     box-sizing: border-box;
-    /*선, 여백 포함 계산될 수 있도록*/
     /*border: 1px solid red;*/
-    /*필요에 따라 사용, 모든 요소에 테두리*/
     font-size: 12px;
 }
 
 a {
-    /*a(하이퍼링크)의 기본값 초기화*/
     text-decoration: none;
     color: black;
+    align-items: center;
+    justify-content: center
 }
 
 li {
     list-style: none;
 }
 
-/*리스트의 글머리 삭제*/
-
 /* =============== Wrap =============== */
-#wrap {
-}
+#wrap {}
 
 /* =============== header =============== */
-#header{
+
+#header_area {
+    border-bottom: 1px solid #eeeeee;
+}
+
+#header {
     width: 1280px;
     margin: 0 auto;
 }
 
+/*========= top-header 메뉴 =========*/
 #top_header {
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .head_logo {
@@ -87,9 +88,64 @@ li {
 
 #top_header span {
     padding: 0px 10px;
-    color: #949496;
+    color: #c4c4c4;
     font-size: 10px;
 }
+
+/*========= bottom-header 메뉴 =========*/
+#bottom_menu {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom_menu>.home_menu {
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom_menu>.home_menu li {
+    border-bottom: 2px solid black;
+    padding: 0px 12px 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom_menu>.home_menu a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#bottom_menu>.my_menu {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+}
+
+#bottom_menu>.my_menu span {
+    font-weight: bold;
+    display: inline-block;
+}
+
+#bottom_menu>.my_menu>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px
+}
+
+#bottom_menu>.my_menu img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#bottom_menu>.my_menu li:nth-child(2) img {
+    margin-left: 20p;
+}
+
 
 /* =============== mian =============== */
 
@@ -97,10 +153,9 @@ li {
 
 /* =============== footer =============== */
 
-#footer {
-}
+#footer {}
 
-#footer_menu{
+#footer_menu {
     width: 1280px;
     margin: 0 auto;
 }

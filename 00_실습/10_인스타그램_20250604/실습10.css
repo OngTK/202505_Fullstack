@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 li {
@@ -15,17 +15,23 @@ a {
 }
 
 #wrap {
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     width: 900px;
-    position: relative;
 }
 
 /*=========== 메인 ===========*/
 #main {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 200px auto;
+}
+
+#mainImg {
+    display: flex;
+    justify-content: center;
+    width:585px
 }
 
 #mainImg>img {
@@ -34,23 +40,120 @@ a {
 
 #main_right {
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 270px;
+    height: 40px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    margin-top: 5px;
+    background-color: rgb(250, 250, 250);
+    align-items: center;
+}
+
+#main_right>div>input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(160, 160, 160);
+    margin: 10px;
+    width: 90%;
 }
 
 .img_container {
-    width: 175px;
-    height: 50px;
+    width: 177px;
+    height: 56px;
     overflow: hidden;
     background-image: url("./insta_logo.png");
-    background-position: 0px -50px;
+    background-position: 2px -49px;
+    margin-bottom: 20px;
 }
 
+#main_right>input {
+    background-color: #808dfb;
+    width: 270px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+
+    color: white;
+    font-weight: bold;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    padding: 15px 0px;
+}
+
+.line>div {
+    background-color: rgb(219, 219, 219);
+    width: 105px;
+    height: 1px;
+}
+
+.line>span {
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.facebook {
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook_logo {
+    background-image: url("facebook_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+.facebook>div:nth-child(2) {
+    color: #0095f6;
+    font-weight: bold;
+    font-size: 13px;
+}
+.password {
+    margin : 10px 0px 50px 0px;
+}
+
+.password > a {
+    font-size: 14px;
+    color: rgb(65, 80, 247);
+}
+
+.new {
+    font-size: 14px;
+
+}
+
+.new>span {
+    font-weight: bold;
+    color: rgb(65, 80, 247);
+}
 
 /*=========== 푸터 ===========*/
 
-#footer {
-    position: sticky;
+#footer_area {
     bottom: 11px;
     padding-bottom: 50px;
+    
+}
+#footer {
+    margin : auto auto;    
 }
 
 #footer>ul {
@@ -62,4 +165,20 @@ a {
     color: #737373;
     font-size: 11px;
     margin: 0px 7px 11px 7px;
+}
+
+#footer>div {
+    display: flex;
+    justify-content: center;
+}
+
+.language {
+    color: #737373;
+    border: none;
+    font-size: 11px;
+}
+
+#footer>div>form>span {
+    color: #737373;
+    font-size: 11px;
 }
