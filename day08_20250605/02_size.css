@@ -39,3 +39,41 @@
     max-height: 100px;
     overflow: hidden;
 }
+
+/*===========================*/
+
+/* overflow : 지정요소보다 하위요소 크기가 더 클 때*/
+
+.overflow > div {
+    width: 200px; height: 100px;
+    background-color: beige;
+}
+
+/* overflow
+1. visible; 내용이 넘쳐도 그냥 보여줌(default)
+2. hidden; 내용이 넘치면 자름
+3. scroll; 내용의 양과 무관하게 항상 스크롤을 표시
+4. auto; 내용이 넘치면 스크롤바 표시
+*/
+
+.overflow :nth-child(2){
+    overflow: visible;
+}
+
+.overflow :nth-child(4){
+    overflow: hidden;
+}
+
+.overflow :nth-child(6){
+    overflow: scroll;
+}
+
+.overflow :nth-child(8){
+    overflow: auto;
+}
+
+/*x축, y축에 각각 스크롤바 표시 유무를 설정할 수 있음*/
+.overflow :nth-child(10){
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
