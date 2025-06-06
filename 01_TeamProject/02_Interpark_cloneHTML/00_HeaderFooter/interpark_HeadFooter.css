@@ -1,0 +1,98 @@
+/* =============== 공통 =============== */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-content: center
+}
+
+li {
+    list-style: none;
+}
+
+/* =============== Wrap =============== */
+
+
+/* =============== header =============== */
+
+#header_area {
+    border-bottom: 1px solid #eeeeee;
+}
+
+#header {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* ==== top_header ====*/
+#top_header {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    width: 144px;
+    height: 25px;
+    background-image: url("01_img/01_HeaderFooter/nol-interpark-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 12px;
+}
+
+#top_header>.header_search {
+    width: 354px;
+    height: 44px;
+    border: 1px solid #dfdfe0;
+    border-radius: 25px;
+    margin: 13px 0px;
+    margin-right: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_search>input {
+    font-size: 16px;
+    margin-left: 25px;
+    color: rgba(41, 41, 45, 0.5);
+    border: none;
+}
+
+.header_search>a {
+    background-image: url(01_img/01_HeaderFooter/icon_search.png);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 20px;
+}
+
+.header_ad {
+    width: 180px;
+    height: 50px;
+    background-image: url("01_img/01_HeaderFooter/header_AD.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin : 0px 8px;
+}
+
+
+/* =============== (mian) =============== */
+
+
+
+
+
+/* =============== footer =============== */
