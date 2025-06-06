@@ -42,7 +42,7 @@ li {
 .header_logo {
     width: 144px;
     height: 25px;
-    background-image: url("01_img/01_HeaderFooter/nol-interpark-logo.svg");
+    background-image: url("01_img_HF/nol-interpark-logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 12px;
@@ -69,7 +69,7 @@ li {
 }
 
 .header_search>a {
-    background-image: url(01_img/01_HeaderFooter/icon_search.png);
+    background-image: url(01_img_HF/icon_search.png);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ li {
 .header_ad {
     width: 180px;
     height: 50px;
-    background-image: url("01_img/01_HeaderFooter/header_AD.png");
+    background-image: url("01_img_HF/header_AD.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
