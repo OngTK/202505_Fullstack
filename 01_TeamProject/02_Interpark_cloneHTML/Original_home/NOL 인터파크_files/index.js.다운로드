@@ -1,1 +1,0 @@
-(()=>{var c;c="pcid",(c=document.cookie.match(new RegExp("(^| )".concat(c,"=([^;]+)"))))&&c[2]||(c="".concat(Date.now()).concat(Array.from({length:5},function(){return Math.floor(10*Math.random())}).join("")),document.cookie="pcid=".concat(c,"; max-age=").concat(31536e3,"; domain=").concat(".interpark.com","; path=/;"))})();
