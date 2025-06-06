@@ -21,7 +21,7 @@ li {
 /* =============== Wrap =============== */
 
 
-/* =============== header =============== */
+/* =============== 1. header =============== */
 
 #header_area {
     border-bottom: 1px solid #eeeeee;
@@ -33,13 +33,14 @@ li {
     padding: 0px 20px;
 }
 
-/* ==== top_header ====*/
+/* ==== 1-1. top_header ====*/
 #top_header {
     display: flex;
     align-items: center;
 }
 
 .header_logo {
+    /* 1-1-1. 로고 */
     width: 144px;
     height: 25px;
     background-image: url("01_img_HF/nol-interpark-logo.svg");
@@ -48,6 +49,7 @@ li {
     margin-right: 12px;
 }
 
+/* 1-1-2. 검색창 */
 #top_header>.header_search {
     width: 354px;
     height: 44px;
@@ -69,7 +71,7 @@ li {
 }
 
 .header_search>a {
-    background-image: url(01_img_HF/icon_search.png);
+    background-image: url("01_img_HF/icon_search.png");
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -78,6 +80,7 @@ li {
     margin-right: 20px;
 }
 
+/* 1-1-3. 검색창 옆 광고 */
 .header_ad {
     width: 180px;
     height: 50px;
@@ -85,7 +88,124 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin : 0px 8px;
+    margin: 0px 8px;
+}
+
+/* 1-1-4. 페밀리 사이트 */
+#top_header>div {
+    display: flex;
+    justify-content: ;
+    align-items: center;
+    margin-left: 295px;
+}
+
+#top_header>div a {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#top_header>div>a:nth-child(1) {
+    width: 30px;
+    height: 12px;
+    background-image: url("01_img_HF/partner-nol.svg");
+}
+
+#top_header>div>a:nth-child(3) {
+    width: 53px;
+    height: 12px;
+    background-image: url("01_img_HF/partner-triple.svg");
+}
+
+#top_header>div>a:nth-child(5) {
+    width: 115px;
+    height: 15px;
+    background-image: url("01_img_HF/partner-interpark-global-small.svg");
+}
+
+#top_header span {
+    padding: 0px 8px;
+    color: #c4c4c4;
+    font-size: 10px;
+}
+
+/* ==== bottom_header ====*/
+#bottom_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*1-2-1. 홈, 투어, 티켓*/
+#bottom_menu>.main_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom_menu>.main_menu li {
+    width: 48px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom_menu>.main_menu a {
+    display: inline-block;
+
+    color: black;
+    font-size: 22px;
+}
+
+#bottom_menu>.main_menu>li:nth-child(2),
+#bottom_menu>.main_menu>li:nth-child(3) {
+    margin: 0px 10px;
+}
+
+#bottom_menu>.main_menu>li:nth-child(1)>a {
+    /*홈,투어,티켓 페이지 별로 강조 영역, nth-child의 숫자 변경*/
+    font-weight: bold;
+}
+
+#bottom_menu>.main_menu>li:nth-child(1) {
+    /*홈,투어,티켓 페이지 별로 강조 영역, nth-child의 숫자 변경*/
+    border-bottom: 2px solid #29292d;
+}
+
+/*1-2-2. 로그인, 내예약*/
+
+.my_menu {
+    display: flex;
+}
+
+.my_menu>a {
+    display: flex;
+}
+
+.my_menu>a>div {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.my_menu>a>span {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 9px;
+}
+
+.my_menu>a:nth-child(1)>div {
+    background-image: url("01_img_HF/login.jpg");
+}
+
+.my_menu>a:nth-child(3)>div {
+    background-image: url("01_img_HF/ticket.jpg");
+}
+
+.my_menu > div{
+    width: 18px;
 }
 
 
