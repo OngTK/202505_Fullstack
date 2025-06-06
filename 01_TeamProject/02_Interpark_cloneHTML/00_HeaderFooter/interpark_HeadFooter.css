@@ -172,7 +172,7 @@ li {
     border-bottom: 2px solid #29292d;
 }
 
-/*1-2-2. 로그인, 내예약*/
+/* 1-2-2. 로그인, 내예약 */
 
 .my_menu {
     display: flex;
@@ -208,11 +208,68 @@ li {
     width: 18px;
 }
 
-
 /* =============== (mian) =============== */
 
 
-
+#main {
+    width: 1280px;
+    font-size: 30px;
+    margin: 30px auto;
+}
 
 
 /* =============== footer =============== */
+
+#footer {
+    background-color: #ffffff;
+}
+
+#footer > div:nth-child(1) {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#footer_menu {
+    width: 1280px;
+    height: 50px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer_menu > li {
+    padding: 10px 14px;
+    align-content: center;
+}
+
+#footer_menu a{
+    font-size: 13px;
+    display: inline-flex;
+}
+
+#footer_menu span{
+    display: inline-block;
+    align-content: center;
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+#footer_menu > li:nth-child(17) div,
+#footer_menu > li:nth-child(19) div{
+    width: 10px;
+    height: 10px;
+    background-image: url(01_img_HF/down_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 8px;
+} 
+
+
+
+#footer_info {
+    width: 1280px;
+    margin: 0 auto;
+}
