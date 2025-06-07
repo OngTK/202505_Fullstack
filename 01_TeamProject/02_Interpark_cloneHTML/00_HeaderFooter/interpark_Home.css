@@ -1,0 +1,63 @@
+/* =============== 공통 =============== */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-content: center
+}
+
+li {
+    list-style: none;
+}
+
+/* =============== main =============== */
+
+
+#main {
+    width: 1280px;
+    font-size: 30px;
+    margin: 0px auto;
+}
+
+
+/* 2-0. home 내의 공통 */
+
+#main > div {
+    font-size: 30px;
+    margin: 30px;
+}
+
+/* 2-1. Top Benner */
+
+
+
+/* 2-2. 투어 특가 */
+
+
+
+
+/* 2-3. W 트립 */
+
+
+
+
+
+/* 2-4. 티켓 링크 */
+
+
+
+
+
+/* 2-5. 인터파크 */
+
+
+
+
