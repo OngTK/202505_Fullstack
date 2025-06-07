@@ -23,25 +23,155 @@ li {
 
 #main {
     width: 1280px;
-    font-size: 30px;
     margin: 0px auto;
 }
 
-
 /* 2-0. home 내의 공통 */
 
-#main > div {
-    font-size: 30px;
-    margin: 30px;
+.hm_gotoBtn {
+    background-color: white;
+    border : 1px solid #eeeeee;
+    padding: 0px 39px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 60px;
+    margin-top: 20px;
+    margin : 0 auto;
 }
 
+.hm_gotoBtn>div {
+    background-image: url("01_img/right_arrow.png");
+
+    width: 15px;
+    height: 15px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+}
+
+
 /* 2-1. Top Benner */
+.hm_TopBenner>ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
 
+.hm_TopBenner>ul>li>a {
+    display: inline-block;
+    width: 628px;
+    height: 343px;
 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    border-radius: 10px;
+}
+
+.hm_TopBenner>ul>li:nth-child(1)>a {
+    background-image: url("01_img/01_01.png");
+}
+
+.hm_TopBenner>ul>li:nth-child(2)>a {
+    background-image: url("01_img/01_02.png");
+}
 
 /* 2-2. 투어 특가 */
+.hm_TourSales {
+    padding: 30px 0px 60px 0px;
+    text-align: center;
+}
 
+.hm_TourSales>h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
 
+.hm_TourSales>p {
+    font-size: 17px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.hm_TourSales > div button {
+    padding: 0px 20px;
+    font-size: 15px;
+    height: 44px;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #eeeeee;
+    margin-left: 2px;
+}
+
+.hm_TourSales button:nth-child(1) {
+    background-color: #333333;
+    color: white;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.hm_TourSales .hm_gotoBtn {
+    padding: 0px 39px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 60px;
+    margin-top: 20px;
+}
+
+.hm_TourSales .hm_gotoBtn>div {
+    background-image: url("01_img/right_arrow.png");
+
+    width: 15px;
+    height: 15px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.hm_toulList {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.hm_toulList>li>a>div:nth-child(2) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hm_toulList div {
+    border: 1px solid #eeeeee;
+}
+
+.hm_tourImg {
+    width: 410px;
+    height: 244px;
+    border-bottom: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hm_tourImg1 {
+    background-image: url("01_img/02_01.jpeg");
+}
+
+.hm_tourImg2 {
+    background-image: url("01_img/02_02.jpg");
+}
+
+.hm_tourImg3 {
+    background-image: url("01_img/02_03.jpg");
+}
 
 
 /* 2-3. W 트립 */
@@ -56,8 +186,100 @@ li {
 
 
 
-/* 2-5. 인터파크 */
+/* 2-5. 인터파크 LIVE */
 
+.hm_IPLive {
+    margin: 30px 0px 60px 0px;
+}
 
+.hm_IPLive>div:nth-child(1) {
+    width: 155px;
+    height: 40px;
+    background-image: url("01_img/interpark_live_logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
 
+.hm_IPLive>ul {
+    display: flex;
+    justify-content: space-between;
+}
 
+.hm_IPLive>ul>li,
+.hm_IPLive>ul>li>a,
+.hm_IPLive>ul>li .hm_liveList_backImg {
+    width: 300px;
+    height: 456px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hm_liveList_info {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+.hm_liveList_info>div:nth-child(1) {
+    margin: 20px 20px 8px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 7px 0px;
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 13px;
+}
+
+.hm_liveList_info>div:nth-child(2) {
+    margin: 0px 20px 0px 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hm_liveList_info>div:nth-child(3) {
+    margin: 60px 20px 0px 20px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.hm_liveList_info>div:nth-child(4) {
+    margin: -10px 20px 0px 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hm_liveList_backImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hm_liveList_backImg1 {
+    background-image: url("01_img/05_01.png");
+}
+
+.hm_liveList_backImg2 {
+    background-image: url("01_img/05_02.png");
+}
+
+.hm_liveList_backImg3 {
+    background-image: url("01_img/05_03.png");
+}
+
+.hm_liveList_backImg4 {
+    background-image: url("01_img/05-04.jpg");
+}
+
+.hm_IPLive>div:nth-child(3) {
+    text-align: center;
+    padding-top: 20px;
+}
