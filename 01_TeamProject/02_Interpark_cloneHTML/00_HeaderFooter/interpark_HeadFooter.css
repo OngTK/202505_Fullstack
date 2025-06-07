@@ -203,9 +203,11 @@ li {
     background-image: url("01_img_HF/ticket.jpg");
 }
 
-.my_menu > div{
+.my_menu>div {
     width: 18px;
 }
+
+/* 1-2-3. 내 예약 드롭박스 */
 
 /* =============== (mian) =============== */
 
@@ -213,7 +215,7 @@ li {
 #main {
     width: 1280px;
     font-size: 30px;
-    margin: 30px auto;
+    margin: 0px auto;
 }
 
 
@@ -223,11 +225,12 @@ li {
     background-color: #ffffff;
 }
 
-#footer > div:nth-child(1) {
+#footer>div:nth-child(1) {
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
 }
 
+/* 3-1-1. 회사소개~Language */
 #footer_menu {
     width: 1280px;
     height: 50px;
@@ -237,25 +240,25 @@ li {
     justify-content: space-between;
 }
 
-#footer_menu > li {
+#footer_menu>li {
     padding: 10px 14px;
     align-content: center;
 }
 
-#footer_menu a{
+#footer_menu a {
     font-size: 13px;
     display: inline-flex;
 }
 
-#footer_menu span{
+#footer_menu span {
     display: inline-block;
     align-content: center;
-    color: #eeeeee;
+    color: #cccccc;
     font-weight: bold;
 }
 
-#footer_menu > li:nth-child(17) div,
-#footer_menu > li:nth-child(19) div{
+#footer_menu>li:nth-child(17) > a > div,
+#footer_menu>li:nth-child(19) > a > div {
     width: 10px;
     height: 10px;
     background-image: url(01_img_HF/down_arrow.png);
@@ -264,20 +267,53 @@ li {
     background-size: contain;
     display: inline-block;
     margin-left: 8px;
-} 
+}
+
+/* 3-1-2. 고객센터, Language 드롭메뉴 */
+#footer_menu>li:nth-child(17) > a > div,
+#footer_menu>li:nth-child(19) > a > div {
+    position: relative;
+}
+
+.footer_sub {
+    position: absolute;
+    padding: 16px;
+    width: 110px;
+
+    background-color: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .2);
+    border-radius: 8px;
+
+    display: none;
+}
+
+.footer_sub > div {
+    height: 9px;
+}
+
+#footer_menu>li:nth-child(19) .footer_sub {
+    width: 85px;
+}
+
+#footer_menu>li:hover .footer_sub{
+    display: block;
+}
+
+
+/* 3-2-1. 회사정보~담당정보 */
 
 #footer_info {
     width: 1280px;
     margin: 0 auto;
 }
 
-#footer_info > #company_info {
+#footer_info>#company_info {
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
 }
 
-#footer_info h3{
+#footer_info h3 {
     font-size: 15px;
     margin-bottom: 3px;
 }
@@ -287,9 +323,12 @@ li {
     color: #4154ff;
 }
 
-#footer_info p, #footer_info a  {
-    color : rgba(41, 41, 45, .8);
+#footer_info p,
+#footer_info a {
+    color: rgba(41, 41, 45, .8);
 }
+
+/* 3-3-1. copy right */
 
 #footer_noti {
     width: 1280px;
