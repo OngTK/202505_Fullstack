@@ -27,9 +27,8 @@ li {
 }
 
 /* =============== 2-0. home 내의 공통 =============== */
-
+/*구역 하단 "더보기", "바로가기" 버튼 공용*/
 .hm_gotoBtn {
-    /*구역 하단 "더보기", "바로가기" 버튼 공용*/
     background-color: white;
     border: 1px solid #eeeeee;
     padding: 0px 39px;
@@ -41,8 +40,8 @@ li {
     margin: 0 auto;
 }
 
+/*구역 하단 "더보기", "바로가기" 버튼의 우측 화살표*/
 .hm_gotoBtn>div {
-    /*구역 하단 "더보기", "바로가기" 버튼의 우측 화살표*/
     background-image: url("01_img/right_arrow.png");
     width: 15px;
     height: 15px;
@@ -50,6 +49,39 @@ li {
     background-position: center;
     background-size: contain;
     display: inline-block;
+}
+
+/*화살표 버튼*/
+.arrow_box {
+    height: 48px;
+    width: 48px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+.left_arrow {
+    background-image: url("01_img/left_arrow.png");
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.right_arrow {
+    background-image: url("01_img/right_arrow.png");
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 /* =============== 2-1. Top Benner =============== */
@@ -78,6 +110,20 @@ li {
 .hm_TopBenner>ul>li:nth-child(2)>a {
     background-image: url("01_img/01_02.png");
 }
+
+/*화살표 배치*/
+.hm_TopBenner {
+    position: relative;
+}
+
+.arrow_box_l1{
+    top: 160px;
+    left : -20px;
+}
+
+.arrow_box_r1
+
+
 
 /* =============== 2-2. 투어 특가 =============== */
 /*구역 설정*/
