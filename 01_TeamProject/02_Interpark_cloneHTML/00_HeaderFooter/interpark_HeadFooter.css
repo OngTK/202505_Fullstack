@@ -25,12 +25,14 @@ li {
 
 #header_area {
     border-bottom: 1px solid #eeeeee;
+    overflow: visible;
 }
 
 #header {
     width: 1280px;
     margin: 0 auto;
     padding: 0px 20px;
+    overflow: visible;
 }
 
 /* ==== 1-1. top_header ====*/
@@ -133,6 +135,8 @@ li {
 #bottom_menu {
     display: flex;
     justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
 }
 
 /*1-2-1. 홈, 투어, 티켓*/
@@ -208,9 +212,11 @@ li {
 }
 
 /* 1-2-3. 메뉴 창 sticky*/
-#bottom_menu {
+#header_area {
     position: sticky;
     top: 0px;
+    background-color: white;
+    z-index: 1000; 
 }
 
 /* =============== footer =============== */
