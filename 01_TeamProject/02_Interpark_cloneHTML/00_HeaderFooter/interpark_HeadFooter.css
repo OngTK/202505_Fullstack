@@ -43,7 +43,7 @@ li {
     /* 1-1-1. 로고 */
     width: 144px;
     height: 25px;
-    background-image: url("01_img_HF/nol-interpark-logo.svg");
+    background-image: url("01_img/nol-interpark-logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 12px;
@@ -71,7 +71,7 @@ li {
 }
 
 .header_search>a {
-    background-image: url("01_img_HF/icon_search.png");
+    background-image: url("01_img/icon_search.png");
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ li {
 .header_ad {
     width: 180px;
     height: 50px;
-    background-image: url("01_img_HF/header_AD.png");
+    background-image: url("01_img/header_AD.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -108,19 +108,19 @@ li {
 #top_header>div>a:nth-child(1) {
     width: 30px;
     height: 12px;
-    background-image: url("01_img_HF/partner-nol.svg");
+    background-image: url("01_img/partner-nol.svg");
 }
 
 #top_header>div>a:nth-child(3) {
     width: 53px;
     height: 12px;
-    background-image: url("01_img_HF/partner-triple.svg");
+    background-image: url("01_img/partner-triple.svg");
 }
 
 #top_header>div>a:nth-child(5) {
     width: 115px;
     height: 15px;
-    background-image: url("01_img_HF/partner-interpark-global-small.svg");
+    background-image: url("01_img/partner-interpark-global-small.svg");
 }
 
 #top_header span {
@@ -133,7 +133,7 @@ li {
 #bottom_menu {
     display: flex;
     justify-content: space-between;
-    width: 1280px;
+    width: 1240px;
     margin: 0 auto;
 }
 
@@ -198,11 +198,11 @@ li {
 }
 
 .my_menu>a:nth-child(1)>div {
-    background-image: url("01_img_HF/login.jpg");
+    background-image: url("01_img/login.jpg");
 }
 
 .my_menu>a:nth-child(3)>div {
-    background-image: url("01_img_HF/ticket.jpg");
+    background-image: url("01_img/ticket.jpg");
 }
 
 .my_menu>div {
@@ -259,7 +259,7 @@ li {
 #footer_menu>li:nth-child(19) > a > div {
     width: 10px;
     height: 10px;
-    background-image: url(01_img_HF/down_arrow.png);
+    background-image: url(01_img/down_arrow.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
