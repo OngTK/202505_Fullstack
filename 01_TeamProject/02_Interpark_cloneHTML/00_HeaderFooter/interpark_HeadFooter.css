@@ -25,14 +25,12 @@ li {
 
 #header_area {
     border-bottom: 1px solid #eeeeee;
-    overflow: visible;
 }
 
 #header {
     width: 1280px;
     margin: 0 auto;
     padding: 0px 20px;
-    overflow: visible;
 }
 
 /* ==== 1-1. top_header ====*/
