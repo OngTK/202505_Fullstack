@@ -610,7 +610,8 @@ li {
 /*================ 2-5. 인터파크 LIVE ================*/
 
 .hm_IPLive {
-    padding: 30px 0px 60px 0px;
+    padding: 30px 0px 60px 0px;    
+    position: relative;    /*화살표 배치*/
 }
 
 /*인터파크 LIVE 로고 삽입*/
@@ -670,12 +671,12 @@ li {
 /*방송 날짜*/
 .hm_liveList_info>div:nth-child(3) {
     margin: 60px 20px 0px 20px;
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 400;
     text-align: center;
 }
 
-/*방송시간*/
+/*방송 시간*/
 .hm_liveList_info>div:nth-child(4) {
     margin: -10px 20px 0px 20px;
     font-size: 50px;
@@ -712,4 +713,15 @@ li {
 .hm_IPLive>div:nth-child(3) {
     text-align: center;
     padding-top: 20px;
+}
+
+/*화살표 배치*/
+.arrow_box_l5 {
+    top: 300px;
+    left: -20px;
+}
+
+.arrow_box_r5 {
+    top: 300px;
+    right: -20px;
 }
