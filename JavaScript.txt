@@ -49,3 +49,24 @@
 
 키워드 : 미리 정해진 기능이 포함된 특수문자/문자열
     [], {}, console, Number, String, if, for .etc
+
+[ 변수와 상수 ]
+    - 변수
+        let 변수명 = 자료;
+        자료 수정 가능
+    - 상수
+        const 상수명 = 자료;
+        자료 수정 불가능
+
+[ 출력함수 ]
+    - console.log(출력할 자료 or 변수명)
+        ctrl + shift + j = f12 console 에 출력
+    - alert( 출력할 자료 or 변수명)
+        페이지 접근 시 알림(alert) 창으로 출력
+
+[ 입력 함수 ]
+    - confirm("메세지")
+        확인(true)/취소(flase) 알림 창  
+    - prompt("메세지")
+        텍스트 입력 알림 창 출력
+    ※ [ let 변수명 = prompt("텍스트를 입력해주세요") ] 와 같은 형식으로 작성

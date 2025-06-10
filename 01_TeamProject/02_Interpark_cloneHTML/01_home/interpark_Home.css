@@ -55,7 +55,7 @@ li {
 .arrow_box {
     height: 48px;
     width: 48px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 0.1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 100px;
@@ -89,7 +89,7 @@ li {
     /*상단 배너 정렬*/
     display: flex;
     justify-content: space-between;
-    padding: 30px 0px;
+    padding: 30px 0px 25px 0px;
 }
 
 /*a 태그 내에 이미지 삽입, 크기조절 및 정렬*/
@@ -116,31 +116,33 @@ li {
     position: relative;
 }
 
-.arrow_box_l1{
-    top: 160px;
-    left : -20px;
+.arrow_box_l1 {
+    top: 163px;
+    left: -20px;
 }
 
-.arrow_box_r1
-
-
+.arrow_box_r1 {
+    top: 163px;
+    right: -20px;
+}
 
 /* =============== 2-2. 투어 특가 =============== */
 /*구역 설정*/
 .hm_TourSales {
     padding: 30px 0px 60px 0px;
     text-align: center;
+    position: relative;
+    /*화살표 배치*/
 }
 
 /*투어 특가*/
 .hm_TourSales>h1 {
     font-size: 28px;
-    margin-bottom: 5px;
 }
 
 /*마감임박! 금주의 특가 여행 추천*/
 .hm_TourSales>p {
-    font-size: 17px;
+    font-size: 18px;
     color: gray;
     margin-bottom: 15px;
 }
@@ -263,12 +265,26 @@ li {
     margin-top: 20px;
 }
 
+/*화살표 배치*/
+
+.arrow_box_l2 {
+    top: 355px;
+    left: -20px;
+}
+
+.arrow_box_r2 {
+    top: 355px;
+    right: -20px;
+}
+
 /*===============  2-3. W 트립 =============== */
 /*W 트립 구역 설정*/
 .hm_WTrip {
     text-align: center;
     padding: 30px 0px 60px 0px;
     border-bottom: 8px solid #eeeeee;
+    position: relative;
+    /*화살표 배치*/
 }
 
 /*W트립 로고와 퀘스천마크 정렬*/
@@ -412,10 +428,23 @@ li {
     margin-top: 20px;
 }
 
-/* =============== 2-4. 티켓 링크 =============== */
+/*화살표 배치*/
+.arrow_box_l3 {
+    top: 318px;
+    left: -20px;
+}
+
+.arrow_box_r3 {
+    top: 318px;
+    right: -20px;
+}
+
+
+/* =============== 2-4. 티켓 랭킹 =============== */
 /*구역 설정*/
 .hm_TicketRanking {
     border-bottom: 8px solid #eeeeee;
+    position: relative;    /*화살표 배치*/
 }
 
 /*li 정렬용*/
@@ -566,8 +595,19 @@ li {
     margin-top: 20px;
 }
 
+/*화살표 배치*/
+.arrow_box_l3 {
+    top: 318px;
+    left: -20px;
+}
 
-/* 2-5. 인터파크 LIVE */
+.arrow_box_r3 {
+    top: 318px;
+    right: -20px;
+}
+
+
+/*================ 2-5. 인터파크 LIVE ================*/
 
 .hm_IPLive {
     padding: 30px 0px 60px 0px;
