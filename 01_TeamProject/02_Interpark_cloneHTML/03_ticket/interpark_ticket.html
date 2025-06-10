@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOL 티켓</title>
+    <link rel="stylesheet" href="interpark_ticket.css">
+    <link rel="stylesheet" href="../00_HeaderFooter/interpark_HeadFooter_tk.css">
+</head>
+
+<body>
+
+    <div id="header_area"> <!-- header_area : header 하단/main 사이 border bottom 때문에 -->
+        <div id="header"> <!-- header -->
+            <div id="top_header"> <!--logo, search etc-->
+                <a href="#" class="header_logo"></a>
+                <form class="header_search">
+                    <input type="text" placeholder="인기 공연 타임딜 & 혜택 모음" />
+                    <a href="#"></a>
+                </form>
+                <a href="#" class="header_ad"></a>
+                <div>
+                    <a href="#"></a>
+                    <span>|</span>
+                    <a href="#"></a>
+                    <span>|</span>
+                    <a href="#"></a></li>
+                </div>
+            </div>
+            <div id="bottom_menu"> <!--홈, 투어, 티켓, 로그인, 내 예약-->
+                <ul class="main_menu">
+                    <li><a href="http://192.168.40.14:5500/01_TeamProject/02_Interpark_cloneHTML/01_home/interpark_Home.html">홈</a></li>
+                    <li><a href="http://192.168.40.14:5500/01_TeamProject/02_Interpark_cloneHTML/02_tour/interpark_Tour.html">투어</a></li>
+                    <li><a href="http://192.168.40.14:5500/01_TeamProject/02_Interpark_cloneHTML/03_ticket/interpark_ticket.html">티켓</a></li>
+                </ul>
+                <div class="my_menu">
+                    <a href="#">
+                        <div></div><span>로그인</span>
+                    </a>
+                    <div></div>
+                    <a href="#">
+                        <div></div><span>내 예약</span>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- header end -->
+    </div> <!-- header_area end-->
+
+    <div id="tk_main">
+        <div class="tk_menu"> <!--tk 메인메뉴-->
+            <ul class="tk_menu01">
+                <li><a href="#">뮤지컬</a></li>
+                <li><a href="#">콘서트</a></li>
+                <li><a href="#">스포츠</a></li>
+                <li><a href="#">전시/행사</a></li>
+                <li><a href="#">클래식/무용</a></li>
+                <li><a href="#">아동/가족</a></li>
+                <li><a href="#">연극</a></li>
+                <li><a href="#">레저/캠핑</a></li>
+                <li><a href="#">토핑</a></li>
+                <li><a href="#">MD샵</a></li>
+                <li><span>|</span></li>
+            </ul>
+            <ul class="tk_menu02">
+                <li><a href="#">랭킹</a></li>
+                <li><a href="#">오픈예정</a></li>
+                <li><a href="#">지역별</a></li>
+                <li><a href="#">공연장</a></li>
+            </ul>
+        </div>
+        <div id="tk_main_img"> <!--tk 메인이미지-->
+            <img class="tk_main_img01" src="./01_img/tk_main_img.gif" />
+            <ul class="tk_main_img02">
+                <li><img src="./01_img/small_img1.jpg"></li>
+                <li><img src="./01_img/small_img3.jpg"></li>
+                <li><img src="./01_img/small_img5.jpg"></li>
+                <li><img src="./01_img/small_img6.jpg"></li>
+                <li><img src="./01_img/small_img10.jpg"></li>
+                <li><img src="./01_img/small_img12.jpg"></li>
+                <li><img src="./01_img/small_img13.jpg"></li>
+                <li><img src="./01_img/small_img2.png"></li>
+                <li><img src="./01_img/small_img11.png"></li>
+                <li><img src="./01_img/small_img14.jpg"></li>
+            </ul>
+        </div>
+        <div class="tk_sub_image"> <!--tk 메인이미지 내부 서브이미지-->
+            <ul class="tk_sub_image02">
+                <li><a href="#"><img src="./01_img/tk_pic2_01.gif" /></a></li>
+                <li><a href="#"><img src="./01_img/tk_pic2_02.gif" /></a></li>
+                <li><a href="#"><img src="./01_img/tk_pic2_03.gif" /></a></li>
+                <li><a href="#"><img src="./01_img/tk_pic2_04.gif" /></a></li>
+                <li><a href="#"><img src="./01_img/tk_pic2_05.gif" /></a></li>
+                <li><a href="#"><img src="./01_img/tk_pic2_06.gif" /></a></li>
+            </ul>
+        </div>
+        <div class="tk_ranking"> <!--tk 장르별 랭킹-->
+            <h1>장르별 랭킹</h1>
+            <ul class="tk_ranking_btn">
+                <input type="button" value="뮤지컬" />
+                <input type="button" value="콘서트" />
+                <input type="button" value="스포츠" />
+                <input type="button" value="전시/행사" />
+                <input class="tk_ranking_click" type="button" value="클래식/무용" />
+                <input type="button" value="아동/가족" />
+                <input type="button" value="연극" />
+                <input type="button" value="레저/캠핑" />
+            </ul>
+            <ul class="tk_rank_list">
+                <li>
+                    <img src="./01_img/장르별랭킹1.gif" />
+                    <h4>2025 예술의전당 & 유니버설발레단 <백조의 호수>
+                    </h4>
+                    <p class="tk_rank_place">예술의전당 오페라극장</p>
+                    <p class="tk_rank_date">2025.7.19 ~ 7.27</p>
+                </li>
+                <li>
+                    <img src="./01_img/장르별랭킹2.gif" />
+                    <h4>제16회 대한민국오페라페스티벌 글로리아오페라단 <카르멘>
+                    </h4>
+                    <p class="tk_rank_place">예술의전당 오페라극장</p>
+                    <p class="tk_rank_date">2025.6.6 ~ 6.8</p>
+                </li>
+                <li>
+                    <img src="./01_img/장르별랭킹3.gif" />
+                    <h4>히사이시 조 영화음악 콘서트 2025_서울(예술의전당)</h4>
+                    <p class="tk_rank_place">예술의전당 콘서트홀</p>
+                    <p class="tk_rank_date">2025.8.31 ~ 8.31</p>
+                </li>
+                <li>
+                    <img src="./01_img/장르별랭킹4.gif" />
+                    <h4>[2025 발레축제] 라이프 오브 발레리노 - Dreamer</h4>
+                    <p class="tk_rank_place">예술의전당 CJ토월극장</p>
+                    <p class="tk_rank_date">2025.6.7 ~ 6.8</p>
+                </li>
+                <li>
+                    <img src="./01_img/장르별랭킹5.gif" />
+                    <h4>국립발레단 <인어공주>
+                    </h4>
+                    <p class="tk_rank_place">예술의전당 오페라극장</p>
+                    <p class="tk_rank_date">2025.8.13 ~ 8.17</p>
+                </li>
+            </ul>
+            <input type="button" value="클래식/무용 랭킹 전체보기 >">
+        </div>
+        <div class="tk_open"> <!--tk 오픈 예정-->
+            <h1>오픈 예정</h1>
+            <ul>
+                <li>
+                    <img src="./01_img/오픈예정1.gif" />
+                    <div>
+                        <p class="tk_open_datetime">내일 20:00</p>
+                        <p class="tk_open_name">TAEYANG 2025 FAN MEETING [01] IN SEOUL</p>
+                        <p class="tk_open_일반예매">일반예매</p>
+                        <div class="tk_open_blrd">
+                            <p class="tk_open_red">HOT</p>
+                            <P class="tk_open_blue">단독판매</P>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/오픈예정2.gif" />
+                    <div>
+                        <p class="tk_open_datetime">06.11(수) 19:00</p>
+                        <p class="tk_open_name">2025 VIVIZ WORLD TOUR [NEW LEGACY] in SEOUL</p>
+                        <p class="tk_open_일반예매">일반예매</p>
+                        <div class="tk_open_blrd">
+                            <p class="tk_open_red">HOT</p>
+                            <P class="tk_open_blue">단독판매</P>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/오픈예정3.jpg" />
+                    <div>
+                        <p class="tk_open_datetime">06.12(목) 18:00</p>
+                        <p class="tk_open_name">Gen Hoshino presents MAD HOPE Asia in SEOUL</p>
+                        <p class="tk_open_일반예매">일반예매</p>
+                        <div class="tk_open_blrd">
+                            <p class="tk_open_red">HOT</p>
+                            <P class="tk_open_blue">단독판매</P>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/오픈예정4.jpeg" />
+                    <div>
+                        <p class="tk_open_datetime">06.12(목) 15:00</p>
+                        <p class="tk_open_name">뮤지컬 배우 이승현 콘서트 <2025 SHank you>
+                        </p>
+                        <p class="tk_open_일반예매">일반예매</p>
+                        <P class="tk_open_blue">단독판매</P>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/오픈예정5.gif" />
+                    <div>
+                        <p class="tk_open_datetime">06.13(금) 11:00</p>
+                        <p class="tk_open_name">연극 <킬 미 나우> : 연극열전10_여섯 번째 작품</p>
+                        <p class="tk_open_일반예매">2차티켓오픈</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/오픈예정6.gif" />
+                    <div>
+                        <p class="tk_open_datetime">06.18(수) 20:00</p>
+                        <p class="tk_open_name">[Play&Stay] BOYNEXTDOOR TOUR 'KNOCK ON Vol.1 FINAL+Hotels</p>
+                        <p class="tk_open_일반예매">일반예매</p>
+                        <div class="tk_open_blrd">
+                            <p class="tk_open_red">HOT</p>
+                            <P class="tk_open_blue">단독판매</P>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <input type="button" value="오픈 예정 공연 전체보기 >">
+        </div>
+        <div class="tk_play"> <!--tk nol play-->
+            <h1>NOL PLAY</h1>
+            <ul class="tk_play_menu">
+                <li><input type="button" value="추천영상"></li>
+                <li><input type="button" value="뮤지컬"></li>
+                <li><input type="button" value="콘서트"></li>
+                <li><input type="button" value="전시/행사"></li>
+                <li><input type="button" value="클래식/무용"></li>
+                <li><input type="button" value="연극"></li>
+            </ul>
+            <ul class="tk_play_video">
+                <li>
+                    <div class="tk_video01">
+                        <iframe class="tk_iframe" width="420" height="315"
+                            src="https://www.youtube.com/embed/39Zo0V6bVQk?si=yyHorhtutW8ENRri"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="tk_play_content">
+                        <img src="./01_img/비디오이미지1.gif" />
+                        <p>[NOL 티켓 월요라이브 S4] Ep.8 뮤지컬 '베어 더 뮤지컬'-강병훈,윤승우,김재한&...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="tk_video02">
+                        <iframe class="tk_iframe" width="420" height="315"
+                            src="https://www.youtube.com/embed/m0j9P9nPyd0?si=ccn7CKLt9GVm1w1V"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="tk_play_content">
+                        <img src="./01_img/비디오이미지2.gif" />
+                        <p>[NOL 티켓 월요라이브 S4] Ep.7 뮤지컬'구텐버그'-조풍래,최민우,박영수,선한국...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="tk_video03">
+                        <iframe class="tk_iframe" width="420" height="315"
+                            src="https://www.youtube.com/embed/Gp7_DY37MU8?si=nxHKczX2cu6IYZ_W"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="tk_play_content">
+                        <img src="./01_img/비디오이미지3.gif" />
+                        <p>[NOL 티켓 월요라이브 S4] Ep.6 뮤지컬 '하트셉수트'-신의정,전성민,제이민,효은,...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tk_sale"> <!--tk 지금 할인중-->
+            <h1>지금 할인중!</h1>
+            <ul>
+                <li>
+                    <img src="./01_img/지금할인중1.gif">
+                    <p class="tk_sale_red">타임딜</p>
+                    <p class="tk_sale_title">뮤지컬 헝키쇼(HUNKY SHOW)</p>
+                    <p class="tk_sale_place">스타스테이지</p>
+                    <p class="tk_sale_date">2025.4.25~8.31</p>
+                    <span class="tk_sale_blue">수,목,금,토,일 최대</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">45%</p>
+                        <p class="tk_sale_price">42,350원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/지금할인중2.gif">
+                    <p class="tk_sale_blue1">조기예매 할인</p>
+                    <p class="tk_sale_title">연극<늘근도둑이야기>
+                    </p>
+                    <p class="tk_sale_place">대학로 아트포레스트 1관</p>
+                    <p class="tk_sale_date">2022.3.5~2025.7.31</p>
+                    <span class="tk_sale_blue">전석 할인</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">70%</p>
+                        <p class="tk_sale_price">15,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/지금할인중3.gif">
+                    <p class="tk_sale_blue1">조기예매 할인</p>
+                    <p class="tk_sale_title">연극<프라이드> : 연극열전10_다섯 번째 작품</p>
+                    <p class="tk_sale_place">예스24아트원 2관</p>
+                    <p class="tk_sale_date">2025.3.29~6.22</p>
+                    <span class="tk_sale_blue">전석 할인</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">40%</p>
+                        <p class="tk_sale_price">26,400원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/지금할인중4.gif">
+                    <p class="tk_sale_blue1">조기예매 할인</p>
+                    <p class="tk_sale_title">대학로 혜화 연극 비누향기</p>
+                    <p class="tk_sale_place">서연아트홀</p>
+                    <p class="tk_sale_date">2021.7.10~2025.6.30</p>
+                    <span class="tk_sale_blue">평일, 주말 최대</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">80%</p>
+                        <p class="tk_sale_price">11,900원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/지금할인중5.gif">
+                    <p class="tk_sale_blue1">조기예매 할인</p>
+                    <p class="tk_sale_title">연극<옥탑방고양이>-틴틴홀</p>
+                    <p class="tk_sale_place">대학로 틴틴홀</p>
+                    <p class="tk_sale_date">2024.10.28~6.30</p>
+                    <span class="tk_sale_blue">임박공연특가</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">80%</p>
+                        <p class="tk_sale_price">10,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./01_img/지금할인중6.gif">
+                    <p class="tk_sale_blue1">조기예매 할인</p>
+                    <p class="tk_sale_title">내사랑 은경씨</p>
+                    <p class="tk_sale_place">상명아트홀 2관</p>
+                    <p class="tk_sale_date">2025.6.5~6.29</p>
+                    <span class="tk_sale_blue">임박공연특가</span>
+                    <div class="tk_sale_pp2">
+                        <p class="tk_sale_percent">40%</p>
+                        <p class="tk_sale_price">30,000원</p>
+                    </div>
+                </li>
+            </ul>
+            <input type="button" value="할인티켓 전체보기 >">
+        </div>
+        <div class="tk_pick"> <!--tk 엠디픽-->
+            <h1>MD Pick</h1>
+            <ul>
+                <li><input type="button" value="오직 NOL 티켓에서만"></li>
+                <li><input type="button" value="핫이슈 클래식&무용"></li>
+                <li><input type="button" value="화제의 전시"></li>
+                <li><input type="button" value="해외 공연"></li>
+            </ul>
+            <div>
+                <ul class="tk_pick_list">
+                    <li>
+                        <img src="./01_img/엠디픽1.gif" />
+                        <h3>2025 서울파크뮤직페스티벌</h3>
+                        <p>올림픽공원 88잔디마당,KSPO</p>
+                        <p>DOME</p>
+                        <p class="tk_pick_date">2025.6.28~6.29</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/엠디픽2.gif" />
+                        <h3>연극 <2시 22분 - A GHOST STORY>
+                        </h3>
+                        <p>세종문화회관 M씨어터</p>
+                        <p class="tk_pick_date">2025.7.5~8.16</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/엠디픽3.gif" />
+                        <h3>프레드 어게인(Fred again..) 내한공연</h3>
+                        <p>킨텍스 제2전시장 10홀</p>
+                        <p class="tk_pick_date">2025.7.23~7.23</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/엠디픽4.gif" />
+                        <h3>뮤지컬 <장수탕 선녀님>-서울숲</h3>
+                        <p>서울숲 씨어터 2관</p>
+                        <p class="tk_pick_date">2025.3.15~8.31</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/엠디픽5.gif" />
+                        <h3>[피크닉 #15] 뮤지컬 <붉은 정원>
+                        </h3>
+                        <p>링크아트센터드림 드림2관</p>
+                        <p class="tk_pick_date">2025.6.17~6.19</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tk_keyword"> <!--tk 추천 키워드-->
+            <h1>추천 키워드</h1>
+            <ul class="tk_keyword_menu">
+                <li><input type="button" value="👍재관럄률 높은"></li>
+                <li><input type="button" value="🐻아이와 함께"></li>
+                <li><input type="button" value="🎭대학로 연극 추천"></li>
+            </ul>
+            <div>
+                <ul>
+                    <li>
+                        <img src="./01_img/추천키워드1.gif">
+                        <h3>용인어린이상상의숲 요리조리스튜디오 <상상파티시엘1>
+                        </h3>
+                        <p>용인어린이상상의숲 요리조리스튜디오</p>
+                        <p class="tk_keyword_date">2025.3.1~7.20</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/추천키워드2.gif">
+                        <h3>뮤지컬 <차미>
+                        </h3>
+                        <p>대학로 TOM(티오엠) 1관</p>
+                        <p class="tk_keyword_date">2025.5.29~8.24</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/추천키워드3.gif">
+                        <h3>음악극 <태일>
+                        </h3>
+                        <p>대학로 TOM(티오엠) 2관</p>
+                        <p class="tk_keyword_date">2025.5.14~7.20</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/추천키워드4.gif">
+                        <h3>뮤지컬 <붉은 정원>
+                        </h3>
+                        <p>링크아트센터드림 드림2관</p>
+                        <p class="tk_keyword_date">2025.4.22~7.20</p>
+                    </li>
+                    <li>
+                        <img src="./01_img/추천키워드5.gif">
+                        <h3>뮤지컬 <도리안 그레이>
+                        </h3>
+                        <p>홍익대 대학로 아트센터 대극장</p>
+                        <p class="tk_keyword_date">2025.3.30~6.8</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input class="tk_keyword_btn" type="button">
+            </div>
+        </div>
+        <div id="tk_bottom_image"> <!--tk 공연 초대권 대형 이미지-->
+            <!-- <img src="./01_img/대형이미지2.svg"/> -->
+        </div>
+        <div class="tk_review"> <!--tk 베스트 관람 후기-->
+            <h1>베스트 관람후기</h1>
+            <ul>
+                <li>
+                    <div class="tk_review_text">
+                        <p class="tk_keyword_date">★평점9.9★연극 <남사친 여사친> (사랑vs우정) 현실공감 로코</p>
+                        <p class="tk_review_title">"그냥 친구 사이?"...연극 남사친 여사친 보고 인...</p>
+                        <p class="tk_review_content">솔직히 말해서 제목 보고 가볍게 봤거든요? 근데 이건... 그냥 내 연애사 자서전임.
+                            "우린 그냥 친구야" 이 말에 숨겨진 감정, 이 연극이 다 보여줍니다. 배우들 연기 진짜 실화냐구요. 웃기다가 갑자기 울컥하게 만드는 디테일...
+                            장난 아니에요. 중간중간에 빵 터지면서도 마지막엔 가슴...
+                        </p>
+                        <div class="tk_review_point">
+                            <img src="./01_img/사람이모지1.svg" />
+                            <p>Park1***</p>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                            <p class="tk_review_point1">9.9</p>
+                        </div>
+                    </div>
+                    <div class="tk_review_image">
+                        <img src="./01_img/관람후기1.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div class="tk_review_text">
+                        <p class="tk_keyword_date">국민 코믹 연극 <오백에삼십> - 대학로 JTN 아트홀 3관</p>
+                        <p class="tk_review_title">인생 첫 연극 관람인데 Best Pick 성공</p>
+                        <p class="tk_review_content">안녕하세요. 오늘 태어나 처음으로 연극을 관람 했는데요. 덕분에 연극이란 게 너무 재밌고 즐거운 거라는 걸 알게
+                            되었어요.
+                            연기/개그/연출/각본 모두 최고 였습니다. 연극 감상이란 취미를 만들어 주셔서 감사합니다.
+                        </p>
+                        <div class="tk_review_point">
+                            <img src="./01_img/사람이모지2.svg" />
+                            <p>Pipigood6***</p>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                            <p class="tk_review_point1">9.9</p>
+                        </div>
+                    </div>
+                    <div class="tk_review_image">
+                        <img src="./01_img/관람후기2.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div class="tk_review_text">
+                        <p class="tk_keyword_date">뮤지컬 <개와 고양이의 시간>
+                        </p>
+                        <p class="tk_review_title">나의 검은 행운들</p>
+                        <p class="tk_review_content">반려견, 반려모를 키우는 사람이 본다면 더 큰 울림을 받을 수 있을 거예요. 강아지와 고양이가 어떤 생각을 하는지,
+                            인간과 어떻게 가까워지는지에 대한
+                            세심한 연출들이 너무 좋아요! 랩터와 플루토의 투닥거리는 귀여운 장면들을 정말 좋아합니다 ㅎㅎ 앞으로의 모험들 끝까지...
+                        </p>
+                        <div class="tk_review_point">
+                            <img src="./01_img/사람이모지3.svg" />
+                            <p>ul1***</p>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                            <p class="tk_review_point1">9.7</p>
+                        </div>
+                    </div>
+                    <div class="tk_review_image">
+                        <img src="./01_img/관람후기3.gif" />
+                    </div>
+                </li>
+                <li>
+                    <div class="tk_review_text">
+                        <p class="tk_keyword_date">뮤지컬 <매디슨 카운티의 다리>
+                        </p>
+                        <p class="tk_review_title">미완을 선택함으로써 완성한 사랑</p>
+                        <p class="tk_review_content">어떤 내용인지 알고 간 지라 어떤 식으로 연출했을 지랑 애정배우들의 연기가 궁금했을 뿐이었는데...2막에서 아주 철철
+                            울고 나왔습니다.
+                            인생에서 이런 확신의 순간은 두 번 다시 오지 않을 것임을 알았지만 그녀는 자기 자리를 지키기를 선택했고 그는 그 선택을 존중해준다. 그리...>
+                        </p>
+                        <div class="tk_review_point">
+                            <img src="./01_img/사람이모지4.svg" />
+                            <p>tte***</p>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                            <p class="tk_review_point1">9.4</p>
+                        </div>
+                    </div>
+                    <div class="tk_review_image">
+                        <img src="./01_img/25003119_p.gif" />
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <input type="button" value="관람후기 새로 보기">
+            </div>
+        </div>
+        <div class="tk_end"> <!--tk 하단-->
+            <ul>
+                <li>
+                    <img src="./01_img/end1.gif" />
+                </li>
+                <li>
+                    <img src="./01_img/end2.gif" />
+                </li>
+                <li>
+                    <img src="./01_img/end3.gif" />
+                </li>
+                <li>
+                    <img src="./01_img/end4.gif" />
+                </li>
+            </ul>
+        </div>
+    </div> <!--ticket main out-->
+    <div id="footer"> <!-- footer -->
+        <div>
+            <ul id="footer_menu">
+                <li><a href="#">회사소개</a></li> <span>|</span>
+                <li><a href="#">이용약관</a></li><span>|</span>
+                <li><a href="#">개인정보처리방침</a></li><span>|</span>
+                <li><a href="#">위치기반서비스 이용약관</a></li><span>|</span>
+                <li><a href="#">여행약관</a></li><span>|</span>
+                <li><a href="#">여행자보험 가입내역</a></li><span>|</span>
+                <li><a href="#">티켓판매안내</a></li><span>|</span>
+                <li><a href="#">공지사항</a></li><span>|</span>
+                <li><a href="#">고객센터<div></div></a>
+                    <ul class="footer_sub">
+                        <li><a href="#">투어 고객센터</a></li>
+                        <div></div>
+                        <li><a href="#">티켓 고객센터</a></li>
+                    </ul>
+                </li><span>|</span>
+                <li><a href="#">Language<div></div></a>
+                    <ul class="footer_sub">
+                        <li><a href="#">Korean</a></li>
+                        <div></div>
+                        <li><a href="#">English</a></li>
+                        <div></div>
+                        <li><a href="#">Japanese</a></li>
+                        <div></div>
+                        <li><a href="#">Chinese</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_info">
+            <div id="company_info">
+                <div>
+                    <h3>(주)놀유니버스</h3>
+                    <p>
+                        주소 경기도 성남시 수정구 금토로 70 (금토동, 텐엑스타워)<br />
+                        사업자등록번호 824-81-02515 <a href="#" class="info_a">사업자정보확인</a><br />
+                        통신판매업신고 2024-성남수정-0912<br />
+                        관광사업증 등록번호 : 제2024-000024호<br />
+                        호스팅서비스제공자 (주)놀유니버스｜ 대표이사 배보찬, 최휘영
+                    </p>
+                </div>
+                <div>
+                    <h3>고객센터</h3>
+                    <p>
+                        <a href="tel:1588-3443">투어 1588-3443</a> | <a href="tel:1544-1555"> 티켓 1544-1555 </a><br />
+                        <a href="tel:02-830-7807">팩스 02-830-7807</a> | <a
+                            href="mailto:help.interpark@nol-universe.com">이메일
+                            help.interpark@nol-universe.com</a><br />
+                        <a href="tel:02-3479-4399">해외항공 02-3479-4399</a> | <a href="tel:02-3479-4340">국내항공
+                            02-3479-4340</a><br />
+                        <a href="#" class="info_a">투어 1:1문의</a> | <a href="#" class="info_a">티켓 1:1문의</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>전자금융거래 분쟁처리 담당정보</h3>
+                    <p>
+                        <a href="tel:1588-3443">투어 1588-3443</a> | <a href="tel:1544-1555">티켓 1544-1555</a><br />
+                        <a href="tel:02-830-8295">팩스 02-830-8295</a> | <a
+                            href="mailto:interpark_ef@nol-universe.com">이메일 interpark_ef@nol-universe.com</a><br />
+                        <a href="mailto:privacy_i@nol-universe.com">개인정보보호책임자 privacy_i@nol-universe.com</a>
+                    </p>
+                </div>
+            </div>
+            <div id="footer_noti">
+                <p>(주)놀유니버스는 일부 상품의 통신판매중개자로서 통신판매의 당사자가 아니므로, 상품의 예약, 이용 및 환불 등 거래와 관련된 의무와 책임은 판매자에게 있으며
+                    (주)놀유니버스는
+                    일체 책임을 지지 않습니다.<br />
+                    ⓒ Nol Universe Co., Ltd. All rights reserved. </p>
+            </div>
+        </div>
+    </div> <!-- footer end-->
+
+
+</body>
+
+</html>

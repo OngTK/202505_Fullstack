@@ -1,0 +1,554 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.tk_menu{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+    background-color: #fbfbfb;
+    width: 1280px;
+    margin: 0 auto;
+}
+.tk_menu01, .tk_menu02{
+    display: flex;
+    justify-content: flex-start;
+}
+.tk_menu li{
+    margin: 20px 20px 20px 0px;
+}
+.tk_menu01 > li > a{
+    color: rgba(41, 41, 45 , 0.8);
+}
+.tk_menu01 > li > span{
+    color: #b3b3b3;
+}
+.tk_menu02 > li > a{
+    color: blue;
+}
+.tk_main_img01{
+    width: 100%;
+    position: relative;
+}
+.tk_main_img02{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 58%; left: 9%;
+}
+.tk_main_img02 > li{
+    padding: 7px;
+}
+.tk_main_img02 > li > img{
+    border-radius: 15px;
+    width: 60px;
+}
+.tk_sub_image{
+    width: 1280px;
+    margin: 20px auto;
+}
+.tk_sub_image02{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tk_sub_image02 > li{
+    padding: 10px;
+}
+.tk_sub_image02 > li img{
+    width: 390px;
+    height: 110px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+.tk_ranking{
+    width: 1280px;
+    margin: 80px auto;
+    text-align: center;
+}
+.tk_ranking > h1{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.tk_ranking_btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.tk_ranking_btn > input{
+    border-radius: 30px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    font-size: 17px;
+}
+.tk_rank_list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.tk_rank_list > li{
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+.tk_rank_list > li > img{
+    width: 240px;
+    height: 320px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.tk_rank_list > li > h4{
+    margin-bottom: 5px;
+    line-height: 160%;
+    text-align: left;
+}
+.tk_rank_place{
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.tk_rank_date{
+    color: gray;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.tk_ranking > input{
+    border: 1px solid #dbdbdb;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: white;
+    padding: 20px 40px;
+    margin-top: 30px;
+}
+/* .tk_ranking_click{
+    background-color: black;
+    color: white;
+} */
+.tk_open{
+    width: 1280px;
+    margin: 50px auto;
+    text-align: center;
+}
+.tk_open > h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.tk_open > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tk_open > ul > li{
+    display: flex;
+    width: 400px;
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+    margin: 10px;
+}
+.tk_open > ul > li > img{
+    width: 125px;
+    height: 170px;
+}
+.tk_open > ul > li > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 10px;
+    padding: 10px;
+}
+.tk_open > ul > li > div p{
+    margin-bottom: 5px;
+}
+.tk_open_datetime{
+    color: blue;
+    font-size: 17px;
+    font-weight: bold;
+}
+.tk_open_name{
+    font-size: 17px;
+    font-weight: bold;
+}
+.tk_open_일반예매{
+    color: gray;
+    font-size: 13px;
+}
+.tk_open_red{
+    font-size: 12px;
+    color: red;
+    background-color: rgb(255, 211, 219);
+    width: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+.tk_open_blue{
+    font-size: 12px;
+    color: blue;
+    background-color: rgb(211, 220, 255);
+    width: 50px;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.tk_open_blrd{
+    display: flex;
+}
+.tk_open > input{
+    border: 1px solid #dbdbdb;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 40px;
+    padding: 20px 40px;
+    background-color: white;
+    margin-top: 30px;
+}
+.tk_play{
+    width: 1280px;
+    margin: 0 auto;
+}
+.tk_play > h1{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.tk_play_menu{
+    display: flex;
+    justify-content: center;
+}
+.tk_play_menu > li{
+    margin: 10px;
+}
+.tk_play_menu > li > input{
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+.tk_play_video{
+    display: flex;
+    justify-content: center;
+}
+.tk_play_video >li{
+    border: 1px solid #dbdbdb;
+    border-radius: 30px;
+    margin: 10px;
+}
+.tk_iframe{
+    border-radius: 20px 20px 0 0;
+}
+.tk_play_content{
+    display: flex;
+    padding: 20px;
+}
+.tk_play_content > img{
+    width: 100px;
+    border-radius: 10px;
+}
+.tk_play_content > p{
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.tk_sale{
+    width: 1280px;
+    margin: 50px auto;
+    text-align: center;
+}
+.tk_sale > h1{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+.tk_sale > ul{
+    display: flex;
+    justify-content: center;
+}
+.tk_sale > ul > li{
+    width: 200px;
+    margin: 10px;
+    text-align: left;
+}
+.tk_sale > ul > li > img{
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+.tk_sale_red{
+    width: 50px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    padding: 2px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0px;
+}
+.tk_sale_title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.tk_sale_place{
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+.tk_sale_date{
+    color: #a1a1a1;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.tk_sale_blue1{
+    color: blue;
+    font-size: 17px;
+    margin: 10px 0px;
+}
+.tk_sale_pp2{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+.tk_sale_percent{
+    color: red;
+    font-weight: 900;
+    font-size: 20px;
+}
+.tk_sale_price{
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0px 10px;
+}
+.tk_sale > input{
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 40px;
+    margin: 30px 0px;
+}
+.tk_pick{
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+.tk_pick > h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+.tk_pick > ul{
+    display: flex;
+    justify-content: center;
+}
+.tk_pick > ul > li{
+    padding: 10px;
+}
+.tk_pick > ul > li > input{
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px 15px;
+}
+.tk_pick_list{
+    display: flex;
+    justify-content: space-between;
+}
+.tk_pick_list > li{
+    width: 240px;
+}
+.tk_pick_list > li > img{
+    width: 240px;
+    border-radius: 10px;
+}
+.tk_pick_list > li > h3{
+    text-align: left;
+    margin: 10px 0px;
+}
+.tk_pick_list > li > p{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.tk_pick_date{
+    color: gray;
+}
+.tk_keyword{
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+.tk_keyword > h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 110px;
+}
+.tk_keyword_menu{
+    display: flex;
+    justify-content: center;
+}
+.tk_keyword_menu > li {
+    padding: 10px;
+}
+.tk_keyword_menu > li > input{
+    background-color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 25px;
+}
+.tk_keyword > div > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.tk_keyword > div > ul > li{
+    text-align: left;
+    padding: 10px 0px;
+    width: 240px;
+}
+.tk_keyword > div > ul > li > img{
+    width: 240px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+.tk_keyword > div > ul > li >h3{
+    margin: 7px 0px;
+}
+.tk_keyword > div > ul > li > p{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+.tk_keyword_date{
+    color: gray;
+}
+#tk_bottom_image{
+    background-image: url("./01_img/대형이미지2.svg");
+    height: 100px;
+    background-repeat: no-repeat;
+    width: 1280px;
+    margin: 0 auto;
+    background-position: center;
+    background-color: #6742d8;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+/* #tk_bottom_image{
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+} */
+.tk_review{
+    width: 1280px;
+    margin: 0 auto;
+}
+.tk_review >h1{
+    text-align: center;
+    font-size: 35px;
+    margin: 90px 0px 30px 0px;
+}
+.tk_review > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tk_review > ul > li{
+    width: 600px;
+    display: flex;
+}
+.tk_review_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tk_review_image > img{
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.tk_review_title{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.tk_review_content{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #616161;
+    line-height: 150%;
+}
+.tk_review_point{
+    display: flex;
+    justify-content: flex-start;
+}
+.tk_review_point > img { 
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+}
+.tk_review_point > p{
+    margin-right: 5px;
+}
+.tk_review_point1{
+    font-weight: bold;
+}
+.tk_review_image{
+    border: 1px solid #dbdbdb;
+}
+.tk_review > div{
+    text-align: center;
+}
+.tk_review > div > input{
+    font-size: 20px;
+    padding: 20px 40px;
+    margin: 30px 0px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    border-radius: 40px;
+}
+.tk_end{
+    width: 1280px;
+    margin: 0 auto;
+}
+.tk_end > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.tk_end > ul > li{
+    width: 305px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+}
+.tk_end > ul > li > img{
+    width: 290px;
+}
+.tk_keyword_btn{
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 60px;
+    height: 60px;
+    background-image: url(./01_img/slide_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}

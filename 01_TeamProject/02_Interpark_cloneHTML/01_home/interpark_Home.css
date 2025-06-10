@@ -159,7 +159,7 @@ li {
 }
 
 /*첫번째 버튼 강조*/
-.hm_TourSales button:nth-child(1) {
+.hm_TourSales > div  button:nth-child(1) {
     background-color: #333333;
     color: white;
     font-weight: bold;
