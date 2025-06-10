@@ -68,8 +68,48 @@ console.log(채소상자);
 [ 배열 array ]
     하나의 변수에 여러 자료를 저장 
 [ , , , , ...]
-    - 인덱스(index)
+    - 인덱스(index) : 0~n으로 표시
+    - 배열 호출 
+        console.log(Array); >> 배열의 모든 값이 출력
+        console.log(Array[index]); >> 배열에 해당 index의 요소가 출력
+    - 배열 수정
+        전체
+            변수명 = [ , , , ]; >> 새로운 자료 입력
+        특정요소
+            변수명[index] = ""      
+    - 배열 내 요소 추가
+        변수명.push(새로운 값) >> 가장 마지막에 추가됨
+    - 배열 내 요소 삭제
+        변수명.splice(index, ea)
+    - 배열 내 특정 요소 찾기
+        변수명.indexOf(찾을값) >> 있으면 index 번호를, 없으면 -1을 반환
 */
 
-let season = ["봄", "여름", "가을", "겨울"] ;
-console.log(season)
+let season = ["봄", "여름", "가을", "겨울"] ; //index 0~3 / length 4
+console.log(season);
+console.log(season[0]);
+console.log(season[1]);
+console.log(season[2]);
+console.log(season[3]);
+console.log(season[4]); // undifined
+
+/* 생각 1)
+변수 : 1개 = season
+리터럴 : 4개 = 봄, 여름, 가을, 겨울 
+타입 : 2개 = array, String
+변수가 갖는 자료 1개: [ ] (배열 통으로 1개) 
+*/
+
+season = ["배두훈", "강형호", "조민규", "고우림"]
+console.log(season);
+season[2] = "박강현";
+console.log(season);
+
+season.push("조민규");
+console.log(season);
+
+season.splice(2,1);
+console.log(season);
+
+console.log(season.indexOf("고우림"));
+console.log(season.indexOf("박강현"));
