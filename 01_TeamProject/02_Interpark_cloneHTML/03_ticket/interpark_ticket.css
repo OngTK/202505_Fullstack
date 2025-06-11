@@ -42,7 +42,7 @@ a{
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    top: 58%; left: 9%;
+    top: 70%; left: 9%;
 }
 .tk_main_img02 > li{
     padding: 7px;
@@ -50,6 +50,11 @@ a{
 .tk_main_img02 > li > img{
     border-radius: 15px;
     width: 60px;
+    height: 60px;
+}
+.tk_main_img02 > li > img:hover{
+    width: 80px;
+    height: 80px;
 }
 .tk_sub_image{
     width: 1280px;
