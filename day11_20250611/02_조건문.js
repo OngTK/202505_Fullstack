@@ -84,6 +84,7 @@ let choice5 = prompt("예약할 좌석을 입력해주세요. (0~2)")
 
 if ( seatList[choice5] == 'X') {
     console.log("예약 성공");
+    seatList[choice5] = 'O'
 } else {
     console.log("예약 불가");
 };
