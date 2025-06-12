@@ -241,6 +241,27 @@ if (player8_1 == 0) {
     )
 }
 */
+/* 방법1
+let player8_1 = Number(prompt("플레이어 1 : 0(가위), 1(바위), 2(보)"));
+let player8_2 = Number(prompt("플레이어 2 : 0(가위), 1(바위), 2(보)")); 
+if (player8_1 == player8_2) {
+    console.log("무승부");
+} else if ( (player8_1==0 && player8_2==2) ||(player8_1==1 && player8_2==0) || (player8_1==2 && player8_2==1)) {
+    console.log("플레이어 1 승리");
+} else {
+    console.log("플레이어 2 승리");
+}
+*/
+// 패턴찾기 
+/* 
+if (player8_1 == player8_2) {
+    console.log("무승부");
+} else if ( (player8_1 == (player8_2 + 1)%3)) {
+    console.log("플레이어 1 승리");
+} else {
+    console.log("플레이어 2 승리");
+*/
+
 
 /* ==============================
 문제 9: 주차 차량 위치 검색
