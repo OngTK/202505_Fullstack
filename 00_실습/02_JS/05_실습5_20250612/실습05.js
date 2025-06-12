@@ -164,6 +164,39 @@ if (num7_1 < num7_2 && num7_1 < num7_3) {
 } 
 */
 
+// 배열로 오름차순 만들기
+/*
+let num7_1 = Number(prompt("숫자를 입력해주세요. 1"));
+let num7_2 = Number(prompt("숫자를 입력해주세요. 2"));
+let num7_3 = Number(prompt("숫자를 입력해주세요. 3")); 
+
+let numList = [ num7_1 , num7_2 , num7_3 ];
+console.log(numList)
+
+let temp; //swap을 위한 임시변수 선언
+if ( numList[0] > numList[1]){
+    temp = numList[0];
+    numList[0] = numList[1];
+    numList[1] = temp;
+}
+console.log(numList)
+if ( numList[0] > numList[2]){
+    tmep = numList[0];
+    numList[0] = numList[2];
+    numList[2] = temp;
+}
+console.log(numList)
+
+if ( numList[1] > numList[2]){
+    tmep = numList[1];
+    numList[1] = numList[2];
+    numList[2] = temp;
+}
+console.log(numList)
+
+console.log(`${numList[0]}, ${numList[1]}, ${numList[2]}`)
+*/
+
 /* ==============================
 문제 8: 가위바위보 게임
 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
