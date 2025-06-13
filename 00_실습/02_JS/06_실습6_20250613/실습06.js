@@ -249,14 +249,21 @@ document.write(output8)
 */
 
 let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
-let output9 = ''
+let output9 = '';
 for (i = 0; i < seatStatus.length; i++) {
-    if (seatStatus[i] == "빈좌석") {
-        output9 += `<div style="color: blue;"> ${seatStatus[i]} </div>`
-    } else if (seatStatus[i] == "예약석") {
-        output9 += `<div style="color: red;"> ${seatStatus[i]} </div>`
+    if ( i % 2 == 0 ) { 
+        output9 += '<div style="display: flex;">' ;
     }
-}
+    if (seatStatus[i] == "빈좌석") {
+        output9 += `<div style="color: blue;"> ${seatStatus[i]} </div>`;
+    } else if (seatStatus[i] == "예약석") {
+        output9 += `<div style="color: red;"> ${seatStatus[i]} </div>`;
+    };
+    if (i % 2 == 1 ) {
+        output9 += '</div>'
+    };
+};
+
 document.write(output9)
 
 
@@ -279,7 +286,7 @@ HTML에 출력하는 프로그램을 작성하시오.
         계산된 요금이 일일 최대 요금을 초과하면, 최대 요금(20,000원)으로 처리합니다.
         HTML에 차량 번호, 주차 시간, 최종 요금을 한 줄씩 출력합니다.
     (4). 출력 예시 (HTML)
-        250어7142: 65분 주차, 최종 요금: 3,000원
+        250어7142: 65분 주차, 최종 요금: 2,500원
         142가7415: 30분 주차, 최종 요금: 1,000원
         888호8888: 140분 주차, 최종 요금: 6,500원
         931나8234: 420분 주차, 최종 요금: 20,000원
