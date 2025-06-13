@@ -165,7 +165,7 @@ let products = ['볼펜', '노트', '지우개'];
 let stock = [10, 5, 20];
 */
 
-/* 풀이
+/* 풀이 
 let products = ['볼펜', '노트', '지우개'];
 let stock = [10, 5, 20];
 
@@ -174,7 +174,7 @@ let buy_stock = Number(prompt("수량"))
 
 if (products.indexOf(buy_product) == -1) {
     console.log("존재하지 않는 상품입니다.");
-}
+} 
 for (let i = 0; i < products.length; i++) {
     if (i == products.indexOf(buy_product)) {
         if (stock[i] >= buy_stock) {
@@ -185,10 +185,10 @@ for (let i = 0; i < products.length; i++) {
         )
     }
 }
-console.log(products) 
-console.log(stock)
+for (let i = 0 ; i < products.length ; i++ ) {
+    console.log(`제품 : ${products[i]} / 재고수량 :  ${stock[i]}`)
+}
 */
-
 
 /*==================
 문제 8: 영화 평점 시각화하기
