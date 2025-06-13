@@ -28,13 +28,14 @@ console.log(num1);
 console.log(num2);
 */
 
+// 강사님 풀이
 let max = 0;
 for (let i = 0; i < numbers.length; i++) {
     if (max < numbers[i]) {
-        max = numbers[i]
+        max = numbers[i];
     };
 };
-console.log(max)
+console.log(max);
 
 /*==================
 문제 2: 별 찍기 (기본 역삼각형)
@@ -68,10 +69,10 @@ let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
 */
 
 let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
-let name3 = ''
-
+let name3 = '';
+/*
 for (let i = 0; i < userNames.length; i++) {
-    name3 = userNames[i]
+    name3 = userNames[i];
     for (let j = 0; j < name3.length; j++) {
         if (name3[j] == '솔') {
             console.log(name3);
@@ -79,6 +80,19 @@ for (let i = 0; i < userNames.length; i++) {
         }
     }
 }
+*/
+// 첫번째만 찾아야 하는데 위에는 솔이 들어간 모든 이름을 찾고있음!
+
+//강사님 풀이
+
+for (let i = 0; i < userNames.length; i++) {
+    let name_3 = userNames[i];
+    if (name_3.indexOf('솔') != -1) {
+        console.log(name_3)
+        break;
+    }
+}
+
 
 /*==================
 문제 4: 2차원 배열의 모든 요소 출력하기
@@ -150,7 +164,8 @@ console.log(numbers6);
 let products = ['볼펜', '노트', '지우개'];
 let stock = [10, 5, 20];
 */
-/*
+
+/* 풀이
 let products = ['볼펜', '노트', '지우개'];
 let stock = [10, 5, 20];
 
@@ -194,7 +209,25 @@ console.log(stock)
         글래디에이터2   ★★★★★★★☆☆☆
         청설            ★★★★★★☆☆☆☆
 */
+let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
+let movieRatings = [8, 4, 7, 6];
 
+let output8 = ``;
+
+for (let i = 0; i < movieNames.length; i++) {
+    let Movie_Title = movieNames[i]
+    output8 += `<div> ${Movie_Title} `
+    let star = movieRatings[i];
+    for (let j = 1; j <= 10; j++) {
+        if (j <= star) {
+            output8 += `<span>★</span>`;
+        } else {
+            output8 += `<span>☆</span>`;
+        }
+    }
+    output8 += `</div>`
+}
+document.write(output8)
 
 /*==================
 문제 9: 좌석 예약 상태 표시하기
@@ -215,10 +248,23 @@ console.log(stock)
         예약석 빈좌석
 */
 
+let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+let output9 = ''
+for (i = 0; i < seatStatus.length; i++) {
+    if (seatStatus[i] == "빈좌석") {
+        output9 += `<div style="color: blue;"> ${seatStatus[i]} </div>`
+    } else if (seatStatus[i] == "예약석") {
+        output9 += `<div style="color: red;"> ${seatStatus[i]} </div>`
+    }
+}
+document.write(output9)
+
+
 /*==================
 문제 10: 주차 요금 정산하기
-차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 
-각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
+차량별 주차 시간 데이터가 주어졌을 때, 
+아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 
+HTML에 출력하는 프로그램을 작성하시오.
     (1). 초기 데이터
         차량 번호와 주차 시간(분)은 두 배열의 동일한 인덱스를 사용합니다.
         let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
@@ -244,3 +290,20 @@ console.log(stock)
         계산 예시 : 65분 주차 시 parseInt( (65 - 30) / 10 )는 
         parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
 */
+
+let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
+let usageMinutes = [65, 30, 140, 420];
+
+for (let i = 0; i < carNumbers.length; i++) {
+    let fee = 0;
+    if (usageMinutes[i] <= 30) {
+        fee = 1000;
+    } else if (usageMinutes[i] > 30) {
+        fee = (parseInt((usageMinutes[i] - 30) / 10)) * 500 + 1000;
+    }
+    if (fee >= 20000) {
+        fee = 20000;
+    }
+
+    document.write(`<div> ${carNumbers[i]} : ${usageMinutes[i]}분 주차, 최종 요금: ${fee}원 </div>`);
+}
