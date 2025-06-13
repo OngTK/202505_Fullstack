@@ -260,7 +260,7 @@ for (i = 0; i < seatStatus.length; i++) {
         output9 += `<div style="color: red;"> ${seatStatus[i]} </div>`;
     };
     if (i % 2 == 1 ) {
-        output9 += '</div>'
+        output9 += '</div>';
     };
 };
 
