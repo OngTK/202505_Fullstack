@@ -171,6 +171,19 @@ for (let i = 0; i < team.length; i++) {
 console.log(team_develop);
 console.log(team_plan);
 
+//===============
+let result = { '개발팀' : [] , '기획팀' : []};
+
+for (let i = 0; i < team.length; i++) {
+  if (team[i].department == '개발팀') {
+    result.개발팀.push(team[i].name);
+  } else if (team[i].department == '기획팀'){
+    result.기획팀.push(team[i].name);
+  };
+};
+console.log(result)
+
+
 /*==================
 문제 8: 장바구니 총액 계산하기
 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
@@ -854,16 +867,16 @@ let response = {
 let data = response.data;
 let tableHead = ['업 소 명', '세대수', '소재지', '지정메뉴', '전화번호', '업태']
 
-let table = `<table> <tr>`
+let tableHtml = `<table style = "border : 1px solid black"> <tr>`
 for (let i = 0; i < tableHead.length; i++) {
-  table += `<th> ${tableHead[i]} </th>`;
+  tableHtml += `<th> ${tableHead[i]} </th>`;
 };
-table += `</tr>`
+tableHtml += `</tr>`
 
-for ( let i = 0 ; i < data.length ; i++ ) {
+for (let i = 0; i < data.length; i++) {
   const obj11 = data[i]
-  table += `<tr>
-  <td>${obj11["업 소 명"]}</td>
+  tableHtml += `<tr>
+  <td>${obj11['업 소 명']}</td>
   <td> </td>
   <td>${obj11.소재지}</td>
   <td>${obj11.지정메뉴}</td>
@@ -871,5 +884,6 @@ for ( let i = 0 ; i < data.length ; i++ ) {
   <td>${obj11.업태}</td>
   </tr>`
 }
+tableHtml += `</table>`
 
-document.write(table)
+document.write(tableHtml)
