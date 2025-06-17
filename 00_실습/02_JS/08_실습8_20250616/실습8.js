@@ -60,12 +60,12 @@ const scores = [
   { name: 'C', math: 76, science: 78 }
 ];
 
-sum = 0;
-for (let i = 0 ; i < scores.length ; i++ ){
-    sum += scores[i].math
+sum3 = 0;
+for (let i = 0; i < scores.length; i++) {
+  sum3 += scores[i].math
 };
-console.log(sum)
-console.log(sum / scores.length )
+console.log(sum3)
+console.log(sum3 / scores.length)
 
 /*==================
 문제 4: 특정 조건을 만족하는 객체 찾기
@@ -80,11 +80,25 @@ const products = [
   { id: 4, name: '딸기' }
 ];
 
-for ( let i = 0 ;  i < products.length ; i++) {
-    if (products[i].id == 3 ) {
-        console.log (products[i]);
-    };
+for (let i = 0; i < products.length; i++) {
+  if (products[i].id == 3) {
+    console.log(products[i]);
+  };
 };
+//(풀이)==========
+let idCheck4 = false;
+for (let i = 0; i < products.length; i++) {
+  if (products[i].id == 3) {
+    idCheck4 = true;
+    console.log(products[i]);
+    break;
+  };
+};
+
+if (idCheck4 == flase) {
+  console.log("상품을 찾을 수 없습니다.")
+}
+
 
 /*==================
 문제 5: 객체 배열 필터링하기
@@ -100,10 +114,10 @@ const users = [
 
 const activeUsers = [];
 
-for (let i = 0 ; i < users.length ; i++) {
-    if(users[i].isActive == true) {
-        activeUsers.push(users[i]);
-    };
+for (let i = 0; i < users.length; i++) {
+  if (users[i].isActive == true) {
+    activeUsers.push(users[i]);
+  };
 };
 console.log(activeUsers)
 
@@ -119,8 +133,8 @@ const movies = [
 ];
 
 const movieTitles = [];
-for (let i =0 ; i < movies.length ; i++) {
-    movieTitles.push(movies[i].title);
+for (let i = 0; i < movies.length; i++) {
+  movieTitles.push(movies[i].title);
 }
 
 console.log(movieTitles)
@@ -146,12 +160,12 @@ const team = [
 const team_develop = [];
 const team_plan = [];
 
-for (let i = 0 ; i < team.length ; i++) {
-    if (team[i].department == '개발팀') {
-        team_develop.push(team[i].name);
-    } else {
-        team_plan.push(team[i].name);
-    };
+for (let i = 0; i < team.length; i++) {
+  if (team[i].department == '개발팀') {
+    team_develop.push(team[i].name);
+  } else {
+    team_plan.push(team[i].name);
+  };
 };
 
 console.log(team_develop);
@@ -164,21 +178,25 @@ cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 
 productsInfo 배열: 각 요소는 상품의 고유 id와 price(가격)를 가집니다.
 cart 배열을 기준으로, 장바구니에 담긴 모든 상품의 총 결제 금액을 계산하여 콘솔에 출력하세요.
 */
-const cart = [{ id: 1, quantity: 2 },{ id: 3, quantity: 1 }];
+const cart = [{ id: 1, quantity: 2 }, { id: 3, quantity: 1 }];
 const productsInfo = [
   { id: 1, price: 1000 },
   { id: 2, price: 5000 }, // 장바구니에 없는 상품
   { id: 3, price: 2500 }
 ];
 
-let sum8 = 0 ;
-for ( let i = 0 ; i < cart.length ; i++ ){
-  for (let j = 0 ; j <productsInfo.length ; j++ ){
+let sum8 = 0;
+for (let i = 0; i < cart.length; i++) {
+  let cartInv = cart[i]
+  for (let j = 0; j < productsInfo.length; j++) {
+    let productsInfoInv = productsInfo[j]
+    if (cartInv.id == productsInfoInv.id) {
+      sum8 += cartInv.quantity * productsInfoInv.price
+    };
+  };
+};
 
-  }
-}
-
-
+console.log(`총 결제금액 : ${sum8}`)
 
 /*==================
 문제 9: 투표 결과 집계하기
@@ -188,6 +206,23 @@ for ( let i = 0 ; i < cart.length ; i++ ){
 */
 // 출력 예시: { A: 3, B: 3, C: 1 }
 const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
+
+let ACont = 0;
+let BCont = 0;
+let CCont = 0;
+
+for (let i = 0; i < votes.length; i++) {
+  if (votes[i] == "A") {
+    ACont++;
+  } else if (votes[i] == "B") {
+    BCont++;
+  } else if (votes[i] == "C") {
+    CCont++;
+  };
+};
+
+let votesObj = { A: ACont, B: BCont, C: CCont }
+console.log(votesObj)
 
 /*==================
 문제 10: 웹툰 평점 시각화하기
@@ -208,6 +243,23 @@ const webtoons = [
   { title: '전지적 독자 시점', rating: 9.7 }
 ];
 
+let text = `<div>`;
+
+for (let i = 0; i < webtoons.length; i++) {
+  text += ` ${webtoons[i].title} : `
+
+  let rate = parseInt(webtoons[i].rating)
+  for (let j = 0; j < rate; j++) {
+    text += `★`
+  }
+  for (let j = 0; j < 10 - rate; j++) {
+    text += `☆`
+  }
+  text += `</div>`
+}
+console.log(text)
+document.write(text)
+
 /*==================
 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기
 [구현 조건]
@@ -219,6 +271,7 @@ const webtoons = [
   4. 테이블의 각 셀에는 '업 소 명', '세대수', '소재지', '지정메뉴', '전화번호','업태' 정보가 
         순서대로 포함되어야 합니다.
   5. 최종적으로 완성된 HTML 테이블 문자열을 document.write() 사용하여 화면에 출력합니다.
+
 [ 공공데이터 open API 신청 ]
   1. 공공데이터 포털 : https://www.data.go.kr
   2. 회원가입/로그인
@@ -229,3 +282,108 @@ const webtoons = [
   6. 인증키 설정 후 'API 목록' 에서  [Open Api 호출] 합니다.
   7. **실행 결과(JSON)**를 전체 복사합니다.  
 */
+let response = {
+  "currentCount": 10,
+  "data": [
+    {
+      "소재지": "인천광역시 부평구 동암산로 10 (십정동)",
+      "업 소 명": "(주)온누리푸드온누리장작구이",
+      "업태": "한식",
+      "연번": 1,
+      "전화번호": "032-526-9292",
+      "지정메뉴": "오리훈제"
+    },
+    {
+      "소재지": "인천광역시 부평구 안남로417번길 20, 2층 (청천동)",
+      "업 소 명": "1982삼계정",
+      "업태": "한식",
+      "연번": 2,
+      "전화번호": "032-512-1982",
+      "지정메뉴": "녹두삼계탕"
+    },
+    {
+      "소재지": "인천광역시 부평구 부평대로 301 (청천동,남광센트렉스 111호)",
+      "업 소 명": "갈비가",
+      "업태": "한식",
+      "연번": 3,
+      "전화번호": "032-363-3787",
+      "지정메뉴": "속초코다리냉면"
+    },
+    {
+      "소재지": "인천광역시 부평구 평천로 553(삼산동)",
+      "업 소 명": "경복궁삼계탕",
+      "업태": "한식",
+      "연번": 4,
+      "전화번호": "032-511-1494",
+      "지정메뉴": "들깨삼계탕"
+    },
+    {
+      "소재지": "인천광역시 부평구 길주남로 109,1층 (부개동,송현주택)",
+      "업 소 명": "곱창마당",
+      "업태": "한식",
+      "연번": 5,
+      "전화번호": "032-271-2292",
+      "지정메뉴": "한우곱창모듬구이"
+    },
+    {
+      "소재지": "인천광역시 부평구 부평대로63번길 10-11 (부평동)",
+      "업 소 명": "금강산추어탕",
+      "업태": "한식",
+      "연번": 6,
+      "전화번호": "032-527-8118",
+      "지정메뉴": "추어탕"
+    },
+    {
+      "소재지": "인천광역시 부평구부평대로87번길 4(부평동)",
+      "업 소 명": "뉴욕반점",
+      "업태": "중식",
+      "연번": 7,
+      "전화번호": "032-516-4488",
+      "지정메뉴": "삼선짬뽕,찹쌀탕수육"
+    },
+    {
+      "소재지": "인천광역시 부평구 신트리로22번길 15-14 (부평동, 1층 일부)",
+      "업 소 명": "더히든키친",
+      "업태": "양식",
+      "연번": 8,
+      "전화번호": "032-272-7276",
+      "지정메뉴": "바질페스토파스타"
+    },
+    {
+      "소재지": "인천광역시 부평구 마장로 402(청천동)",
+      "업 소 명": "덕수갈비",
+      "업태": "한식",
+      "연번": 9,
+      "전화번호": "032-517-4070",
+      "지정메뉴": "왕갈비탕"
+    },
+    {
+      "소재지": "인천광역시 부평구 대정로 93, 웰링턴 1층 103호 (부평동)",
+      "업 소 명": "동강해물탕",
+      "업태": "한식",
+      "연번": 10,
+      "전화번호": "032-524-9166",
+      "지정메뉴": "해물탕"
+    }
+  ],
+  "matchCount": 70,
+  "page": 1,
+  "perPage": 10,
+  "totalCount": 70
+}
+let data = response.data;
+let tableHead = ['업 소 명', '세대수', '소재지', '지정메뉴', '전화번호','업태' ]
+
+let table = `<table> <tr>`
+for ( let i = 0 ; i < tableHead.length ; i++ ) {
+  table += `<th> ${tableHead[i]} </th>` ;
+};
+table += `</tr>`
+
+for ( let i = 0 ; i < data.length ; i ++ ){
+  let dataInv = data[i];
+  for (let j = 0 ; j < data[i].length ; j++ ){
+  }
+}
+
+document.write(table)
