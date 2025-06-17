@@ -30,18 +30,25 @@ let ID2 = prompt("아이디");
 let PW2 = prompt("비밀번호");
 let Name2 = prompt("이름");
 
-let member2 = { id : ID2, pw : PW2, name : Name2 };
+let member2 = { id : ID2, password : PW2, name : Name2 };
+
+let idCkeck = false;
 
 for (let i = 0 ; i < members.length ; i++) {
     let user_info = members[i]
-    if (ID2 == members[i].id) {
-        console.log("존재하는 아이디 입니다.")
-    } else {
-        members.push(member2)
-        console.log(member2)
-    }
+    if ( ID2 == user_info.id ) {
+      console.log("존재하는 아이디 입니다.");
+      idCkeck = true;
+      break;
+    } 
 };
+if (idCkeck == false) {
+  members.push(member2) ;
+}
+
+console.log(members)
 */
+
 /*==================
 문제 3: 객체 배열의 속성 값 평균 구하기
 scores 배열에 담긴 모든 학생의 수학(math) 점수 평균을 계산하여 콘솔에 출력하시오.
@@ -163,6 +170,14 @@ const productsInfo = [
   { id: 2, price: 5000 }, // 장바구니에 없는 상품
   { id: 3, price: 2500 }
 ];
+
+let sum8 = 0 ;
+for ( let i = 0 ; i < cart.length ; i++ ){
+  for (let j = 0 ; j <productsInfo.length ; j++ ){
+
+  }
+}
+
 
 
 /*==================
