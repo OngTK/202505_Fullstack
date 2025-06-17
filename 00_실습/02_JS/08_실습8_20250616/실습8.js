@@ -95,7 +95,7 @@ for (let i = 0; i < products.length; i++) {
   };
 };
 
-if (idCheck4 == flase) {
+if (idCheck4 == false) {
   console.log("상품을 찾을 수 없습니다.")
 }
 
@@ -243,10 +243,10 @@ const webtoons = [
   { title: '전지적 독자 시점', rating: 9.7 }
 ];
 
-let text = `<div>`;
+let text = ``;
 
 for (let i = 0; i < webtoons.length; i++) {
-  text += ` ${webtoons[i].title} : `
+  text += ` <div> ${webtoons[i].title} : `
 
   let rate = parseInt(webtoons[i].rating)
   for (let j = 0; j < rate; j++) {
@@ -372,18 +372,24 @@ let response = {
   "totalCount": 70
 }
 let data = response.data;
-let tableHead = ['업 소 명', '세대수', '소재지', '지정메뉴', '전화번호','업태' ]
+let tableHead = ['업 소 명', '세대수', '소재지', '지정메뉴', '전화번호', '업태']
 
 let table = `<table> <tr>`
-for ( let i = 0 ; i < tableHead.length ; i++ ) {
-  table += `<th> ${tableHead[i]} </th>` ;
+for (let i = 0; i < tableHead.length; i++) {
+  table += `<th> ${tableHead[i]} </th>`;
 };
 table += `</tr>`
 
-for ( let i = 0 ; i < data.length ; i ++ ){
-  let dataInv = data[i];
-  for (let j = 0 ; j < data[i].length ; j++ ){
-  }
+for ( let i = 0 ; i < data.length ; i++ ) {
+  const obj11 = data[i]
+  table += `<tr>
+  <td>${obj11["업 소 명"]}</td>
+  <td> </td>
+  <td>${obj11.소재지}</td>
+  <td>${obj11.지정메뉴}</td>
+  <td>${obj11.전화번호}</td>
+  <td>${obj11.업태}</td>
+  </tr>`
 }
 
 document.write(table)
