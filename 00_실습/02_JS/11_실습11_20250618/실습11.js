@@ -98,13 +98,13 @@ function findTopStudent(array) {
     for (let i = 0; i < array.length ; i++) {
         if (array[i].score > TopScore) {
             TopStudent = array[i].name;
-            TopScore = array[i].score
+            TopScore = array[i].score;
         }; 
     };
     return TopStudent;
 };
 
-console.log(findTopStudent(students))
+console.log(findTopStudent(students));
 
 /*======================================
 실습 6: 상품 목록 페이지 만들기 (참고: 예제 6, 7, 8, 12)
@@ -125,7 +125,7 @@ function renderProducts(array) {
     };
     return html;
 };
-document.write(renderProducts(products))
+document.write(renderProducts(products));
 
 /*======================================
 실습 7: 간단한 계산기
@@ -151,11 +151,11 @@ renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회�
 let todoList = ['장보기', '운동하기']
 
 function renderList(array){
-    html =`<ul>`
+    html =`<ul>`;
     for(let i = 0 ; i < array.length ; i++){
-        html += `<li>${array[i]}</li>`
-    }
-    html +=`</ul>`
+        html += `<li>${array[i]}</li>`;
+    };
+    html +=`</ul>`;
     return html;
 };
 
