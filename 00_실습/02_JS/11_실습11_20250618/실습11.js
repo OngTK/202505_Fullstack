@@ -24,8 +24,9 @@ for 반복문을 사용해 모든 요소의 합계를 구하여 반환하는 sum
 */
 
 const numbers = [10, 20, 30, 40, 50];
-sum = 0;
+
 function symArray(array) {
+    sum = 0;
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
     };
@@ -148,7 +149,7 @@ renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회�
  <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
 최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
 */
-let todoList = ['장보기', '운동하기']
+let todoList = ['장보기', '운동하기'];
 
 function renderList(array){
     html =`<ul>`;
@@ -172,11 +173,11 @@ document.write(renderList(todoList))
 
 function getTicketPrice(age){
     if (age < 8) {
-        return '무료'
+        return '무료';
     } else if (age <= 19) {
-        return '5,000원'
+        return '5,000원';
     } else {
-        return '10,000원'
+        return '10,000원';
     };
 };
 console.log(getTicketPrice(10));
