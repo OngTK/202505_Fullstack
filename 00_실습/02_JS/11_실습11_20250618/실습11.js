@@ -118,22 +118,28 @@ const products = [
     { name: '키보드', price: 80000, stock: 25 }
 ];
 
-let html = '';
 function renderProducts(array) {
+    let html = '';
     for (let i = 0; i < array.length; i++) {
         html += `<div><h4>${array[i].name}</h4><p>${array[i].price}</p><p>${array[i].stock}<p></div>`;
     };
+    return html;
 };
-renderProducts(products)
-document.write(html)
+document.write(renderProducts(products))
 
 /*======================================
 실습 7: 간단한 계산기
 num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
 operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)
 */
-
-
+function calculator (num1, num2, operator) {
+    if (operator == '+') {
+        console.log(num1 + num2);
+    } else if (operator == '-') {
+        console.log(num1 - num2);
+    };
+};
+calculator(150,73,'-');
 
 /*======================================
 실습 8: HTML 리스트(ul, li) 동적 생성
@@ -144,6 +150,17 @@ renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회�
 */
 let todoList = ['장보기', '운동하기']
 
+function renderList(array){
+    html =`<ul>`
+    for(let i = 0 ; i < array.length ; i++){
+        html += `<li>${array[i]}</li>`
+    }
+    html +=`</ul>`
+    return html;
+};
+
+document.write(renderList(todoList))
+
 /*======================================
 실습 9: 입장료 계산 함수
 임의의 나이(age)를 매개변수로 받아 입장료를 반환하는 getTicketPrice 함수를 만드시오.
@@ -152,3 +169,14 @@ let todoList = ['장보기', '운동하기']
 20세 이상: "10,000원"
 계산된 가격 문자열을 반환(return)하시오.
 */
+
+function getTicketPrice(age){
+    if (age < 8) {
+        return '무료'
+    } else if (age <= 19) {
+        return '5,000원'
+    } else {
+        return '10,000원'
+    };
+};
+console.log(getTicketPrice(10));
