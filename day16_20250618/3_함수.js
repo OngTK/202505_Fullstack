@@ -29,12 +29,12 @@ printSum(5,10)
 "환영합니다, [이름]님!" 형식의 문자열을 반환하는 getWelcomeMessage 함수를 정의하시오.
 함수를 호출한 결과를 변수에 저장하고, 그 변수를 콘솔에 출력하시오.
 */
-function getWelcomeMessage( x ) {
-    console.log(`환영합니다, ${x}님!`);
+function getWelcomeMessage( name ) {
+    return `환영합니다, ${name}님!`;
 };
 
-getWelcomeMessage('고우림');
-
+let result = getWelcomeMessage('고우림');
+console.log(result)
 /*======================================
 예제 4: 함수를 이용한 카운터
 0의 값을 가진 counter라는 전역 변수를 만드시오.
@@ -45,7 +45,6 @@ getWelcomeMessage('고우림');
 let counter = 0;
 function increaseCount() {
     counter++;
-    return counter;
 };
 
 increaseCount();
@@ -66,7 +65,7 @@ function printNumbers(n){
     };  
 };
 
-printNumbers(3)
+printNumbers(5)
 
 /*======================================
 예제 6: prompt와 함수 활용
@@ -75,11 +74,12 @@ prompt를 이용해 사용자로부터 이름을 입력받으시오.
 addUser 함수를 정의하고 호출하시오.
 */
 
-// let name = prompt('이름을 입력하세요.');
 userList = [];
 function address(x){
     userList.push(x);
 };
+
+// let name = prompt('이름을 입력하세요.');
 address(name);
 console.log(userList);
 
@@ -89,14 +89,14 @@ console.log(userList);
 for 반복문을 사용하여 배열의 모든 요소를 콘솔에 하나씩 출력하는 printFruits 함수를 정의하시오.
 */
 
-let name7 = ['사과', '수박', '포도', '딸기'];
+let Fruits = ['사과', '수박', '포도', '딸기'];
 function printFruits(array){
     for ( let i = 0 ; i <array.length ; i++){
         console.log(array[i]);
-    }
+    };
 };
 
-printFruits(name7);
+printFruits(Fruits);
 
 /*======================================
 예제 8: Boolean 값 반환하기
@@ -107,14 +107,14 @@ isPositive 함수를 만들어 보세요.
 */
 function isPositive(x){
     if ( x > 0 ) {
-        console.log('true');
+        return 'true';
     } else{
-        console.log('false');
+        return 'false';
     };
 };
 
-isPositive(3);
-isPositive(-2);
+let result8 = isPositive(-1);
+console.log(result8)
 
 /*======================================
 예제 9: 전역 변수와 지역 변수
