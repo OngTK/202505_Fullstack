@@ -4,7 +4,7 @@
 그 함수를 호출하시오.
 */
 
-function sayHello(){
+function sayHello() {
     console.log('함수 호출 성공!');
 };
 
@@ -17,11 +17,11 @@ sayHello();
 printSum(5, 10)을 호출하여 결과를 확인하시오.
 */
 
-function printSum(x , y ) {
+function printSum(x, y) {
     console.log(x + y);
 };
 
-printSum(5,10)
+printSum(5, 10)
 
 /*======================================
 예제 3: 값을 반환(return)하는 함수
@@ -29,7 +29,7 @@ printSum(5,10)
 "환영합니다, [이름]님!" 형식의 문자열을 반환하는 getWelcomeMessage 함수를 정의하시오.
 함수를 호출한 결과를 변수에 저장하고, 그 변수를 콘솔에 출력하시오.
 */
-function getWelcomeMessage( name ) {
+function getWelcomeMessage(name) {
     return `환영합니다, ${name}님!`;
 };
 
@@ -58,11 +58,11 @@ console.log(counter);
 1부터 n까지의 숫자를 콘솔에 차례대로 출력하는 printNumbers 함수를 정의하시오.
 */
 
-function printNumbers(n){
+function printNumbers(n) {
     let print = '';
-    for(let i = 1 ; i <= n ; i++) {
-        console.log(i) ;
-    };  
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    };
 };
 
 printNumbers(5)
@@ -75,7 +75,7 @@ addUser 함수를 정의하고 호출하시오.
 */
 
 userList = [];
-function address(x){
+function address(x) {
     userList.push(x);
 };
 
@@ -90,8 +90,8 @@ for 반복문을 사용하여 배열의 모든 요소를 콘솔에 하나씩 출
 */
 
 let Fruits = ['사과', '수박', '포도', '딸기'];
-function printFruits(array){
-    for ( let i = 0 ; i <array.length ; i++){
+function printFruits(array) {
+    for (let i = 0; i < array.length; i++) {
         console.log(array[i]);
     };
 };
@@ -105,11 +105,11 @@ printFruits(Fruits);
 그렇지 않으면 false를 반환하는 
 isPositive 함수를 만들어 보세요.
 */
-function isPositive(x){
-    if ( x > 0 ) {
-        return 'true';
-    } else{
-        return 'false';
+function isPositive(x) {
+    if (x > 0) {
+        return true;
+    } else {
+        return false;
     };
 };
 
@@ -124,11 +124,12 @@ printLocal 함수 안에서는 let localText = '지역'; 변수를 선언하고,
 
 let globalText = '전역';
 
-function printLocal(){
+function printLocal() {
     let localText = '지역';
+    console.log(globalText)
     console.log(localText)
 };
 
 console.log(globalText)
-printLocal()
 // console.log(localText)
+printLocal()
