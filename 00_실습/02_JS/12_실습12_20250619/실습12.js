@@ -32,9 +32,76 @@
 /* 작업순서 정하기
     1. HTML/CSS 화면구성
     2. 데이터 모델링 >> 데이터베이스 설계
-        const table = [ {날짜: , 항목 : , 금액 :}]
+        const table = [ {코드 : 1 , 날짜: '2025-06-19', 항목 : '식비', 금액 : 20000}]
     3. 함수(기능) 설계 >> API 설계
+        (1) 등록
+            등록 클릭 > 입력받은 3가지 정보 저장
+            함수명   : 등록함수
+            매개변수 : X
+            반환값   : X
+            로직    : input으로부터 입력 받은 값 가져오기
+                     입력값 3개를 객체로 묶기
+                     객체를 배열에 push
+            실행조건 : [등록] onclick
+        (2) 조회
+            함수명   : 전체조회함수 
+            매개변수 : X
+            반환값   : X
+            로직    : 특정한 table(html)에 배열내 모든 정보를 html형식으로 출력
+            실행조건 : 페이지가 열렸을 때(최초)
+                      [등록] 성공 시              
     4. 로직
     5. 화면-기능 연동
 */
+
+const 가계부목록 = [
+    { 코드: 1, 날짜: '2025-06-18', 항목명: '택시', 금액: 5800 },
+    { 코드: 2, 날짜: '2025-06-19', 항목명: '식비', 금액: 20000 }
+];
+
+function 등록함수() {
+    console.log('등록함수 exe');
+
+    const dateInput = document.querySelector('#dateInput');
+    console.log(dateInput);
+    const contentInput = document.querySelector('#contentInput');
+    console.log(contentInput);
+    const moneyInput = document.querySelector('#moneyInput');
+    console.log(moneyInput);
+
+    const date = dateInput.value;
+    console.log(date);
+    const content = contentInput.value;
+    console.log(content);
+    const money = moneyInput.value;
+    console.log(money);
+
+    const obj = {코드 : 가계부목록.length+1 , 날짜 : date , 항목명 : content , 금액 : money};
+    console.log(obj);
+
+    가계부목록.push(obj);
+    console.log(가계부목록);
+
+    전체조회함수();
+};
+
+function 전체조회함수(){
+    console.log('전체조회함수 exe');
+
+    let html = ``;
+    for(let i = 0 ; i < 가계부목록.length ; i++) {
+        let 목록 = 가계부목록[i]
+        html += `
+        <tr>
+            <td>${목록.날짜}</td>
+            <td>${목록.항목명}</td>
+            <td>${목록.금액.toLocaleString() }</td>
+        </tr> `
+    };
+    console.log(html)
+
+    const contentbody = document.querySelector('#contentbody')
+    console.log(contentbody)
+    contentbody.innerHTML = html
+};
 
