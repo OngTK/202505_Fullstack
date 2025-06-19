@@ -87,10 +87,9 @@ for (let i = 0; i < item.length; i++) {
 
 function func7() {
     console.log('func7 exe');
-    document.querySelector('#mainImage').src = 'https://placehold.co/600x400/red/white';
+    const mainImage = document.querySelector('#mainImage')
+    mainImage.src = 'https://placehold.co/600x400/red/white';  
 };
-
-
 
 /* 예제 8 : select 에서 선택한 option값 console 출력하기. ======================================*/
 // (1) 목표 요소        : #foodSelect
