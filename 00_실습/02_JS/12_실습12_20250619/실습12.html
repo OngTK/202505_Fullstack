@@ -10,15 +10,15 @@
     <h1> 실습12 : 미니 가계부</h1>
     <div> <!--등록 영역-->
         <h3> 등록 영역</h3>
-        날짜 선택 : <input type="date" id="dateInput"/> <br />
-        항목 입력 : <input type="text" id="contentInput"/> <br />
-        금액 입력 : <input type="number" id="moneyInput"/> <br />
+        날짜 선택 : <input type="date" id="dateInput" /> <br />
+        항목 입력 : <input type="text" id="contentInput" /> <br />
+        금액 입력 : <input type="number" id="moneyInput" /> <br />
         <button onclick="등록함수()""> 등록 </button>
     </div> <!--등록 영역 end-->
 
     <div> <!--목록 영역-->
         <h3> 목록 영역</h3>
-        <table border="1">
+        <table border=" 1">
             <thead>
                 <tr>
                     <th>날짜</th>
@@ -27,8 +27,18 @@
                 </tr>
             </thead>
             <tbody id="contentbody">
+                <tr>
+                    <td>2025-06-18</td>
+                    <td>택시</td>
+                    <td>5,800</td>
+                </tr>
+                <tr>
+                    <td>2025-06-19</td>
+                    <td>식비</td>
+                    <td>20,000</td>
+                </tr>
             </tbody>
-        </table>
+            </table>
     </div> <!--목록 영역-->
 
     <script src="실습12.js"></script>

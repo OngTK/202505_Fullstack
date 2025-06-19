@@ -59,6 +59,9 @@ const 가계부목록 = [
     { 코드: 2, 날짜: '2025-06-19', 항목명: '식비', 금액: 20000 }
 ];
 
+let 마지막인덱스 = 가계부목록.length-1;
+let 코드자동번호 = 가계부목록[ 마지막인덱스 ].코드
+
 function 등록함수() {
     console.log('등록함수 exe');
 
@@ -76,7 +79,8 @@ function 등록함수() {
     const money = moneyInput.value;
     console.log(money);
 
-    const obj = {코드 : 가계부목록.length+1 , 날짜 : date , 항목명 : content , 금액 : money};
+    코드자동번호++;
+    const obj = {코드 : 코드자동번호 , 날짜 : date , 항목명 : content , 금액 : money};
     console.log(obj);
 
     가계부목록.push(obj);
@@ -85,23 +89,25 @@ function 등록함수() {
     전체조회함수();
 };
 
+전체조회함수(); //JS가 그냥 켜지는 순간 실행될 수 있도록 
 function 전체조회함수(){
     console.log('전체조회함수 exe');
 
+    const contentbody = document.querySelector('#contentbody');
+    console.log(contentbody);
+
     let html = ``;
     for(let i = 0 ; i < 가계부목록.length ; i++) {
-        let 목록 = 가계부목록[i]
+        let 목록 = 가계부목록[i];
         html += `
         <tr>
             <td>${목록.날짜}</td>
             <td>${목록.항목명}</td>
             <td>${목록.금액.toLocaleString() }</td>
-        </tr> `
+        </tr> `;
     };
-    console.log(html)
+    console.log(html);
 
-    const contentbody = document.querySelector('#contentbody')
-    console.log(contentbody)
-    contentbody.innerHTML = html
+    contentbody.innerHTML = html;
 };
 

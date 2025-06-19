@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>실습13</title>
+</head>
+
+<body>
+    <h1>미니 전화번호부</h1>
+    <div> <!-- 등록 영역 -->
+        <h3>연락처 등록</h3>
+        <div>이름 : <input type="text" id="contName"/></div>
+        <div>연락처 : <input type="text" placeholder="010-0000-0000" id="contNumber"/></div>
+        <div>메모 : <input type="text" id="contMemo"/></div>
+        <button onclick="submit()">등록</button>
+    </div>
+    <div> <!-- 목록 영역 -->
+        <h3>연락처 목록</h3>
+        <table border='1' ;>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                    <th>메모</th>
+                </tr>
+            </thead>
+            <tbody id="contactList">
+
+            </tbody>
+        </table>
+    </div>
+    <script src='실습13.js'></script>
+</body>
+
+</html>
