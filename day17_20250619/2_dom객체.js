@@ -117,5 +117,13 @@ function func9() {
     arrayStatus.push(itemInput);
     console.log(arrayStatus);
 
-    document.querySelector('#arrayStatus').textContent = `[${arrayStatus}]`;
+    //document.querySelector('#arrayStatus').textContent = `[${arrayStatus}]`;
+
+    let html =`[`
+    for(let i = 0 ; i < arrayStatus.length ; i++) {
+        const val = arrayStatus[i];
+        html += `<span> ${val} ,</span>`
+    };
+    html +=`]`
+    document.querySelector('#arrayStatus').innerHTML = html
 };
