@@ -216,7 +216,7 @@ function productEdit(pno) {
             productList[i].pname = changeName;
             productList[i].pprice = changePrice;
             
-            alert('제품 수정 [성공]')
+            alert('제품 수정 [성공]');
         };
     };
 
