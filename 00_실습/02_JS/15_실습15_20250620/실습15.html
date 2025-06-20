@@ -4,19 +4,8 @@
 <head>
     <meta charset='utf-8'>
     <title>실습15</title>
-
-    <style>
-        table {
-            border: 1px solid black;
-        };
-
-        #employee>tr>td>img {
-            height: 200px;
-            object-fit: cover;
-        };
-    </style>
+    <link rel='stylesheet' href='실습15.css'>
 </head>
-
 <body>
     <div id="wrap">
         <h1>인사관리 대시보드</h1>
@@ -40,13 +29,6 @@
                             </tr>
                         </thead>
                         <tbody id="departmentList">
-                            <tr>
-                                <td>경영지원</td>
-                                <td>
-                                    <button>수정</button>
-                                    <button>삭제</button>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -78,8 +60,6 @@
                             </tr>
                         </thead>
                         <tbody id="employee">
-                            <tr>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -92,14 +72,14 @@
                     <h3>휴가신청</h3>
                     신청사원
                     <select id="selectEmployee">
-                        <option>휴가 신청 사원을 고르세요.</option>
-                        <option>배두훈</option>
                     </select>
                     <br />
-                    휴가시작일 <input type="date">
-                    휴가종료일 <input type="date">
+                    휴가시작일 <input type="date" id="vacationStart"/>
+                    휴가종료일 <input type="date" id="vacationEnd"/>
                     <br />
-                    휴가사유 <input type="text">
+                    휴가사유 <input type="text" id="vacationReason">
+                    <button onclick="newVacation()">신청</button>
+
                 </div>
                 <div>
                     <h3>휴가 신청 전체 목록</h3>
@@ -113,14 +93,6 @@
                             </tr>
                         </thead>
                         <tbody id="vacationTable">
-                            <tr>
-                                <td>배두훈</td>
-                                <td>2025-06-20~2025-06-20</td>
-                                <td>개인사정</td>
-                                <td>
-                                    <button>신청취소</button>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

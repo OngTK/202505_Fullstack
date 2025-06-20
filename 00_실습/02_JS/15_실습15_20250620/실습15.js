@@ -115,10 +115,10 @@ const employeeList = [
 ];
 
 const vacationList = [
-    { vacationCode: 7001, IDCode: 5001, vacationPeriod: '2025-03-01~2025-03-02', vacationReason: '개인사정' },
-    { vacationCode: 7002, IDCode: 5003, vacationPeriod: '2025-04-05~2024-04-07', vacationReason: '여행' },
-    { vacationCode: 7003, IDCode: 5005, vacationPeriod: '2025-05-15~2025-05-18', vacationReason: '경사' },
-    { vacationCode: 7004, IDCode: 5007, vacationPeriod: '2025-06-20~2025-06-20', vacationReason: '병원진료' }
+    { vacationCode: 7001, IDCode: 5001, vacationstart: '2025-03-01', vacationEnd: '2025-03-02', vacationReason: '개인사정' },
+    { vacationCode: 7002, IDCode: 5003, vacationstart: '2025-04-05', vacationEnd: '2024-04-07', vacationReason: '여행' },
+    { vacationCode: 7003, IDCode: 5005, vacationstart: '2025-05-15', vacationEnd: '2025-05-18', vacationReason: '경사' },
+    { vacationCode: 7004, IDCode: 5007, vacationstart: '2025-06-20', vacationEnd: '2025-06-20', vacationReason: '병원진료' }
 ];
 
 // 1. 부서관리 ====================================
@@ -130,7 +130,10 @@ function departmentSubmit() {
     // console.log(newDepartment.value)
 
     if (newDepartment.value != '') {
-        const obj = { departmentCode: MaxdepartmentCode(departmentList), Partname: newDepartment.value };
+        const obj = {
+            departmentCode: MaxdepartmentCode(departmentList),
+            Partname: newDepartment.value
+        };
         departmentList.push(obj);
         console.log(departmentList);
 
@@ -207,7 +210,7 @@ function departmentDelete(departmentCode) {
 // 2. 사원 관리 ====================================
 // 2.1. 사원등록
 // 2.1.1 부서 select 목록
-departmentSelect()
+departmentSelect();
 function departmentSelect() {
     html = '<option value="" disabled selected >부서를 고르세요</option>'
     for (let i = 0; i < departmentList.length; i++) {
@@ -215,7 +218,7 @@ function departmentSelect() {
 
         html += `<option value="${department.departmentCode}">${department.Partname}</option>`
     };
-    // console.log(html)
+    // console.log(html);
     document.querySelector('#departSelect').innerHTML = html;
 };
 
@@ -229,13 +232,19 @@ function newEmployee() {
     const newEmploImg = document.querySelector('#newEmploimg');
 
 
-    const obj = { IDCode: MaxEmployeeCode(employeeList), employeeName: newEmploName.value, departmentCode: Number(departSelect.value), positionCode: Number(scanPositiontoCode(newEmploPosi.value)), employeeImg: URL.createObjectURL(newEmploImg.files[0]) };
-    console.log(obj)
-    employeeList.push(obj)
-    console.log(employeeList)
+    const obj = {
+        IDCode: MaxEmployeeCode(employeeList),
+        employeeName: newEmploName.value,
+        departmentCode: Number(departSelect.value),
+        positionCode: Number(scanPositiontoCode(newEmploPosi.value)),
+        employeeImg: URL.createObjectURL(newEmploImg.files[0])
+    };
+    console.log(obj);
+    employeeList.push(obj);
+    console.log(employeeList);
 
-    employeePrint()
-    selectEmployee()
+    employeePrint();
+    selectEmployee();
 };
 
 // employeeList에서 가장 큰 pk값 찾기 +1
@@ -247,17 +256,17 @@ function MaxEmployeeCode(array) {
         };
     };
     maxCode++;
-    // console.log(maxCode)
+    // console.log(maxCode);
     return maxCode;
 };
 
 // 직급명으로 positioncode 찾기
 function scanPositiontoCode(position) {
-    // console.log('scanPositiontoCode exe')
-    // console.log(position)
+    // console.log('scanPositiontoCode exe');
+    // console.log(position);
     for (let i = 0; i < positionList.length; i++) {
         if (positionList[i].positionName == position) {
-            return positionList[i].positionCode
+            return positionList[i].positionCode;
         };
     };
 };
@@ -268,7 +277,7 @@ employeePrint()
 function employeePrint() {
     // console.log('employeelist exe');
 
-    html = ``
+    html = ``;
     for (let i = 0; i < employeeList.length; i++) {
         const employee = employeeList[i];
 
@@ -281,28 +290,28 @@ function employeePrint() {
                     <button onclick="employeeEdit(${employee.IDCode})">수정</button>
                     <button onclick="employeeDelete(${employee.IDCode})">삭제</button>
                 </td>
-            </tr>`
+            </tr>`;
     };
-    // console.log(html)
-    document.querySelector('#employee').innerHTML = html
+    // console.log(html);
+    document.querySelector('#employee').innerHTML = html;
 };
 
 // 2.2.1.1. 부서명 조회
 function scanDepartment(departmentCode) {
-    // console.log('scanDepartment exe')
+    // console.log('scanDepartment exe');
     for (let i = 0; i < departmentList.length; i++) {
         if (departmentList[i].departmentCode == departmentCode) {
-            return departmentList[i].Partname
+            return departmentList[i].Partname;
         };
     };
     return null;
 };
 // 2.2.1.1. 직급 조회
 function scanPosition(positionCode) {
-    console.log('scanPosition exe')
+    // console.log('scanPosition exe');
     for (let i = 0; i < positionList.length; i++) {
         if (positionList[i].positionCode == positionCode) {
-            return positionList[i].positionName
+            return positionList[i].positionName;
         };
     };
     return null;
@@ -314,15 +323,15 @@ function employeeEdit(IDCode) {
     // console.log(IDCode)
     for (let i = 0; i < employeeList.length; i++) {
         if (employeeList[i].IDCode == IDCode) {
-            // console.log(IDCode)
+            // console.log(IDCode);
             // console.log(employeeList[i].IDCode);
             let newName = prompt('수정할 이름을 입력하세요.');
             let newPosition = prompt('수정 직급을 입력하세요.');
-            employeeList[i].employeeName = newName
+            employeeList[i].employeeName = newName;
             employeeList[i].positionCode = scanPositiontoCode(newPosition);
-            // console.log(employeeList)
-            employeePrint()
-            selectEmployee()
+            // console.log(employeeList);
+            employeePrint();
+            selectEmployee();
         };
     };
 };
@@ -333,9 +342,9 @@ function employeeDelete(IDCode) {
     // console.log(IDCode)
     for (let i = 0; i < employeeList.length; i++) {
         if (employeeList[i].IDCode == IDCode) {
-            employeeList.splice(i, 1)
-            employeePrint()
-            selectEmployee()
+            employeeList.splice(i, 1);
+            employeePrint();
+            selectEmployee();
         };
     };
 };
@@ -343,29 +352,89 @@ function employeeDelete(IDCode) {
 // 3. 휴가관리
 // 3.1. 휴가신청 영역
 // 3.1.1. 신청사원 select
-selectEmployee()
+selectEmployee();
 function selectEmployee() {
-    html = `<option value="" disabled selected >휴가 신청 사원을 고르세요.</option>`;
+    let html = `<option value="" disabled selected >휴가 신청 사원을 고르세요.</option>`;
     for (let i = 0; i < employeeList.length; i++) {
-        html += `<option value="${employeeList[i].IDCode}">${employeeList[i].employeeName}</option>
-                `
+        html += `<option value="${employeeList[i].IDCode}">
+                ${employeeList[i].employeeName}</option>`;
     };
-    document.querySelector('#selectEmployee').innerHTML = html
+    document.querySelector('#selectEmployee').innerHTML = html;
 };
 
 // 3.1.2. input > vactionList push
+function newVacation() {
+    // console.log('newVacation exe');
 
+    const IDcode = Number(document.querySelector('#selectEmployee').value);
+    const vacationStart = document.querySelector('#vacationStart').value;
+    const vacationEnd = document.querySelector('#vacationEnd').value;
+    const vacationReason = document.querySelector('#vacationReason').value;
 
+    const obj = {
+        vacationCode: MaxvacationCode(vacationList),
+        IDCode: IDcode,
+        vacationstart: vacationStart,
+        vacationEnd: vacationEnd,
+        vacationReason: vacationReason
+    };
+    // console.log(obj);
+
+    vacationList.push(obj);
+    vacationPrint();
+};
+// vacationList에서 가장 큰 pk값 찾기 +1
+function MaxvacationCode(array) {
+    let maxCode = 0;
+    for (let i = 0; i < vacationList.length; i++) {
+        if (vacationList[i].vacationCode > maxCode) {
+            maxCode = vacationList[i].vacationCode;
+        };
+    };
+    maxCode++;
+    // console.log(maxCode);
+    return maxCode;
+};
 
 // 3.2. 휴가 신청 전체 목록 영역
-function vacationPrint() {
-    console.log('vacationPrint exe')
-
-
-    for (let i = 0; i < vacationList.length; i++) {
-
-    }
-}
 
 // 3.2.1. 조회
+vacationPrint();
+function vacationPrint() {
+    // console.log('vacationPrint exe');
+    let html = ``
+    for (let i = 0; i < vacationList.length; i++) {
+        let vacation = vacationList[i];
+        // console.log(vacation);
+        html += `<tr>
+                    <td>${findEmployee(vacation.IDCode)}</td>
+                    <td>${vacation.vacationstart}~${vacation.vacationEnd}</td>
+                    <td>${vacation.vacationReason}</td>
+                    <td>
+                        <button onclick='vacationDelete(${vacation.vacationCode})'>신청취소</button>
+                    </td>
+                </tr>`;
+    };
+    // console.log(html);
+    document.querySelector('#vacationTable').innerHTML = html;
+};
+
+function findEmployee(IDCode) {
+    for (let i = 0; i < employeeList.length; i++) {
+        if (employeeList[i].IDCode == IDCode) {
+            return employeeList[i].employeeName;
+        };
+    };
+};
+
 // 3.2.2. 취소
+function vacationDelete(vacationCode) {
+    // console.log('vacationDelete exe')
+    // console.log(vacationCode)
+    for (let i = 0; i < vacationList.length; i++) {
+        if (vacationList[i].vacationCode == vacationCode) {
+            vacationList.splice(i, 1);
+            vacationPrint();
+        };
+    };
+};
