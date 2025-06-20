@@ -344,10 +344,10 @@ function employeeDelete(IDCode) {
 // 3.1. 휴가신청 영역
 // 3.1.1. 신청사원 select
 selectEmployee()
-function selectEmployee(){
+function selectEmployee() {
     html = `<option value="" disabled selected >휴가 신청 사원을 고르세요.</option>`;
-    for(let i = 0 ; i < employeeList.length ; i++){
-        html +=`<option value="${employeeList[i].IDCode}">${employeeList[i].employeeName}</option>
+    for (let i = 0; i < employeeList.length; i++) {
+        html += `<option value="${employeeList[i].IDCode}">${employeeList[i].employeeName}</option>
                 `
     };
     document.querySelector('#selectEmployee').innerHTML = html
@@ -357,7 +357,15 @@ function selectEmployee(){
 
 
 
-
 // 3.2. 휴가 신청 전체 목록 영역
+function vacationPrint() {
+    console.log('vacationPrint exe')
+
+
+    for (let i = 0; i < vacationList.length; i++) {
+
+    }
+}
+
 // 3.2.1. 조회
 // 3.2.2. 취소
