@@ -158,24 +158,26 @@ function productPrint() {
         const product = productList[i];
         // console.log(product)
 
-        // 카티고리 명 가져오기
+        // 카티고리명 가져오기
         let cname = '';
-        for (let j = 0 ; j < categoryList.length ; j++) {
+        for (let j = 0; j < categoryList.length; j++) {
             const category = categoryList[j];
             if (product.cno == categoryList[j].cno) {
-                cname = categoryList[j].cname
-            }
+                cname = categoryList[j].cname;
+            };
         };
 
         html += `<tr>    
-                        <td> <img src="${productList[i].pimg} " /></td>   
-                        <th> ${cname} </td>   
-                        <td> ${productList[i].pname} </td> 
-                        <td> ${productList[i].pprice.toLocaleString()} </td>             
-                        <td> ${productList[i].pdate} </td>       
-                        <td> <button class="btnDelete"> 삭제 </button> 
-                        <button class="btnEdit"> 수정 </button> </td> 
-                    </tr>`
+                    <td> <img src="${product.pimg} " /></td>   
+                    <th> ${cname} </td>   
+                    <td> ${product.pname} </td> 
+                    <td> ${product.pprice.toLocaleString()} </td>             
+                    <td> ${product.pdate} </td>       
+                    <td> 
+                        <button class="btnDelete" onclick="productDelete(${product.pno})"> 삭제 </button> 
+                        <button class="btnEdit" onclick="productEdit(${product.pno})"> 수정 </button> 
+                    </td> 
+                </tr>`;
     };
     // console.log(html)
 
@@ -184,9 +186,43 @@ function productPrint() {
 };
 
 // 삭제 함수
+function productDelete(pno) {
+    console.log('productDelete exe')
+    console.log(pno)
 
+    for (let i = 0; i < productList.length; i++) {
+        if (productList[i].pno == pno) {
+            productList.splice(i, 1);
+            alert('제품 삭제 [성공]')
+            break;
+        };
+    };
+    productPrint() //삭제 후 조회 필요
+    // console.log(productList)
+};
 
 // 수정 함수
+function productEdit(pno) {
+    console.log('productEdit exe')
+    console.log(pno)
+
+    for (let i = 0; i < productList.length; i++) {
+        if (productList[i].pno == pno) {
+            const changeName = prompt("수정할 상품명");
+            const changePrice = Number(prompt("수정 가격"));
+            // console.log(changeName)
+            // console.log(changePrice)
+
+            productList[i].pname = changeName;
+            productList[i].pprice = changePrice;
+            
+            alert('제품 수정 [성공]')
+        };
+    };
+
+    productPrint() //수정 후 조회 필요
+
+};
 
 
 
