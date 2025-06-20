@@ -50,11 +50,143 @@
             해당 제품의 정보를 수정하고 목록을 즉시 갱신해야 합니다.
 */
 
-/* [ 작업 순서 ] 
-1. front / 화면 스케치(프로토타입)
-2. front / HTML, CSS
-3. back / 데이터 모델링
-4. back / 기능(함수) 설계
-5. back / 구현/로직
-6. back / test
-*/
+// [ 작업 순서 ] 
+// 1. front / 화면 스케치(프로토타입)
+// 2. front / HTML, CSS
+// 3. back / 데이터 모델링
+
+// 카테고리 목록
+const categoryList = [
+    { cno: 1, cname: '음료류' },
+    { cno: 2, cname: '과자류' }
+];
+let currentCno = 2;
+
+// 제품 목록
+const productList = [
+    { pno: 1, cno: 1, pname: '코카콜라', pprice: 1000, pimg: 'https://placehold.co/100x100', pdate: '2025-06-17' },
+    { pno: 2, cno: 2, pname: '새우깡', pprice: 1200, pimg: 'https://placehold.co/100x100', pdate: '2025-06-18' },
+    { pno: 3, cno: 1, pname: '칠성사이다', pprice: 900, pimg: 'https://placehold.co/100x100', pdate: '2025-06-19' }
+];
+let currentPno = 3;
+
+console.log(categoryList);
+console.log(productList);
+
+// 4. back / 기능(함수) 설계
+//      카테고리 목록 / 등록 / 출력 / 수정 / 삭제
+// 5. back / 구현/로직
+// 6. back / test
+
+
+// categoryList > select 출력 함수
+categryPrint();
+function categryPrint() {
+    console.log('categoryInput exe');
+
+    const categoryInput = document.querySelector('#categoryInput');
+
+    let html = `<option value="" disabled selected > 카테고리 선택하세요. </option>`;
+    for (let i = 0; i < categoryList.length; i++) {
+        const category = categoryList[i];
+        html += `<option value="${category.cno}"> ${category.cname} </option>`;
+    };
+    categoryInput.innerHTML = html;
+};
+
+// 제품 등록 함수
+function submit() {
+    console.log('submit exe');
+
+    const pnameInput = document.querySelector('#pnameInput');
+    const pname = pnameInput.value;
+    // console.log(pname);
+    const ppriceInput = document.querySelector('#ppriceInput');
+    const pprice = ppriceInput.value;
+    // console.log(pprice);
+    const pimgInput = document.querySelector('#pimgInput');
+    const pimg = pimgInput.files[0];
+    //files[0] 첨부파일의 첫번째 파일 객체를 가져옴
+    // console.log(pimg);
+
+    const categoryInput = document.querySelector('#categoryInput');
+    const cno = categoryInput.value;
+    // console.log(cno);
+
+    //유효성 검사
+    if (cno == '' || pname == '' || pprice == '') {
+        alert('비어있는 항목이 있습니다.[실패]');
+        return;
+    };
+
+    //현재 날짜 구하기 ☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
+    let year = new Date().getFullYear() // 현재 연도 반환함수
+    let month = new Date().getMonth() + 1 // 1월이 0부터 시작하므로 +1 필수
+    month = month > 9 ? month : `0${month}` // 1~9월 일 경우 앞에 0이 표시되어 보이게
+    let day = new Date().getDate()        // getDay(요일 1~7), getDate(OO일)
+    let pdate = `${year}-${month}-${day}`
+    // console.log(pdate)☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
+
+    const obj = {
+        pno: ++currentPno,
+        cno: Number(cno),
+        pname: pname,
+        pprice: Number(pprice),
+        pimg: pimg ? URL.createObjectURL(pimg) : 'https://placehold.co/100x100', //URL.createObjectURL:url생성  
+        pdate: pdate
+    };
+    // console.log(obj);
+
+    productList.push(obj);
+    console.log(productList);
+
+    productPrint()
+
+    // etc input 초기화, 등록 성공 Alert
+    categoryInput.value = ''
+    pnameInput.value = ''
+    ppriceInput.value = ''
+    alert('성공')
+};
+
+// 제품 출력 함수
+productPrint();
+function productPrint() {
+    // console.log('display exe')
+    let html = ``
+    for (let i = 0; i < productList.length; i++) {
+        const product = productList[i];
+        // console.log(product)
+
+        // 카티고리 명 가져오기
+        let cname = '';
+        for (let j = 0 ; j < categoryList.length ; j++) {
+            const category = categoryList[j];
+            if (product.cno == categoryList[j].cno) {
+                cname = categoryList[j].cname
+            }
+        };
+
+        html += `<tr>    
+                        <td> <img src="${productList[i].pimg} " /></td>   
+                        <th> ${cname} </td>   
+                        <td> ${productList[i].pname} </td> 
+                        <td> ${productList[i].pprice.toLocaleString()} </td>             
+                        <td> ${productList[i].pdate} </td>       
+                        <td> <button class="btnDelete"> 삭제 </button> 
+                        <button class="btnEdit"> 수정 </button> </td> 
+                    </tr>`
+    };
+    // console.log(html)
+
+    // tbody에 id/class 부여 하지 않아도 >로 상하위 경로로 작성~
+    document.querySelector('#main > table > tbody').innerHTML = html;
+};
+
+// 삭제 함수
+
+
+// 수정 함수
+
+
+
