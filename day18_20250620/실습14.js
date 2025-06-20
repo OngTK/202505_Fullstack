@@ -159,17 +159,17 @@ function productPrint() {
         // console.log(product)
 
         // 카티고리명 가져오기
-        let cname = '';
-        for (let j = 0; j < categoryList.length; j++) {
-            const category = categoryList[j];
-            if (product.cno == categoryList[j].cno) {
-                cname = categoryList[j].cname;
-            };
-        };
+        // let cname = '';
+        // for (let j = 0; j < categoryList.length; j++) {
+        //     const category = categoryList[j];
+        //     if (product.cno == categoryList[j].cno) {
+        //         cname = categoryList[j].cname;
+        //     };
+        // };
 
         html += `<tr>    
                     <td> <img src="${product.pimg} " /></td>   
-                    <th> ${cname} </td>   
+                    <th> ${getCategory(product.cno)} </td>   
                     <td> ${product.pname} </td> 
                     <td> ${product.pprice.toLocaleString()} </td>             
                     <td> ${product.pdate} </td>       
@@ -224,5 +224,11 @@ function productEdit(pno) {
 
 };
 
-
-
+function getCategory(cno){
+    for( let i = 0 ; i < categoryList.length ; i++){
+        if(cno == categoryList[i].cno) {
+            return categoryList[i].cname;
+        };
+    };
+    return null;
+};

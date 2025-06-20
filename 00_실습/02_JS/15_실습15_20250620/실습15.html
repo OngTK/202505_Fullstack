@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>실습15</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+        };
+
+        #employee>tr>td>img {
+            height: 200px;
+            object-fit: cover;
+        };
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인사관리 대시보드</h1>
+        <div style="display: flex;">
+            <!--부서 관리(좌)-->
+            <div id="departmentMng">
+                <h2>부서 관리</h2>
+                <div>
+                    <h3>부서등록</h3>
+                    부서명
+                    <input type="text" id='newDepartment' />
+                    <button onclick="departmentSubmit()">추가</button>
+                </div>
+                <div>
+                    <h3>부서목록</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>부서명</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody id="departmentList">
+                            <tr>
+                                <td>경영지원</td>
+                                <td>
+                                    <button>수정</button>
+                                    <button>삭제</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--사원 관리(중)-->
+            <div id="employeeMng">
+                <h2>사원 관리</h2>
+                <div>
+                    <h3>사원등록</h3>
+                    이름 <input type='text' id="newEmploName"/>
+                    직급 <input type='text' id="newEmploPosi" placeholder="사원/주임/대리/과장/차장/부장"/><br />
+                    부서
+                    <select id="departSelect">
+                    </select>
+                    사진 <input id="newEmploimg" type="file" accept="image/* " />
+                    <button onclick="newEmployee()">등록</button>
+                </div>
+                <div>
+                    <h3>사원목록</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>사진</th>
+                                <th>이름</th>
+                                <th>부서</th>
+                                <th>직급</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employee">
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--휴가 관리(우)-->
+            <div id="vacationMng">
+                <h2>휴가 관리</h2>
+                <div>
+                    <h3>휴가신청</h3>
+                    신청사원
+                    <select id="selectEmployee">
+                        <option>휴가 신청 사원을 고르세요.</option>
+                        <option>배두훈</option>
+                    </select>
+                    <br />
+                    휴가시작일 <input type="date">
+                    휴가종료일 <input type="date">
+                    <br />
+                    휴가사유 <input type="text">
+                </div>
+                <div>
+                    <h3>휴가 신청 전체 목록</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>휴가기간</th>
+                                <th>사유</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>배두훈</td>
+                                <td>2025-06-20~2025-06-20</td>
+                                <td>개인사정</td>
+                                <td>
+                                    <button>신청취소</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='실습15.js'></script>
+</body>
+
+
+</html>
