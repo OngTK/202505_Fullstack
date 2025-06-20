@@ -4,12 +4,65 @@
 <head>
     <meta charset='utf-8'>
     <title>실습15</title>
-    <link rel='stylesheet' href='실습15.css'>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #wrap {
+            width: 100%;
+            max-width: 1280px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            margin: 50px auto;
+        }
+
+        #title {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            border-bottom: #7F8CAA 1px solid;
+        }
+
+        #main {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1, h2, h3, th{
+            color: #333446;
+        }
+
+        h3 {
+            margin: 10px auto;
+        }
+    </style>
 </head>
+
 <body>
+
     <div id="wrap">
-        <h1>인사관리 대시보드</h1>
-        <div style="display: flex;">
+        <div  id="title">
+            <h1>인사관리 대시보드</h1>
+        </div>
+        <div id="main">
             <!--부서 관리(좌)-->
             <div id="departmentMng">
                 <h2>부서 관리</h2>
@@ -39,8 +92,8 @@
                 <h2>사원 관리</h2>
                 <div>
                     <h3>사원등록</h3>
-                    이름 <input type='text' id="newEmploName"/>
-                    직급 <input type='text' id="newEmploPosi" placeholder="사원/주임/대리/과장/차장/부장"/><br />
+                    이름 <input type='text' id="newEmploName" />
+                    직급 <input type='text' id="newEmploPosi" placeholder="사원/주임/대리/과장/차장/부장" /><br />
                     부서
                     <select id="departSelect">
                     </select>
@@ -74,8 +127,8 @@
                     <select id="selectEmployee">
                     </select>
                     <br />
-                    휴가시작일 <input type="date" id="vacationStart"/>
-                    휴가종료일 <input type="date" id="vacationEnd"/>
+                    휴가시작일 <input type="date" id="vacationStart" />
+                    휴가종료일 <input type="date" id="vacationEnd" />
                     <br />
                     휴가사유 <input type="text" id="vacationReason">
                     <button onclick="newVacation()">신청</button>
@@ -101,7 +154,7 @@
     </div>
 
     <script src='실습15.js'></script>
-</body>
 
+</body>
 
 </html>
