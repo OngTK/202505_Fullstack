@@ -190,6 +190,8 @@ function departmentEdit(departmentCode) {
             let newDepartmentName = prompt('수정한 부서명을 입력하세요.');
             departmentList[i].Partname = newDepartmentName;
             departmentPrint();
+            departmentSelect();
+            employeePrint();
         };
     };
 };
