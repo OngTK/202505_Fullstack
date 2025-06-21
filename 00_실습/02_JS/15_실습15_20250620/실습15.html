@@ -4,67 +4,18 @@
 <head>
     <meta charset='utf-8'>
     <title>실습15</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            /* border: 1px solid red; */
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        #wrap {
-            width: 100%;
-            max-width: 1280px;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-            margin: 50px auto;
-        }
-
-        #title {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            border-bottom: #7F8CAA 1px solid;
-        }
-
-        #main {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        h1, h2, h3, th{
-            color: #333446;
-        }
-
-        h3 {
-            margin: 10px auto;
-        }
-    </style>
+    <link rel='stylesheet' href='실습15.css'>
 </head>
 
 <body>
 
     <div id="wrap">
-        <div  id="title">
+        <div id="title">
             <h1>인사관리 대시보드</h1>
         </div>
         <div id="main">
             <!--부서 관리(좌)-->
-            <div id="departmentMng">
+            <div id="departmentMng" class="mainbox">
                 <h2>부서 관리</h2>
                 <div>
                     <h3>부서등록</h3>
@@ -88,7 +39,7 @@
             </div>
 
             <!--사원 관리(중)-->
-            <div id="employeeMng">
+            <div id="employeeMng" class="mainbox">
                 <h2>사원 관리</h2>
                 <div>
                     <h3>사원등록</h3>
@@ -119,7 +70,7 @@
             </div>
 
             <!--휴가 관리(우)-->
-            <div id="vacationMng">
+            <div id="vacationMng" class="mainbox">
                 <h2>휴가 관리</h2>
                 <div>
                     <h3>휴가신청</h3>

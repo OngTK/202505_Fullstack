@@ -282,7 +282,7 @@ function employeePrint() {
         const employee = employeeList[i];
 
         html += `<tr>
-                <td><img src="${employee.employeeImg}" style="height: 200px; width:150px; object-fit: cover;"></td>
+                <td><img src="${employee.employeeImg}" style="height: 100px; width:80px; object-fit: cover;"></td>
                 <td>${employee.employeeName}</td>
                 <td> ${scanDepartment(employee.departmentCode)}</td>
                 <td>${scanPosition(employee.positionCode)}</td>
