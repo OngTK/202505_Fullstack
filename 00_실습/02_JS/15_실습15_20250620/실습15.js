@@ -207,7 +207,7 @@ function departmentDelete(departmentCode) {
             console.log(count)
         };
     };
-    if( count >= 1) {
+    if (count >= 1) {
         alert('[실패] 소속직원이 존재하여 삭제할 수 없습니다.')
         return;
     }
@@ -359,6 +359,12 @@ function employeeDelete(IDCode) {
             employeeList.splice(i, 1);
             employeePrint();
             selectEmployee();
+        };
+    };
+    for (let j = 0; j < vacationList.length; j++) {
+        if (vacationList[j].IDCode == IDCode) {
+            vacationList.splice(j, 1);
+            vacationPrint();
         };
     };
 };
