@@ -348,7 +348,7 @@
                     <마크업> innerHTML <마크업>
             (5) dom객체.value                       : value 값을 JS 객체로 가져옴
                     <마크업 value=""> 
-                    ex) input, select, textarea etc.
+                    ex. input, select, textarea etc.
             (6) dom객체.style                       : 마크업 내 style CSS 요소 대입
             (7) dom객체.style.css속성명              : 마크업 내 styel CSS 요소 추가
             (8) dom객체.classList                   : 마크업 내 적용된 class들을 반환
@@ -358,3 +358,25 @@
                     dom객체.classList.contains('class명') : 마크업 내 지정 클래스가 있는지 확인 > true/flase
             (9) dom객체.src
             (10) dom객체.remove
+            (11) 마크업.files[0]  : 첨부파일의 첫번째 파일 객체를 가져옴
+                    <input type='files'>
+                    [ + 파일객체를 URL 주소로 만들어주는 함수 ]
+                    URL.createObjectURL(마크업.files[0])
+
+[ 날짜/시간 관련 객체]
+    new Date() = 현재 시스템(PC의 날짜와 시간을 반환)
+        1. 년도 
+            let year = new Date().getFullYear()
+        2. 달
+            let month = new Date().getMonth() + 1 
+                1월이 [0]부터 시작하므로 +1 필수
+            month = month > 9 ? month : `0${month}`     
+                1~9월 일 경우 앞에 0이 표시되어 보이게
+        3. 일
+            let day = new Date().getDate()        
+            getDate(OO일)
+        4. 요일 
+            getDay (일요일 0 ~ 토요일 6), 
+
+        let pdate = `${year}-${month}-${day}`
+        
