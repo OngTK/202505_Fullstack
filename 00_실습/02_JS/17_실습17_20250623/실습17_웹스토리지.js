@@ -60,9 +60,9 @@ function addWaiting() {
         waitingList = [];
     } else {
         waitingList = JSON.parse(waitingList);
-        no = waitingList[waitingList.length - 1].no;
+        no = waitingList[waitingList.length - 1].no +1;
     };
-
+    
     const obj = { no: no, name: name, phone: phone, count: count };
     console.log(obj);
 
