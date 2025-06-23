@@ -97,5 +97,5 @@ function checkStatus() {
             return;
         };
     };
-    alert("[주의] 전화번호가 확인되지 않습니다.")
+    alert("[주의] 대기정보가 없습니다.")
 };
