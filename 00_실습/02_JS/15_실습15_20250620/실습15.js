@@ -198,15 +198,27 @@ function departmentEdit(departmentCode) {
 
 // 1.2.3. 삭제
 function departmentDelete(departmentCode) {
-    console.log('departmentDelete exe')
+    // console.log('departmentDelete exe')
     console.log(departmentCode)
+    let count = 0;
+    for (let j = 0; j < employeeList.length; j++) {
+        if (employeeList[j].departmentCode == departmentCode) {
+            count++;
+            console.log(count)
+        };
+    };
+    if( count >= 1) {
+        alert('[실패] 소속직원이 존재하여 삭제할 수 없습니다.')
+        return;
+    }
+
     for (let i = 0; i < departmentList.length; i++) {
         if (departmentList[i].departmentCode == departmentCode) {
             departmentList.splice(i, 1)
             departmentPrint();
         };
     };
-};
+}
 
 
 // 2. 사원 관리 ====================================
