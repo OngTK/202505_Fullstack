@@ -6,28 +6,40 @@
     <title>실습17_웹스토리지</title>
 
     <style>
-        #wrap > div > div {
+        * {
+            margin: 0px 0px;
+            padding: 0px 0px;
+        }
+
+        #wrap>div>div {
             width: 250px;
-            height: 30px;
+            height: 35px;
             display: flex;
             justify-content: space-between;
+            margin: 5px 0px;
         }
 
-        #wrap > div{
-            border: 1px solid ;
+        #wrap>div {
             padding: 20px;
             margin: 20px 0px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h3 {
+        h3 {
+            padding: 10px;
+            margin-bottom: 10px;
             color: #203864;
         }
+
         h1 {
             border-bottom: 3px solid #203864;
+            padding: 10px;
+            color: #203864;
         }
 
-        input{
-            height: 18px;
+        input {
+            height: 20px;
         }
     </style>
 
@@ -38,14 +50,14 @@
         <h1>대기표</h1>
         <div> <!--대기 등록 영역-->
             <h3>대기 등록</h3>
-            <div>이름<input type="text" class="name"/> </div>
-            <div>전화번호<input type="text" class="phone"/> </div>
-            <div>인원수 <input type="number" class="count"/> </div>
+            <div>이름<input type="text" class="name" /> </div>
+            <div>전화번호<input type="text" class="phone" /> </div>
+            <div>인원수 <input type="number" class="count" /> </div>
             <button onclick="addWaiting()">등록</button>
         </div>
         <div> <!--대기 확인 영역-->
             <h3>대기 확인</h3>
-            <div>전화번호<input type="text" class="customoersPhone"/> </div>
+            <div>전화번호<input type="text" class="customoersPhone" /> </div>
             <button onclick="checkStatus()">대기확인</button>
         </div>
     </div>
