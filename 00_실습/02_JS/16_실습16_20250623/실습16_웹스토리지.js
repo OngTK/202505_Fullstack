@@ -70,8 +70,6 @@ function signup() {
         no = memberList[memberList.length - 1].no + 1;
     };
 
-    // 
-
     const obj = { 'no': no, 'id': ID, 'pw': PW };
     // console.log(obj);
 
@@ -84,6 +82,7 @@ function signup() {
 
     document.querySelector('.signId').value = '';
     document.querySelector('.signPw').value = '';
+    alert('회원가입 완료')
 
 };
 
@@ -103,4 +102,8 @@ function login() {
         };
     };
     alert('동일한 회원정보가 없습니다. 로그인실패');
+    //로그인에 성공했다면, return으로 함수를 탈출함. 
+    // esle의 실패 alert을 쓸 경우, 
+    // for i를 수행하면서 일치하지 않는 경우 만큼 alert이 발생할 수 있으므로 
+    // 반드시 if 안에 return과 실패 alert를 for문 밖에 작성!!
 };
