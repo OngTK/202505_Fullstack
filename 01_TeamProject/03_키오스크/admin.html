@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div> <!-- 제품 관리 -->
+            <div> <!-- 제품 등록 폼 -->
+                <h3>제품 등록</h3>
+                <div>이미지<input id="pimgInput" type="file" /></div>
+                <div>제품명<input id="pnameInput" type="text" /></div>
+                <div>제품가격<input id="ppriceInput" type="number" /></div>
+                <div>설명<input id="pdescInput" type="textarea" /></div>
+                <div><button onclick="regProduct()">제품 등록</button></div>
+            </div>
+            <div> <!-- 제품 목록 테이블 -->
+                <h3>제품 목록</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이미지</th>
+                            <th>제품명</th>
+                            <th>제품가격</th>
+                            <th>설명</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+                        <tr>
+                            <td><img src="https://placehold.co/100x100" /></td>
+                            <td>제품명</td>
+                            <td>제품가격</td>
+                            <td>설명</td>
+                            <td><button onclick="delProduct()">삭제</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- 제품 관리 끝 -->
+        <div> <!-- 재고 로그 관리 -->
+            <div> <!-- 재고 로그 입고 폼 -->
+                <h3>재고 로그 입고</h3>
+                <div>제품ID<select id="pidInput"></select></div>
+                <div>변동유형
+                    <select id="pInoutInput">
+                        <option>입고</option>
+                        <option>출고</option>
+                    </select>
+                </div>
+                <div>변동수량<input id="pqtyInput" type="number" /></div>
+                <div>입출사유<input id="preasonInput" type="textarea" /></div>
+                <div><button onclick="">재고 입고</button></div>
+            </div>
+            <div> <!-- 재고 로그 목록 테이블 -->
+                <h3>재고 로그 목록 테이블</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제품ID</th>
+                            <th>변동유형</th>
+                            <th>변동수량</th>
+                            <th>입출사유</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logList">
+                        <tr>
+                            <td>ID</td>
+                            <td>입고/출고</td>
+                            <td>수량</td>
+                            <td>사유</td>
+                            <td><button onclick="">입출사유변경</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- 재고 로고 테이블 끝 -->
+        </div> <!-- 재고 로고 관리 끝-->
+    </div>
+    <script src="./admin.js"></script>
+</body>
+
+</html>
