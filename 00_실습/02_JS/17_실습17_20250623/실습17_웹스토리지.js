@@ -60,9 +60,9 @@ function addWaiting() {
         waitingList = [];
     } else {
         waitingList = JSON.parse(waitingList);
-        no = waitingList[waitingList.length - 1].no +1;
+        no = waitingList[waitingList.length - 1].no + 1;
     };
-    
+
     const obj = { no: no, name: name, phone: phone, count: count };
     console.log(obj);
 
@@ -83,7 +83,7 @@ function checkStatus() {
     // console.log("checkStatus exe")
     const customoersPhone = document.querySelector('.customoersPhone').value;
 
-    if(customoersPhone == ''){
+    if (customoersPhone == '') {
         alert('[실패] 전화번호를 입력해주세요.')
         return;
     };
@@ -91,11 +91,26 @@ function checkStatus() {
     let waitingList = JSON.parse(localStorage.getItem("waitingList"));
     console.log(waitingList)
 
-    for( let i = 0 ; i < waitingList.length; i++){
-        if(waitingList[i].phone == customoersPhone ) {
+    for (let i = 0; i < waitingList.length; i++) {
+        if (waitingList[i].phone == customoersPhone) {
             alert(`고객님의 대기번호는 ${waitingList[i].no}번 입니다.`);
             return;
         };
     };
     alert("[주의] 대기정보가 없습니다.")
+};
+
+//250624 function 분리
+function setLocalStorage(waitingList) {
+let waitingList = JSON.parse(localStorage.getItem("waitingList"));
+};
+
+function getLocalStorage() {
+    let waitingList = localStorage.getItem("waitingList");
+    if (waitingList == null) {
+        waitingList = [];
+    } else {
+        waitingList = JSON.parse(waitingList);
+    };
+    return waitingList;F
 };
