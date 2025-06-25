@@ -1,17 +1,17 @@
-/* const productList = [
-    { pid: 1, pname: '콜라', pprice: '1200', pdesc:	'시원한 탄산음료', pimg: 'https://placehold.co/100x100' },
-    { pid: 2, pname: '사이다', pprice: '1400', pdesc: '칠성에서 만든 음료', pimg: 'https://placehold.co/100x100' },
-    { pid: 3, pname: '환타', pprice: '1500', pdesc:	'오렌지맛 탄산음료', pimg: 'https://placehold.co/100x100' }
-];
+// const productList = [
+//     { pid: 1, pname: '콜라', pprice: '1200', pdesc: '시원한 탄산음료', pimg: 'https://placehold.co/100x100' },
+//     { pid: 2, pname: '사이다', pprice: '1400', pdesc: '칠성에서 만든 음료', pimg: 'https://placehold.co/100x100' },
+//     { pid: 3, pname: '환타', pprice: '1500', pdesc: '오렌지맛 탄산음료', pimg: 'https://placehold.co/100x100' }
+// ];
 
-const inventoryList = [
-    { invid: 1, pid: 1, pInout: '입고', pqty: 10, preason: 'OOOOOO', pdate:'2025-06-22'},
-    { invid: 2, pid: 2, pInout: '출고', pqty: 20, preason: 'OOOOOO', pdate:'2025-06-23'},
-    { invid: 3, pid: 3, pInout: '입고', pqty: 30, preason: 'OOOOOO', pdate:'2025-06-24'}
-]; */
+// const inventoryList = [
+//     { invid: 1, pid: 1, pInout: '입고', pqty: 10, preason: 'OOOOOO', pdate: '2025-06-22' },
+//     { invid: 2, pid: 2, pInout: '출고', pqty: 20, preason: 'OOOOOO', pdate: '2025-06-23' },
+//     { invid: 3, pid: 3, pInout: '입고', pqty: 30, preason: 'OOOOOO', pdate: '2025-06-24' }
+// ];
 
-
-// 제품 정보 ====================================================
+//produc============================
+// 2.1. 제품 등록
 function regProduct() {
     const pimgInput = document.querySelector('#pimgInput');
     const pnameInput = document.querySelector('#pnameInput');
@@ -31,12 +31,12 @@ function regProduct() {
     }
 
     let productList = localStorage.getItem('productList');
-    if (productList == null || productList == '[]') {
-        productList = [];
+    if (productList == null || productList == "[]") {
+        productList = []; 
         pid = 1;
     } else {
         productList = JSON.parse(productList);
-        pid = productList[productList.length-1].pid+1;
+        pid = productList[productList.length - 1].pid + 1;
     }
 
     const obj = {
@@ -44,7 +44,7 @@ function regProduct() {
         pname: pname,
         pprice: pprice,
         pdesc: pdesc,
-        pimg: pimg?URL.createObjectURL(pimg):'https://placehold.co/100x100'
+        pimg: pimg ? URL.createObjectURL(pimg) : 'https://placehold.co/100x100'
     }
     productList.push(obj);
 
@@ -58,14 +58,19 @@ function regProduct() {
     viewPid();
 } // 제품 등록
 
+// 2.2. 제품 삭제
 function delProduct(pid) {
-    console.log(pid);
-    let productList = getProduct();
+    let productList = localStorage.getItem('productList');
+    if (productList == null) {
+        productList = [];
+    } else {
+        productList = JSON.parse(productList);
+    }
 
-    for(let i=0; i<=productList.length-1; i++) {
+    for (let i = 0; i <= productList.length - 1; i++) {
         if (productList[i].pid == pid) {
             productList.splice(i, 1);
-            localStorage.setItem('productList', JSON.stringify(productList));
+            localStorage.setItem('productList', JSON.stringify(productList))
             console.log("제품 삭제 성공");
             alert('제품이 삭제되었습니다.');
             viewProduct();
@@ -78,11 +83,18 @@ function delProduct(pid) {
     viewPid();
 } // 제품 삭제
 
-// 2.2. 제품 조회
+// 2.3 . 제품 조회
 viewProduct();
 function viewProduct() {
+    console.log(`viewProduct exe`)
     let html = ``;
-    let productList = getProduct();
+
+    let productList = localStorage.getItem('productList');
+    if (productList == null) {
+        productList = [];
+    } else {
+        productList = JSON.parse(productList);
+    }
 
     for (let i = 0; i < productList.length; i++) {
         let product = productList[i];
@@ -96,10 +108,29 @@ function viewProduct() {
                 </tr>`
     };
 
-    document.querySelector('#productList').innerHTML = html;
+    document.querySelector('#productList').innerHTML = html
 } // 전체 제품 조회
 
-// 재고 로그 정보 ====================================================
+// 제품ID 조회
+viewPid()
+function viewPid() {
+    let productList = localStorage.getItem('productList');
+    if (productList == null) {
+        productList = [];
+    } else {
+        productList = JSON.parse(productList);
+    }
+
+    let html = `<option disabled selected>이름 선택</option>`;
+    for (let i = 0; i < productList.length; i++) {
+        html += ` <option> ${productList[i].pid}</option>`
+    };
+    document.querySelector('#pidInput').innerHTML = html;
+};
+
+//inventory============================
+
+// 4.1. 재고 입고
 function inputInv() {
     const pidInput = document.querySelector('#pidInput');
     const pInoutInput = document.querySelector('#pInoutInput');
@@ -107,10 +138,10 @@ function inputInv() {
     const preasonInput = document.querySelector('#preasonInput');
 
     let year = new Date().getFullYear();
-    let month = new Date().getMonth()+1;
-    month = month<9?`0${month}`:month;
+    let month = new Date().getMonth() + 1;
+    month = month < 9 ? `0${month}` : month;
     let day = new Date().getDate();
-    day = day<9?`0${day}`:day;
+    day = day < 9 ? `0${day}` : day;
 
     let invid = 1;
     let pid = pidInput.value;
@@ -119,18 +150,12 @@ function inputInv() {
     const preason = preasonInput.value;
     let pdate = `${year}-${month}-${day}`;
 
-    if (pid == 'none' || pqty == '' || preason == '') {
-        alert('비어있는 값이 있습니다.');
-        console.log("재고 등록 실패: 비어있는 필드가 있음");
-        return;
-    }
-
     let inventoryList = localStorage.getItem('inventoryList');
     if (inventoryList == null) {
         inventoryList = [];
     } else {
         inventoryList = JSON.parse(inventoryList);
-        invid = inventoryList[inventoryList.length-1].invid+1;
+        invid = inventoryList[inventoryList.length - 1].invid + 1;
     }
 
     const obj = {
@@ -151,9 +176,22 @@ function inputInv() {
     viewInv();
 } // 재고 입고
 
+// 4.2. 전체 재고 로그 조회
 viewInv()
 function viewInv() {
-    let inventoryList = getInventory();
+    // console.log(`viewInv exe`)
+
+    let inventoryList = localStorage.getItem("inventoryList")
+    console.log(inventoryList)
+    if (inventoryList == null) {
+        inventoryList = [];
+    } else {
+        inventoryList = JSON.parse(inventoryList)
+    };
+
+    // if (inventoryList.length < 1) {
+    //     alert('[주의] 표시할 재고 로그가 없습니다.')
+    // };
 
     let html = ``;
     for (let i = 0; i < inventoryList.length; i++) {
@@ -170,70 +208,33 @@ function viewInv() {
     document.querySelector('#logList').innerHTML = html;
 } // 전체 재고 로그 조회
 
-viewPid()
-function viewPid() {
-    let productList = localStorage.getItem('productList');
-    if (productList == null) {
-        productList = [];
-    } else {
-        productList = JSON.parse(productList);
-    }
 
-    let html = `<option value='none' disabled selected>ID를 선택해주세요</option>`;
-    for (let i = 0; i < productList.length; i++) {
-        html += ` <option> ${productList[i].pid}</option>`
-    };
-     document.querySelector('#pidInput').innerHTML = html;
-}
-
+// 4.3. 재고 내역 수정
 function modInv(invid) {
-    let inventoryList = JSON.parse(localStorage.getItem("inventoryList"))
 
-    for (let i = 0; i <= inventoryList.length - 1; i++) {
-        if (inventoryList[i].invid == invid) {
-            const reason = prompt("새로운 입출사유를 입력해주세요:");
-            if (reason == '') {
-                alert('입출사유가 입력되지 않았습니다.');
-                console.log("재고 수정 실패: 비어있는 필드가 있음");
+    let inventoryList = JSON.parse(localStorage.getItem("inventoryList"))
+    if (inventoryList)
+
+
+        for (let i = 0; i <= inventoryList.length - 1; i++) {
+            if (inventoryList[i].invid == invid) {
+                const reason = prompt("새로운 입출사유를 입력해주세요:");
+                if (reason == '') {
+                    alert('입출사유가 입력되지 않았습니다.');
+                    console.log("재고 수정 실패: 비어있는 필드가 있음");
+                    return;
+                }
+
+                inventoryList[i].preason = reason;
+                localStorage.setItem('inventoryList', JSON.stringify(inventoryList));
+                alert('입출사유가 수정되었습니다.');
+                console.log("재고 수정 성공");
+                viewInv();
                 return;
             }
-
-            inventoryList[i].preason = reason;
-            localStorage.setItem('inventoryList', JSON.stringify(inventoryList));
-            alert('입출사유가 수정되었습니다.');
-            console.log("재고 수정 성공");
-            viewInv();
-            return;
         }
-    }
 } // 재고 내역 수정 
 
-function getProduct() {
-    let productList = localStorage.getItem('productList');
-    if (productList == null) {
-        productList = [];
-    } else {
-        productList = JSON.parse(productList);
-    }
-    return productList;
-}
 
-function getCart() {
-    let cartList = localStorage.getItem('cartList');
-    if (cartList == null) {
-        cartList = [];
-    } else {
-        cartList = JSON.parse(cartList);
-    }
-    return cartList;
-}
 
-function getInventory() {
-    let inventoryList = localStorage.getItem('inventoryList');
-    if (inventoryList == null) {
-        inventoryList = [];
-    } else {
-        inventoryList = JSON.parse(inventoryList);
-    }
-    return inventoryList;
-}
+
