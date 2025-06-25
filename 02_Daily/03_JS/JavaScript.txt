@@ -380,6 +380,10 @@
 
         let pdate = `${year}-${month}-${day}`
 
+    let hour = today.getHours();  //시
+    let min = today.getMinutes(); //분
+    let sec = today.getSeconds(); //초
+
 [웹스토리지]
     - 웹 브라우저 F12 > application tab > local/sesssion strorage
     - 도메인 별로 웹스토리지가 할당
