@@ -462,3 +462,6 @@
                 : 현재 URL 경로를 반환하는 객체
             [2] let url = new URLSearchParams(location.search)
                 let 변수명 = url.get('변수명')
+※ location.href VS location.search
+href : URL 전체를 가져옴
+search : URL에서 ? 뒤의 query string만 가져옴
