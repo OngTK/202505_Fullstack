@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <input type="text" id="pnameInput" placeholder="상품명" />
+            <input type="number" id="ppriceInput" placeholder="상품가격" />
+            <textarea id="pcontentInput" placeholder="간단한 설명"></textarea>
+            <input type="file" id="pimgInput" accept="image/*">
+            <button onclick="productAdd()">등록</button>
+        </div>
+        <div id="main">
+            <table>
+                <thead>
+                    <tr>
+                        <th>이미지</th>
+                        <th>상품명</th>
+                        <th>가격</th>
+                        <th>설명</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>이미지</td>
+                        <td>상품명</td>
+                        <td>가격</td>
+                        <td>설명</td>
+                        <td><button onclick="">삭제</button></td>
+                    </tr>
+                </tbody>
+        </div>
+        </table>
+
+    </div>
+
+
+
+
+
+    <script src='03.js'></script>
+
+</body>
+
+</html>
