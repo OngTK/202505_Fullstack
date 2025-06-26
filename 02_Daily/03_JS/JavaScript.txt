@@ -446,3 +446,19 @@
     - chart.JS
     - mui
     - cdnjs.com : CDN을 모아놓은 사이트
+
+
+[쿼리스트링, Query String]
+    1. 정의 : URL 상에 매개변수를 사용
+    2. 형태
+        URL?변수명=값
+        페이지 이동(요청)간의 데이터를 전달하기 위해 사용
+    3. 사용법
+        (1) 이동방법
+            html : <a href='이동경로?변수명=값&변수명=값'>
+            js : location.href='이동경로?변수명=값&변수명=값'
+        (2) URL 상의 매개변수를 가져오는 방법
+            [1] new URLSearchParams(location.search).get(URL상의 변수명);
+                : 현재 URL 경로를 반환하는 객체
+            [2] let url = new URLSearchParams(location.search)
+                let 변수명 = url.get('변수명')

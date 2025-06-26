@@ -1,7 +1,3 @@
-function getBoard() {
-
-}
-
 
 function boardWrite() {
     console.log("boardWrite exe");
