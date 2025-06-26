@@ -427,3 +427,22 @@
             localStorage.setItem( '속성명', JSON.stringify(배열변수) );
             JSON.parse( localStorage.getItem( '속성명' ) )
         (2) 비동기통신(외부페이지와)
+
+[ interval ]
+    1. 정의 : 시간적인 간격에 따라 특정 함수 실행
+    2. 사용법   
+        (1) setInterval( 함수명 , m sec)
+            - 특정 함수를 msec 마다 실행
+            - 함수명 : () 소괄호 없이
+            - m sec 
+                1 msec = 10^-3 sec
+                1 sec = 10^3 msec
+                1min = 60 * 10^3 msec
+        (2) clearInterval( interval 객체 )
+            - 중지할 interval 객체를 대입
+
+[ 라이브러리 사용 방법 ]
+    - 부트스트랩
+    - chart.JS
+    - mui
+    - cdnjs.com : CDN을 모아놓은 사이트
