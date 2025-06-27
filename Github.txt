@@ -67,3 +67,15 @@
 
     브랜치 : 독립적인 작업 공간 생성
     scource control > etc(...) > branch > create branch
+
+[ 인텔리제이에서 github에 프로젝트 게시하기 ]
+1. 인텔리제이에서 git 연동
+    1.1. setting > version control > GitHub > Add account
+
+2. 커밋계정 정보
+    2.1. 왼쪽 하단 terminal(alt + F12)
+    2.2. local 우측 아래 아이콘 클릭 > git bash
+        git config --global user.name
+        git config --global user.email
+
+3. 상단 메뉴 > vcs > share project on github
