@@ -37,7 +37,7 @@
 
 [ 기존 저장소 가저오기 ]
     1. File > New windows
-    2. 가운데 메뉴(시작) 아래 [ Git 리포지토리 복제 / ]
+    2. 가운데 메뉴(시작) 아래 [ Git repository 복제 / ]
     or Source Control > Clone repository
         * PC에 Git 설치 필수
         * VSCODE와 Git 연동 로그인
@@ -46,4 +46,24 @@
 [ git 계정 해제]
 좌측 하단 계정 로그아웃
 윈도우 > 자격 증명 관리자 > 로그아웃
-수정수정
+
+===========
+[ team git 저장소, repository ]
+    1. 새로운 폴더 생성
+    2. 임의의 파일 생성
+    3. 해당 폴더를 git에 게시
+        source control > public to github
+    4. public 으로 설정
+    5. 웹의 git에서 팀원 초대
+        (1) settiong
+        (2) collaborators
+        (3) manage access > add people > 검색 후 초대
+        (4) 수신자는 notification에서 수락 or email
+
+    6. 초대받는 사람
+        (1) VScode를 새 창으로 열기
+        (2) Source Control > Clone repository
+        (3) 공유 받은 repository를 가져옴
+
+    브랜치 : 독립적인 작업 공간 생성
+    scource control > etc(...) > branch > create branch
