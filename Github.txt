@@ -79,3 +79,12 @@
         git config --global user.email
 
 3. 상단 메뉴 > vcs > share project on github
+
+
+[코드 취합]
+각 브랜치에서 작업한 분량을 push
+> main 브랜치에서 각 멤버별로 full from으로 가져옴
+> 마찬가지로 각각 sync를 맞춤 x 멤버수
+> main 브랜치에서 push 해서 맞춤
+> 맴버 브랜치에서 main을 full 해서 가져옴
+단, 충돌이 발생할 경우 편집기를 통해 수정
