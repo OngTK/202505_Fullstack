@@ -1,0 +1,14 @@
+[ Java Install ]
+    1. IDE(Integrated Development Environment)
+        통합 개발 환경
+        코딩, 디버깅, 컴파일, 배포 등 소프트웨어 개발과 관련된 다양한 작업을 하나의 프로그램 안에서 처리할 수 있도록 돕는 도구 모음
+        - IntelliJ IDEA
+            - IntelliJ IDEA Ultimate : 유료
+            - IntelliJ IDEA Community Edition : 무료☆★☆★☆★☆★☆★☆★☆★
+        - New project 생성
+            JDK download > version : 17 (spring 지원하는 버전) 
+                         > vendor : amazon corretto (사실 큰 상관X)
+                         > location 기본값
+
+        - 기본설정
+            1. editor > general > mouse control 활성화
