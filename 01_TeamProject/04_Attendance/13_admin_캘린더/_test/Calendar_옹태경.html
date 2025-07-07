@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+
+    <title>인사관리시스템_format</title>
+
+    <!--부트스트랩 필수 1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!--폰트 noto sans 적용 CSS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: 'Noto Sans:ital';
+            font-weight: 400;
+            max-width: 1280px;
+            /* border: 1px red solid; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #wrap {
+            width: 100%;
+            max-width: 1280px;
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+            margin: 10px auto;
+        }
+
+        .menubutton {
+            height: 50px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1280px;
+            background-color: #ffffff;
+            padding: 20px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        /*==========================달력 ========================== */
+        /* 달력 상단 구역 */
+        #calTop {
+            display: flex;
+            /* 하위 요소들을 배치 */
+            align-items: center;
+            justify-content: center;
+        }
+
+        #calTop>h6 {
+            margin: 0px 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #calTop>button {
+            background-color: white;
+            border: none;
+            font-size: 40px;
+            color: rgb(22, 62, 99);
+        }
+
+        /* 달력 날짜 표시 구역 */
+        #calBottom {
+            display: flex;
+            /* 하위 요소들을 배치 */
+            flex-wrap: wrap;
+            /*하위 요소들이 자동으로 줄바꿈*/
+            /* padding-left: 100px; */
+            width: 100%;
+
+        }
+
+        #calBottom>div {
+            width: 14.25%;
+            /* 가로사이즈 : 부모요소의 가로사이즈 100% 의 7등분 */
+            height: 70px;
+            /* 일일  상자 세로사이즈 */
+            border-bottom: solid 3px black;
+        }
+
+        #calBottom>.week {
+            height: 50px;
+            background-color: #d9d9d9;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-top: solid 5px black;
+            border-bottom: solid 5px black;
+        }
+
+        #calBottom>.sunday {
+            background-color: #d9d9d9;
+            color: red;
+            border-top: solid 5px black;
+            border-bottom: solid 5px black;
+        }
+
+        #calBottom>.thuday {
+            background-color: #d9d9d9;
+            color: blue;
+            border-top: solid 5px black;
+            border-bottom: solid 5px black;
+        }
+
+        .dayEdit,
+        .dayEdit div {
+            font-size: 14px !important;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .chart h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../00_참고/localStorage_table.js"></script>
+
+    <div id="wrap"> <!--wrap-->
+        <div id="header" class="container text-center"> <!--header-->
+            <div class="row">
+                <img id="attndancelogo" class="col-3" src="../00_참고/_img/attendance_logo.webp">
+                <div id="menuBar" class=" col-9 container row">
+                    <a href="" role="button" class="btn btn-outline-dark col menubutton">사원관리</a>
+                    <a href="" role="button" class="btn btn-outline-dark col menubutton">근태이력</a>
+                    <a href="" role="button" class="btn btn-outline-dark col menubutton">캘린더</a>
+                    <a href="" role="button" class="btn btn-outline-dark col menubutton">대시보드</a>
+                </div>
+            </div>
+        </div><!--header end-->
+
+        <div id="main" class="container"> <!--main-->
+            <!--============================ Calendar================================-->
+            <div class="content"><!--Calendar-->
+                <h4>캘린더</h4>
+                <div id="calTop">
+                    <button onclick="monthChange( -1 )">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg> </button>
+                    <h6>2025년 06월</h6>
+                    <button onclick="monthChange( 1 )">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg> </button>
+                </div>
+                <div id="calBottom">
+
+                </div>
+                <script src="Calendar_옹태경.js"></script>
+            </div><!--Calendar end-->
+            <!--============================ chart================================-->
+            <div class="content">
+                <div class="chart"> <!--Chart-->
+                    <h4> 출근/지각 통계</h4>
+                    <div> <!-- 차트 자체에 컨테이너-->
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                    <!-- CDN 에서 chart.js를 포함 -->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <!-- 차트객체(인스턴스)만들기-->
+                    <script src="chart_옹태경.js"></script>
+                </div>
+            </div> <!--chart end-->
+        </div>
+    </div><!--main end-->
+    </div> <!--wrap end-->
+
+
+    <!-- 부트스트랩 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

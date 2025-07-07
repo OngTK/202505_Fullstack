@@ -38,15 +38,15 @@ function MemberListView() {
     const MemberList = getMemberList()
     for (let i = 0; i <= MemberList.length - 1; i++) {
         let member = MemberList[i]
-        html += `<tr>
-                        <td scope="row">${member.memberID}</td>
-                        <td>${member.Name}</td>
-                        <td>${member.Birthday}</td>
-                        <td>${changeDepartName(member.departID)}</td>
-                        <td>${changePositionName(member.posiID)}</td>
-                        <td>${member.Call}</td>
-                        <td>${member.Email}</td>
-                        <td>
+        html += `<tr class="row">
+                        <td class="col-1">${member.memberID}</td>
+                        <td class="col-1">${member.Name}</td>
+                        <td class="col-2">${member.Birthday}</td>
+                        <td class="col-1">${changeDepartName(member.departID)}</td>
+                        <td class="col-1">${changePositionName(member.posiID)}</td>
+                        <td class="col-2">${member.Call}</td>
+                        <td class="col-2">${member.Email}</td>
+                        <td class="col-2">
                         <button type="button" data-bs-toggle="modal" data-bs-target="#updateMemberModal" class="btn btn-primary btn-sm" onclick=updateViewMember(${member.memberID})>수정</button>
                         <button type="button" class="btn btn-danger btn-sm" onclick="deletMember(${member.memberID})">삭제</button>
                         </td>
@@ -99,7 +99,7 @@ function saveNewMember() {
         Email: newEmail,
         posiID: Number(newposiID),
         departID: Number(newdepartID),
-        pwd: 1234
+        pwd: "1234"
     }
     // console.log(newMember)
 
@@ -247,3 +247,8 @@ function updateMember(memberID) {
     }
 }
 
+function logout() {
+    alert("로그아웃 되었습니다.")
+    localStorage.setItem('login_memberID', JSON.stringify(""));
+    location.href="../../01_공통_로그인/login.html"
+}
