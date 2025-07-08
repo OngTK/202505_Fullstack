@@ -16,7 +16,7 @@ document.querySelector('#title').innerHTML = 'DOM 조작 성공!';
 // (3) 처리할 내용   : 버튼 클릭 시 input의 value를 읽어와 p 태그에 삽입
 
 function func2() {
-    console.log('func2 exe');
+    console.log('func2 exe');   
 
     const userName = document.querySelector('#usernameInput').value;
     console.log(userName);
