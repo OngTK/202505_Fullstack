@@ -357,4 +357,324 @@ if ( id == 'admin' && pw == '1234') {
 ----
 
 # JS_04_반복문
+
 ## 1. 반복문이란?
+특정한 조건의 논리 결과가 true 일 때 특정한 명령어들을 반복처리
+
+### 1) 형태
+<span style="font-size:20px;font-weight:bold"> for ( 초기값 ; 조건문 ; 증감식) {실행문}</span>
+
+### 2) 문법
+- 초기값 : 반복할 때 반복의 카운터/횟수를 체크하는 변수의 처음값
+- 조건문 : 반복 실행문이 실행되는 조건으로 true 이면 { } 실행, 아니면 종료
+- 증감식 : 반복 변수의 증가 혹은 감소 변화 연산식
+- 실행문 : 조건이 true일때 반복실행되는 코드
+```js
+// 1~5를 출력하는 반복문
+for (let i = 1 ; i <= 5; i++){
+    console.log(i)
+}
+// >> 결과 : 1 2 3 4 5 
+```
+
+### 3) 배열과 반복문의 관계
+- 배열의 인덱스는 순차적인 순서 번호가 존재
+- 배열의 길이 : 변수명.lenght
+- 배열의 마지막 인데스 : 변수명.lenght-1
+
+## 2. 반복문 제어 키워드
+### 1) continue 
+- 가장 가까운 for문의 증감식으로 이동
+```js
+for () {
+    if (true) {
+        continue;
+        }; // true일 경우, 아래 코드를 실행하지 않고 for 문의 증감식으로 이동!!
+    console.log();
+    };
+```
+### 2) break
+- 가장 가까운 for문의 종료
+```js
+    for () {
+        if (true) {
+            break;
+            }; // true일 경우, // 반복문 자체를 종료
+    };
+```
+### 3) 무한 루프
+```js
+    for( ; ; ){  }  // for 안에 아무것도 넣지 않음 or 조건식, 증감식이 무조건 true
+```
+
+## 3. 예제
+```js
+// 1~10, 누적합계. 단, 누적합계 10 초과시 종료
+let sum = 0;
+for (i = 1; i <= 10; i++) {
+    sum += i;
+    if (sum > 10) { break; }     // 반복문 자체를 종료
+}
+console.log(sum)
+```
+```js
+// 배열 요소의 합계와 평균 구하기
+// 다음 학생들의 점수가 담긴 배열이 있습니다. 
+// for 반복문을 사용하여 모든 점수의 합계와 평균을 계산하여 콘솔에 출력하시오.
+let scores = [85, 92, 78, 65, 95];
+*/
+
+let scores1 = [85, 92, 78, 65, 95];
+let sum1 = 0;
+for (let i = 0; i < scores1.length; i++) {
+    sum1 += scores1[i];
+};
+console.log(`합계 : ${sum1}`);
+console.log(`평균 : ${sum1 / scores1.length}`);
+
+```
+```js
+// 배열에서 특정 값의 개수 세기
+// 다음 배열에서 'A'형 혈액형을 가진 사람이 몇 명인지 for 반복문을 통해 세고, 그 수를 콘솔에 출력하시오.
+
+let bloodTypes = ['A', 'B', 'O', 'AB', 'A', 'B', 'A'];
+let count = 0;
+
+for (let i = 0; i < bloodTypes.length; i++) {
+    if (bloodTypes[i] == 'A') {
+        count++;
+    };
+};
+console.log(`${bloodTypes.length}명 중 A형은 ${count}명`);
+```
+
+----
+----
+
+# JS_05_객체
+
+## 1. 객체란?
+1) 정의
+    - 객체, Object : 주체(나, 대상)가 아닌 다른 실체(타인)
+    - 주체, Subject : '나/대상'이라는 실체, 중심
+2) 생활 속 객체 : 모든 것
+    - 어떠한 대상을 정의할 수 있는 모든 것
+
+> 개발자(주체자) 관점에서 컴퓨터 속(객체)를 만든다.
+
+## 2. JS 객체 
+### 1) 종류
+
+(1) 클래스 기반의 객체
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class : 객체를 만들기 위한 틀, 설계도, 자바에서는 필수.
+
+(2) 클래스가 없는 객체
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ } 를 이용
+
+### 2) 배열과 객체의 차이점
+
+(1) 배열
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ ], 인덱스, 자료 순서 有, 목록
+
+(2) 객체
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ }, 속성명, 자료 순서 無, 정보
+
+#### ※ 변수
+    배열과 객체 자료를 저장하는 메모리 공간
+    ※ 예시
+    정보를 만들떼는 객체화하고, 동일한 정보(객체)들을 여러개 묶을 때는 배열
+    이 배열은 하나의 변수에 저장하여 사용
+    const 제품목록 = [ {name : '콜라', price : 1000} , {name : '사이다', price : 1200} ]
+
+
+### 3) 객체 선언시 속성(properties) 구성
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속성명과 자료를 한 쌍(entry)으로 하고, 쉼표로 구분하여 여러 쌍(entry)을 { } 로 감싼다.<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속성명은 임의로 작성하되, 특수문자가 포함된 경우 text로 묶는다.<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속성명은 자료를 식별하는 목적이므로 중복 불가
+
+### 4) 객체 호출
+```js
+console.log( 변수명 );                   // 전체 호출
+console.log( 변수명.속성명 );             // 특정 속성의 자료 호출 / 접근·도트 연산자 >> 특정 위치로 이동
+console.log( 변수명['속성명2'] );         // 속성명에 특수문자 포함 or 변수일 경우 
+console.log( Object.keys( 변수명 ) );    // 객체 내 모든 속성명(key)를 배열로 반환
+console.log( Object.values( 변수명 ) );  // 객체 내 모든 자료(value)를 배열로 반환
+console.log( Object.entries( 변수명 ) ); // 객체 내 모든 entry를 배열로 반환
+```
+
+### 5) 객체 내 속성 추가·삭제·수정
+
+- 추가 <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;변수명.속성명 = 자료<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;변수명['속성명'] = 자료
+- 수정 : (추가와 동일)
+- 삭제  <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete 변수명.속성명
+- 확인<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속성명 in 변수명 >> true or false
+### 6) 객체 속성내 자료
+변수 값, 리터럴 값, 객체, 배열, 함수 등 모든 자료 대입 가능
+```js
+let var1 = 10;
+const var2 = { 
+    props1 : 3.14 , 
+    props2 : var1 , 
+    props3 : { } , 
+    props4 : [] , 
+    props5 : function(){} 
+    };
+```
+
+### 7) 배열과 객체의 조합
+
+- 공통점 : 여러 개의 자료를 하나의 자료로 묶는다.
+- 차이점 : 배열-인덱스로 자료를 구분 vs 객체-속성명으로 자료 구분
+
+#### ※ 일반적으로 <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서로 다른 의미의 자료를 가질 때는 객체    
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동일한 자료의 의미를 가질 때는 배열
+
+#### in 연산자
+- 객체 내 특정한 속성이 있는지 확인
+- 속성명 in 변수명 >> true or false 
+```js
+console.log( 'props1' in var2 ) ; // true
+console.log( 'props6' in var2 ) ; // false
+```
+
+----
+----
+
+# JS_06_함수
+
+## 1. 함수 Function
+### 1) 정의
+
+특정한 {} 안에 미리 정의된 코드
+
+### 2) 목적
+
+미리 정의된 코드를 재사용
+
+### 3) 함수 종류
+
+- 라이브러리 : 미리 만들어진 함수
+- 정의함수 : 나(개발자)가 만든 함수
+### 4) 함수도 JS에서는 자료형
+
+### 5) JS함수 표현 방법
+- 선언적 함수
+    선언 키워드를 이용하여 함수를 만드는 방법
+    function 함수명(){};
+
+- 익명 함수
+    함수명 없이 정의하는 방법
+    function (){};
+
+- 화살표(람다식) 함수
+    선언키워드와 함수명 없이 정의하는 방법
+    ( ) => {}       
+
+
+### 6) 함수 만드는 방법
+function    : 
+함수명       : 
+()          : 매개변수 (함수 안으로 들어오는 데이터)
+        인수   : 들어가는 수
+        인자값 : 들어온 수
+{}          : 함수가 실행될 때 처리되는 명령어들
+return      : 함수가 종료되면서 함수를 호출했던 곳으로 반환되는 값 (필수 X)
+
+### 7) 함수 호출
+- JS
+    함수명();
+    함수명(인수, ...) : ,로 구분하여 정해진 매개변수를 함수에 대입
+- HTML
+    <마크업 이벤트속성='함수명()'>
+
+```js
+// [1] 함수 만들기
+function 함수1(){
+    console.log(`내가 처음 만든 함수`)
+};
+
+// [2] 함수 호출
+함수1();
+
+// [3] 간단한 함수 만들기
+function 더하기(x , y) {
+    console.log( x + y );
+    return 10 ; //return 값은 무조건 1개
+};
+
+더하기(1, 2); // result = 3
+```
+
+## 2. 예제
+```js
+// 기본 함수 선언 및 호출
+// '함수 호출 성공!'이라는 메시지를 콘솔에 출력하는 sayHello라는 이름의 함수를 정의하고, 
+// 그 함수를 호출하시오.
+
+function sayHello() {
+    console.log('함수 호출 성공!');
+};
+sayHello();
+```
+```js
+// for 반복문을 포함한 함수
+// 임의의 숫자 n을 매개변수로 받아, 
+// 1부터 n까지의 숫자를 콘솔에 차례대로 출력하는 printNumbers 함수를 정의하시오.
+
+function printNumbers(n) {
+    let print = '';
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    };
+};
+printNumbers(5)
+```
+```js
+// 배열을 매개변수로 전달
+// 임의의 이름 들이 담긴 배열을 매개변수로 받아, 
+// for 반복문을 사용하여 배열의 모든 요소를 콘솔에 하나씩 출력하는 printFruits 함수를 정의하시오.
+
+let Fruits = ['사과', '수박', '포도', '딸기'];
+function printFruits(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    };
+};
+
+printFruits(Fruits);
+
+```
+```js
+// 가장 긴 단어 찾기
+// 문자열로 이루어진 배열을 매개변수로 받아, 
+// for 반복문을 사용해 가장 긴 단어를 찾아 반환하는 findLongestWord 함수를 만드세요. 
+// 아래 words 배열로 테스트해 보세요.
+
+const words = ['apple', 'banana', 'kiwi', 'strawberry'];
+
+function findLongestWord(array) {
+  let longest = "";
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > longest.length) {
+      longest = words[i];
+    };
+  };
+  return longest;
+}
+console.log(findLongestWord(words));
+```
+
+---
+---
+
+# JS_07_dom객체
