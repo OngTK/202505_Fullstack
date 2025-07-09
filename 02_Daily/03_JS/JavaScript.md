@@ -679,6 +679,7 @@ console.log(findLongestWord(words));
 
 # JS_07_dom객체
 
+
 ## 1. dom객체란?
 Document Object Model : 문서 객체 모델 
 HTML을 객체로 다루기 위한 내장 객체
@@ -945,4 +946,131 @@ if ( visit == null ) {                   // 2. 속성명 X = 최초방문 = 속�
 }
 
 document.querySelector("#visitCount").innerHTML = `이번 세션에서 ${visit}번째 방문입니다. `
+```
+
+# JS_10_Interval, Query String
+
+## 1. Interval
+### 1) 정의
+시간적인 간격에 따라 특정 함수 실행
+### 2) 사용법   
+#### (1) setInterval( 함수명 , millisec)
+  - 특정 함수를 millisec 마다 실행
+  - 함수명 : () 소괄호 없이
+  - m sec 
+
+    1 msec = 10^-3 sec
+    1 sec = 10^3 msec
+    1min = 60 * 10^3 msec
+
+#### (2) clearInterval (interval 객체)
+- 중지할 interval 객체를 대입
+
+```html
+<h3 id='box1'></h3>
+
+<h3 id='box2'></h3>
+
+<h3 id='box3'></h3>
+<button onclick="타이머시작()"> start </button>
+<button onclick="타이머중지()"> stop </button>
+```
+
+```js
+// [1] 1초 간격에 따른 증가함수 반복 실행 ===================
+let value = 0;
+function 증가함수() {
+    value++;
+
+    const box1 = document.querySelector('#box1');
+    let html = value;
+    box1.innerHTML = html;
+};
+setInterval(증가함수, 1000);
+
+//[2] 시계 ===============================================
+function 시계함수() {
+    //현재 시간 구하기
+    let today = new Date();
+    let hour = today.getHours();  //시
+    let min = today.getMinutes(); //분
+    let sec = today.getSeconds(); //초
+
+    const box2 = document.querySelector('#box2');
+    let html = `${hour} : ${min} : ${sec}`;
+    box2.innerHTML = html;
+};
+setInterval(시계함수,1000)
+
+//[3] 타이머 ==============================================
+let time = 0;
+let timerID; // 추후, interval 객체 저장
+function 시간증가(){
+    time++;
+    document.querySelector("#box3").innerHTML = time;
+};
+function 타이머시작(){
+    timerID = setInterval(시간증가,1000)
+};
+
+function 타이머중지(){
+    clearInterval(timerID)
+};
+```
+
+## 2. 쿼리스트링(Query String)
+### 1) 정의 
+URL 후단에 매개변수를 기재하고 이를 통해 해당 데이터를 출력하는 방법
+### 2) 형태
+URL?변수명=값
+페이지 이동(요청)간의 데이터를 전달하기 위해 사용
+### 3) 사용법
+#### (1) 이동방법
+html : `<a href='이동경로?변수명=값&변수명=값'>`
+js : `location.href='이동경로?변수명=값&변수명=값'`
+#### (2) URL 상의 매개변수를 가져오는 방법
+[1] new URLSearchParams(location.search).get(URL상의 변수명);
+현재 URL 경로를 반환하는 객체
+
+[2] let url = new URLSearchParams(location.search)
+let 변수명 = url.get('변수명')
+
+    ※ location.href VS location.search
+    href : URL 전체를 가져옴
+    search : URL에서 ? 뒤의 query string만 가져옴
+
+```html
+<h3>쿼리스트링</h3>
+<a href="1_queryString.html"> 링크1 </a> <br/>
+<a href="1_queryString.html?param=3"> 링크2(쿼리스트링) </a> ?param=3<br/>
+<a href="1_queryString.html?pcode=10&page=3"> 링크3(변수2개) </a> <br/>
+
+<button onclick="이동함수()">링크버튼4</button>
+```
+```js
+//[1]
+let url = new URLSearchParams(location.search);
+console.log(url);
+
+//[2]
+let param = url.get('param');
+console.log(param);
+
+//[3]
+let url3 = new URLSearchParams(location.search);
+let pcode = url3.get('pcode')
+console.log(pcode)
+
+let page = url3.get('page')
+console.log(page)
+
+//[4] JS에서 페이지를 요청하는 방법
+function 이동함수(){
+    location.href='1_queryString.html?sort=1&code=8';
+}
+let url4 = new URLSearchParams(location.search)
+let sort = url4.get('sort')
+console.log(sort)
+let code = url4.get('code')
+console.log(code)
 ```
