@@ -678,3 +678,271 @@ console.log(findLongestWord(words));
 ---
 
 # JS_07_dom객체
+
+## 1. dom객체란?
+Document Object Model : 문서 객체 모델 
+HTML을 객체로 다루기 위한 내장 객체
+
+## 2. 주요 속성
+
+|속성|설명|
+|---|---|
+|document.write('출력 내용')|HTML에 출력하는 함수|
+|document.querySelector('선택자') |HTML에 지정한 선택자를 JS 객체로 반환하는 함수|
+|document.querySelectorAll('선택자')|HTML에 지정한 선택자 모두를 JS 객체를 배열로 반환하는 함수|
+|dom객체.innerHTML|마크업 내 html을 호출하는 속성<br>ex) div, span, button, table|
+|dom객체.value  |value 값을 JS 객체로 가져옴 <br>ex) input, select, textarea etc.|
+|dom객체.style |마크업 내 style CSS 요소 대입|
+|dom객체.style.css속성명|마크업 내 styel CSS 요소 추가|
+|dom객체.classList |마크업 내 적용된 class들을 반환|
+| dom객체.classList.add('class명') <br>dom객체.classList.remove('class명')<br>||
+|dom객체.classList.toggle('class명')|마크업 내 지정 클래서가 없으면 추가, 있으면 삭제|
+| dom객체.classList.contains('class명')|마크업 내 지정 클래스가 있는지 확인 > true/flase|
+|dom객체.src||
+|dom객체.remove||
+|마크업.files[0]|첨부파일의 첫번째 파일 객체를 가져옴<br>`<input type='files'>`<br>[ + 파일객체를 URL 주소로 만들어주는 함수 ]<br>ex) URL.createObjectURL(마크업.files[0])|
+
+## 3.예제
+#### 1) 요소 내용 변경하기
+
+id가 'title'인 `<h1>` 요소의 내용을 'DOM 조작 성공!'으로 변경하시오.
+
+(1) 목표 요소     : #title
+(2) 사용할 내장 속성/메소드: .innerHTML
+(3) 처리할 내용   : 'DOM 조작 성공!' 텍스트로 교체
+
+```html
+<h1 id="title">이전 제목</h1>
+```
+```js
+console.log(document.querySelector('#title').innerHTML)
+document.querySelector('#title').innerHTML = 'DOM 조작 성공!';
+```
+
+#### 2) 사용자 입력값 가져와서 표시하기
+id가 'usernameInput'인 `<input>`에 이름을 입력하고 
+'확인' 버튼(id: 'submitBtn')을 클릭하면,
+id가 'greeting'인 `<p>` 태그에 "안녕하세요, [입력된이름]님!"이라고 표시하시오.
+
+(1) 목표 요소     : #usernameInput, #submitBtn, #greeting
+(2) 사용할 내장 속성/메소드:  .value, .innerHTML
+(3) 처리할 내용   : 버튼 클릭 시 input의 value를 읽어와 p 태그에 삽입
+
+```html
+<input type="text" id="usernameInput" placeholder="이름을 입력하세요">
+<button id="submitBtn" onclick="func()">확인</button>
+<p id="greeting">결과가 여기에 표시됩니다.</p>
+```
+```js
+function func() {
+    console.log('func exe');   
+
+    const userName = document.querySelector('#usernameInput').value;
+    console.log(userName);
+
+    document.querySelector('#greeting').innerHTML = `안녕하세요. ${userName} 님!`;
+};
+```
+
+#### 3) 요소 스타일 동적으로 변경하기
+'스타일 변경' 버튼(id: 'styleBtn')을 클릭하면,
+id가 'colorBox'인 <div>의 배경색을 'skyblue'로, 글자색을 'white'로 변경하시오.
+(1) 목표 요소     : #styleBtn, #colorBox
+(2) 사용할 내장 속성/메소드: .style
+(3) 처리할 내용   : 버튼 클릭 시 div의 배경색과 글자색 스타일 변경
+
+```html
+<button id="styleBtn" onclick="func()">스타일 변경</button>
+<div id="colorBox">이 박스의 스타일이 바뀝니다.</div>
+```
+```js
+function func() {
+    console.log('func4 exe');
+    const colorBox = document.querySelector('#colorBox');
+    colorBox.style = "color : white; background : skyblue";
+};
+```
+
+#### 4) select 에서 선택한 option값 console 출력하기
+(1) 목표 요소        : #foodSelect
+(2) 사용할 내장 속성/메소드 : .value
+(3) 처리할 내용      : select 요소의 값이 변경될 때마다 선택된 option의 value를 콘솔에 출력
+
+```html
+<select id="foodSelect" onchange="func()">
+    <option value="">-- 음식을 선택하세요 --</option>
+    <option value="pizza">피자</option>
+    <option value="chicken">치킨</option>
+    <option value="sushi">초밥</option>
+</select>
+```
+```js
+function func() {
+    console.log('func exe');
+    const foodSelect = document.querySelector('#foodSelect').value;
+    console.log(foodSelect);
+};
+```
+
+# JS_08_날짜/시간 관련 객체
+## 1. 시간 반환 객체
+
+new Date() = 현재 시스템(PC의 날짜와 시간을 반환)
+
+## 2. 사용방법
+
+### 1) 년도 
+let year = new Date().getFullYear()
+### 2) 달
+let month = new Date().getMonth() + 1 
+
+1월이 [0]부터 시작하므로 +1 필수
+month = month > 9 ? month : `0${month}`     
+>> 1~9월 일 경우 앞에 0이 표시되어 보이게
+
+### 3)일
+let day = new Date().getDate()        
+getDate(OO일)
+
+### 4)요일 
+getDay (일요일 0 ~ 토요일 6), 
+
+  let pdate = `${year}-${month}-${day}`
+
+
+```js
+let year = new Date().getFullYear() // 현재 연도 반환함수
+
+let month = new Date().getMonth() + 1 // 1월이 0부터 시작하므로 +1 필수
+month = month > 9 ? month : `0${month}` // 1~9월 일 경우 앞에 0이 표시되어 보이게
+
+let day = new Date().getDate()        // getDay(요일 1~7), getDate(OO일)
+day = day > 9 > day : `0${day}`
+
+let pdate = `${year}-${month}-${day}`
+
+let hour = today.getHours();  //시
+
+let min = today.getMinutes(); //분
+
+let sec = today.getSeconds(); //초
+```
+
+---
+---
+
+# JS_9_웹스토리지
+
+## 1. 종류
+###  sessionStorage 
+- 브라우저가 실행되는 동안만 저장되며 브라우저를 닫으면 데이터가 사라짐
+- ex) 일회성 정보, 이전 페이지 기록
+### localStorage 
+- 사용자가 직접 삭제하거나 브라우저 캐시, 쿠키 등을 청소하지 않는 한 영구 저장
+- ex) 설정 정보, 팝업창(다시 보지 않기), 테마, 자동로그인 etc
+
+## 2. 사용법
+### 1) 자료 대입
+sessionStorage.setItem( '속성명/key' , '값/value' ); 
+### 2) 자료 호출
+sessionStorage.getItem( '속성명/key' );
+속성이 존재하지 않으면 null, 존재하면 value를 반환
+### 3) 자료 삭제
+sessionStorage.removeItem( '속성명/key' );
+    속성만 삭제
+
+localStorage.clear(); 
+    전체삭제
+
+## 3. 확인 방법
+- 웹 브라우저 F12 > application tab > local/sesssion strorage
+- 도메인 별로 웹스토리지가 할당
+
+## 4. JSON (JavaScript Object Notation)
+자바스크립트 객체 문법의 형식
+
+- 자바 객체를 문자열 타입이지만, 객체형식(모양)으로 표현한 것
+    ex) 3 : 숫자타입, 숫자모양 vs "3" : 문자열타입, 숫자모양
+- { age : 40 } 객체타입, 객체모양 vs "{age:40}" 문자열타입, 객체모양
+
+### 1) Storage, HTTP 
+Storage, HTTP은 객체지향이 아님
+문자열과 바이트만 전송 가능함.
+따라서, [객체 > 문자열] >> [문자열 > 객체] 로의 타입변환이 필요
+
+### 2) 사용법
+    (1) JSON.stringify (자료);  : 해당 자료를 문자열 타입으로 반환
+    (2) JSON.parse(자료);       : 해당 자료를 JS 타입으로 반환
+
+
+## 5. 예제
+
+#### 예제 1. localStorage에 데이터 저장하고 불러오기
+localStorage에 <input> 으로 입력받은 사용자의 아이디를 저장하고, 
+페이지를 새로고침해도 그 값이 유지되는 것을 확인하시오. 
+```html
+<input id="userInput" type="text" placeholder="ID를 입력하세요."/>
+<button onclick="func1()"> 예제1 버튼</button>
+```
+```js
+function func1(){
+    console.log('func1 exe');
+
+    let userInput = document.querySelector('#userInput');
+    let user = userInput.value
+    console.log(user);
+
+    localStorage.setItem('user', user);
+    console.log(localStorage)
+};
+```
+#### 예제 2. localStorage에 객체 저장하기 (JSON.stringify)
+아래 사용자의 환경 설정(객체)을 문자열로 변환하여 localStorage에 저장 하시오. 
+```js
+const userSettings = { theme: 'dark', notifications: true, language: 'ko' };
+console.log(JSON.stringify(userSettings));
+
+const data = JSON.stringify(userSettings);
+localStorage.setItem("data", data)
+
+console.log(localStorage)
+```
+
+#### 예제 3: localStorage에서 객체 불러오기 (JSON.parse)
+localStorage에 문자열로 저장된 사용자 설정(userSettings) 을 다시 객체로 변환하여 사용 하시오. 
+```js
+let getData = JSON.parse(localStorage.getItem('data'));
+console.log(getData);
+```
+
+#### 예제 4: 데이터 삭제하기 (removeItem, clear)
+스토리지에 저장된 특정 데이터(userSettings) 또는 전체 데이터를 삭제 하시오. 
+```js
+localStorage.removeItem("data");
+// localStorage.clear();
+
+console.log(localStorage)
+```
+
+#### 5) 예제 5: 방문 횟수 카운터 만들기
+페이지가 로드될 때마다 sessionStorage를 사용하여 방문 횟수를 1씩 증가시키시오. 
+현재 방문 횟수를 id="visitCount"인 span 태그에 "이번 세션에서 O번째 방문입니다." 형식으로 출력하시오. 
+(페이지를 새로고침하면 숫자가 올라가고, 브라우저 탭을 닫았다 다시 열면 1로 초기화되어야 합니다.) 
+```html
+<span id="visitCount"></span>
+```
+```js
+// 1. 기존 웹 스토리지 불러오기
+let visit = sessionStorage.getItem('visit');
+console.log(visit);
+
+// 2. 새로운 웹스토리지에 값 저장
+if ( visit == null ) {                   // 2. 속성명 X = 최초방문 = 속성명을 만들기 
+    sessionStorage.setItem('visit', 1);     
+} else{                                  // 3. 이미 존재한다면
+    visit = Number(visit) + 1 ;
+    sessionStorage.setItem('visit', visit);
+}
+
+document.querySelector("#visitCount").innerHTML = `이번 세션에서 ${visit}번째 방문입니다. `
+```
